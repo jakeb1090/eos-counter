@@ -27641,6 +27641,21 @@ var HeaderContainer = styled_components_browser_esm_default.div`
   justify-content: center;
   color: teal;
   border: 1px solid gray;
+  border-radius: 8px;
+`;
+var ControlsContainer = styled_components_browser_esm_default.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  border: 1px solid pink;
+  border-radius: 8px;
+`;
+var CurrencyContainer = styled_components_browser_esm_default.div`
+  display: flex;
+  flex-direction: column;
+  border: 1px solid slateGray;
+  margin-bottom: 1em;
+  padding: 1em;
 `;
 var Counter = () => {
   const [totalBills, setTotalBills] = (0, import_react41.useState)([0, 0, 0, 0, 0]);
@@ -27649,7 +27664,7 @@ var Counter = () => {
   const [target, setTarget] = (0, import_react41.useState)(0);
   (0, import_react42.useEffect)(() => {
     let reduced = totalBills.reduce((acc, num) => acc + num);
-    setTotalCash(reduced);
+    setTotalCash(reduced.toFixed(2));
   }, [totalBills]);
   let handleChange = (sum, denom, idx) => {
     let tempArray = totalBills.slice();
@@ -27670,9 +27685,7 @@ var Counter = () => {
       align: "center",
       size: "xl"
     }, totalCash)
-  }))), /* @__PURE__ */ import_react40.default.createElement("div", {
-    className: "input-group"
-  }, "ONE", /* @__PURE__ */ import_react40.default.createElement(NumberComponent_default, {
+  }))), /* @__PURE__ */ import_react40.default.createElement(ControlsContainer, null, /* @__PURE__ */ import_react40.default.createElement(CurrencyContainer, null, "ONE", /* @__PURE__ */ import_react40.default.createElement(NumberComponent_default, {
     idx: "0",
     range: 100,
     denom: 1,
@@ -27702,27 +27715,27 @@ var Counter = () => {
     range: 50,
     denom: 100,
     onChange: handleChange
-  }), "PENNY", /* @__PURE__ */ import_react40.default.createElement(NumberComponent_default, {
-    name: "1",
+  })), /* @__PURE__ */ import_react40.default.createElement(CurrencyContainer, null, "PENNY", /* @__PURE__ */ import_react40.default.createElement(NumberComponent_default, {
+    idx: "6",
     range: 100,
     denom: 0.01,
     onChange: handleChange
   }), "NICKEL", /* @__PURE__ */ import_react40.default.createElement(NumberComponent_default, {
-    name: "5",
+    idx: "7",
     range: 100,
     denom: 0.05,
     onChange: handleChange
   }), "DIME", /* @__PURE__ */ import_react40.default.createElement(NumberComponent_default, {
-    name: "20",
+    idx: "8",
     range: 100,
     denom: 0.1,
     onChange: handleChange
   }), "QUARTER", /* @__PURE__ */ import_react40.default.createElement(NumberComponent_default, {
-    name: "50",
+    idx: "9",
     range: 100,
     denom: 0.25,
     onChange: handleChange
-  })));
+  }))));
 };
 var Counter_default = Counter;
 

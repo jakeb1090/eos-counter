@@ -2,6 +2,9 @@
 
 > This is a template for [esbuild create react app](https://github.com/awran5/esbuild-create-react-app) project.
 
+
+![alt text](money-counter.gif)
+
 ## What is inside?
 
 - [esbuild](https://esbuild.github.io/)
