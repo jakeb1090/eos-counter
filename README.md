@@ -1,6 +1,6 @@
-# esbuild React Javascript Template
+# eos Currency Counter
 
-> This is a Javascript template for [esbuild create react app](https://github.com/awran5/esbuild-create-react-app) project.
+> This is a template for [esbuild create react app](https://github.com/awran5/esbuild-create-react-app) project.
 
 ## What is inside?
 
