@@ -8,7 +8,8 @@
     "pre-commit": "lint-staged",
     "lint": "eslint \"src/**/*.{js,jsx}\" --max-warnings=0",
     "start": "node builder.js",
-    "build": "NODE_ENV=production node builder.js"
+    "build": "NODE_ENV=production node builder.js",
+    "startx": "npm run build && npm run start"
   },
   "dependencies": {
     "@mantine/core": "^3.6.2",
