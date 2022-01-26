@@ -5,8 +5,6 @@ import styled from 'styled-components';
 import NumberComponent from './NumberComponent';
 import { NumberInput, RingProgress, Text } from '@mantine/core';
 
-// import e from 'express';
-
 const HeaderContainer = styled.div`
   display: flex;
   flex-direction: row;
@@ -15,7 +13,6 @@ const HeaderContainer = styled.div`
   border: 1px solid gray;
   border-radius: 8px;
 `;
-
 const ControlsContainer = styled.div`
   display: flex;
   flex-direction: row;
@@ -23,7 +20,6 @@ const ControlsContainer = styled.div`
   border: 1px solid pink;
   border-radius: 8px;
 `;
-
 const CurrencyContainer = styled.div`
   display: flex;
   flex-direction: column;
@@ -48,7 +44,6 @@ const Counter = () => {
     tempArray[Number(idx)] = sum
     setTotalBills(tempArray)
   }
-
   const percent = (totalCash / target).toFixed(1);
 
   return (
@@ -76,8 +71,6 @@ const Counter = () => {
           />
         </div>
       </HeaderContainer>
-
-
       <ControlsContainer>
         <CurrencyContainer>
           ONE<NumberComponent idx="0" range={100} denom={1} onChange={handleChange}/>
@@ -98,5 +91,4 @@ const Counter = () => {
     </>
   )
 }
-
 export default Counter

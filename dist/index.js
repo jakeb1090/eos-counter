@@ -27594,7 +27594,9 @@ function NumberComponent(props) {
     setIsLocked(!isLocked);
     console.log(e2.target.checked);
   };
-  return /* @__PURE__ */ import_react39.default.createElement(import_react39.default.Fragment, null, /* @__PURE__ */ import_react39.default.createElement(Slider, {
+  return /* @__PURE__ */ import_react39.default.createElement(import_react39.default.Fragment, null, /* @__PURE__ */ import_react39.default.createElement("h1", {
+    className: "text-yellow-800"
+  }, "HELLO WHATS UP"), /* @__PURE__ */ import_react39.default.createElement(Slider, {
     labelTransition: "skew-down",
     labelTransitionDuration: 150,
     labelTransitionTimingFunction: "ease",

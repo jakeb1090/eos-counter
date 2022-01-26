@@ -7,11 +7,8 @@ const BillQuantityText = styled.span`
   backgroundColor: 'slateGray'
 `;
 
-
-
 function NumberComponent(props) {
   let { range, idx, denom, onChange  } = props
-
   const [quantity, setQuantity] = useState(0);
   const [sum, setSum] = useState(0);
   const [isLocked, setIsLocked] = useState(false);
@@ -24,26 +21,23 @@ function NumberComponent(props) {
       onChange(sum, denom, idx)
   }, [sum])
 
-
   const denomCalculator = () => {
     const tempSum = quantity * denom
     setSum(tempSum);
   }
-
   const handleClick = (e) => {
     const sign = e.target.textContent
     if (sign === '+') setQuantity(prevQuantity => prevQuantity += 1);
     if (sign === '-' && quantity > 0) setQuantity(prevQuantity => prevQuantity -= 1);
     // setQuantity(prevQuantity => prevQuantity -= 1)
   }
-
   const handleChangeSwitch = (e) => {
     setIsLocked(!isLocked)
     console.log(e.target.checked)
   }
-
   return (
     <>
+      <h1 className="text-yellow-800">HELLO WHATS UP</h1>
       <Slider
         labelTransition="skew-down"
         labelTransitionDuration={150}
@@ -59,7 +53,6 @@ function NumberComponent(props) {
             checked={isLocked}
             onChange={handleChangeSwitch}
         />
-
         <NumberInput
           hideControls
           value={quantity}
@@ -71,7 +64,6 @@ function NumberComponent(props) {
           step={2}
           styles={{ input: { width: 54, textAlign: 'center' } }}
         />
-
         <NumberInput
           hideControls
           value={sum}
@@ -88,5 +80,4 @@ function NumberComponent(props) {
     </>
   );
 }
-
 export default NumberComponent
