@@ -7,8 +7,9 @@
   "scripts": {
     "pre-commit": "lint-staged",
     "lint": "eslint \"src/**/*.{js,jsx}\" --max-warnings=0",
-    "startx": "node builder.js",
-    "start": "NODE_ENV=production node builder.js",
+    "start": "node builder.js",
+    "build": "NODE_ENV=production node builder.js",
+    "startx": "npm run build && npm run start",
     "heroku-prebuild": "echo This runs before Heroku installs dependencies.",
     "heroku-postbuild": "echo This runs after Heroku installs dependencies, but before Heroku prunes and caches dependencies.",
     "heroku-cleanup": "echo This runs after Heroku prunes and caches dependencies."
