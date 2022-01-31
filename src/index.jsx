@@ -1,5 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
+import { BrowserRouter as Router } from 'react-router-dom'
 import { MantineProvider } from '@mantine/core';
 import styled from 'styled-components';
 
@@ -14,20 +15,24 @@ const AppContainer = styled.div`
   padding: 1em;
 `;
 
+const theme = {
+  colorScheme: 'dark',
+  breakpoints: {
+      xs: 500,
+      sm: 800,
+      md: 1000,
+      lg: 1200,
+      xl: 1400,
+    }
+}
+
 ReactDOM.render(
   <AppContainer>
+    <Router>
       <MantineProvider
-        theme={{
-          colorScheme: 'dark',
-          breakpoints: {
-              xs: 500,
-              sm: 800,
-              md: 1000,
-              lg: 1200,
-              xl: 1400,
-            },
-          }} withGlobalStyles>
+        theme={theme} withGlobalStyles>
         <App />
       </MantineProvider>
+    </Router>
   </AppContainer>
   , document.querySelector('#app'));
