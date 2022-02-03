@@ -7,7 +7,7 @@
   "scripts": {
     "pre-commit": "lint-staged",
     "lint": "eslint \"src/**/*.{js,jsx}\" --max-warnings=0",
-    "start": "node './backend/index.js'",
+    "start": "node server/index.js",
     "build": "NODE_ENV=production node builder.js",
     "startx": "npm run build && npm run start",
     "heroku-prebuild": "echo This runs before Heroku installs dependencies.",

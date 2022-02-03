@@ -12,7 +12,7 @@
 - [Prettier](https://prettier.io/)
 - [Husky](https://github.com/typicode/husky)
 - [lint-staged](https://github.com/okonet/lint-staged)
-- [live-server](https://github.com/tapio/live-server)
+
 
 ### License
 
