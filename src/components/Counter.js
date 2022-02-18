@@ -65,21 +65,28 @@ const Counter = () => {
         </div>
       </HeaderContainer>
 
-      <div className="input-group-bills">
-        ONE<NumberComponent idx="0" range={100} denom={1} onChange={handleChange} value={totalBills[0]}/>
-        FIVE<NumberComponent idx="1" range={100} denom={5} onChange={handleChange} value={totalBills[1]} />
-        TEN<NumberComponent idx="2" range={100} denom={10} onChange={handleChange} value={totalBills[2]} />
-        TWENTY<NumberComponent idx="3" range={120} denom={20} onChange={handleChange}/>
-        FIFTY<NumberComponent idx="4" range={50} denom={50} onChange={handleChange}/>
-        HUNDRED<NumberComponent idx="5" range={50} denom={100} onChange={handleChange}/>
-      </div>
 
-      <div className="input-group-coins">
-        PENNY<NumberComponent idx="6" range={100} denom={.01} onChange={handleChange} value={totalBills[6]}/>
-        NICKEL<NumberComponent idx="7" range={100} denom={.05} onChange={handleChange} value={totalBills[7]}/>
-        DIME<NumberComponent idx="8" range={100} denom={.1} onChange={handleChange} value={totalBills[8]}/>
-        QUARTER<NumberComponent idx="9" range={100} denom={.25} onChange={handleChange} value={totalBills[9]}/>
-      </div>
+      <Tabs>
+        <Tabs.Tab label="Gallery">
+        <div className="input-group-bills">
+          ONE<NumberComponent idx="0" range={100} denom={1} onChange={handleChange} value={totalBills[0]}/>
+          FIVE<NumberComponent idx="1" range={100} denom={5} onChange={handleChange} value={totalBills[1]} />
+          TEN<NumberComponent idx="2" range={100} denom={10} onChange={handleChange} value={totalBills[2]} />
+          TWENTY<NumberComponent idx="3" range={120} denom={20} onChange={handleChange} value={totalBills[3]} />
+          FIFTY<NumberComponent idx="4" range={50} denom={50} onChange={handleChange} value={totalBills[4]} />
+          HUNDRED<NumberComponent idx="5" range={50} denom={100} onChange={handleChange} value={totalBills[5]} />
+        </div>
+        </Tabs.Tab>
+
+        <Tabs.Tab label="Messages" >
+        <div className="input-group-coins">
+          PENNY<NumberComponent idx="6" range={100} denom={.01} onChange={handleChange} value={totalBills[6]}/>
+          NICKEL<NumberComponent idx="7" range={100} denom={.05} onChange={handleChange} value={totalBills[7]}/>
+          DIME<NumberComponent idx="8" range={100} denom={.1} onChange={handleChange} value={totalBills[8]}/>
+          QUARTER<NumberComponent idx="9" range={100} denom={.25} onChange={handleChange} value={totalBills[9]}/>
+        </div>
+        </Tabs.Tab>
+      </Tabs>
 
     </>
   )

@@ -2,23 +2,22 @@ import React, { useState, useRef, useEffect } from 'react';
 import { NumberInput, Group, ActionIcon, Slider, Switch} from '@mantine/core';
 import styled from 'styled-components';
 
-const BillQuantityText = styled.span`
+const BillvalueText = styled.span`
   color: 'teal',
   backgroundColor: 'slateGray'
 `;
 
 
-
 function NumberComponent(props) {
-  let { range, idx, denom, onChange  } = props
+  let { range, idx, denom, onChange, value  } = props
 
-  const [quantity, setQuantity] = useState(0);
+  // const [value, setvalue] = useState(0);
   const [sum, setSum] = useState(0);
   const [isLocked, setIsLocked] = useState(false);
 
   useEffect(() => {
       denomCalculator()
-  }, [quantity])
+  }, [value])
 
   useEffect(() => {
       onChange(sum, denom, idx)
@@ -26,15 +25,15 @@ function NumberComponent(props) {
 
 
   const denomCalculator = () => {
-    const tempSum = quantity * denom
+    const tempSum = value * denom
     setSum(tempSum);
   }
 
   const handleClick = (e) => {
     const sign = e.target.textContent
-    if (sign === '+') setQuantity(prevQuantity => prevQuantity += 1);
-    if (sign === '-' && quantity > 0) setQuantity(prevQuantity => prevQuantity -= 1);
-    // setQuantity(prevQuantity => prevQuantity -= 1)
+    if (sign === '+') setvalue(prevvalue => prevvalue += 1);
+    if (sign === '-' && value > 0) setvalue(prevvalue => prevvalue -= 1);
+    // setvalue(prevvalue => prevvalue -= 1)
   }
 
   const handleChangeSwitch = (e) => {
@@ -48,8 +47,8 @@ function NumberComponent(props) {
         labelTransition="skew-down"
         labelTransitionDuration={150}
         labelTransitionTimingFunction="ease"
-        onChange={(quant) => setQuantity(quant)}
-        value={quantity}
+        onChange={(quant) => setvalue(quant)}
+        value={value}
         size={"xl"}
       />
       <Group spacing={5} style={{"marginBottom": "1em"}}>
@@ -62,8 +61,8 @@ function NumberComponent(props) {
 
         <NumberInput
           hideControls
-          value={quantity}
-          // onChange={value => setQuantity(value)}
+          value={value}
+          // onChange={value => setvalue(value)}
           // handlersRef={handlers}
           onChange={() => console.log('value')}
           max={10}
