@@ -4,7 +4,7 @@
 
 
 <!-- ![alt text](money-counter.gif) -->
-![alt text](https://github.com/jakeb1090/eos-counter/blob/slider-vals/counter.gif?raw=true, width=499px)
+![alt text](https://github.com/jakeb1090/eos-counter/blob/slider-vals/counter.gif?raw=true)
 
 ## What is inside?
 
