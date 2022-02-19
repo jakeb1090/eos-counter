@@ -12,7 +12,7 @@ const HeaderContainer = styled.div`
   flex-direction: row;
   justify-content: center;
   color: teal;
-  border: 1px solid gray;
+  border: 2px solid gray;
 `;
 
 const ToggleBills = styled.div`
@@ -55,6 +55,12 @@ const Counter = () => {
     setToggle(!toggle)
   }
 
+  let ringColor = (
+    totalCash < target ? 'cyan' :
+    totalCash > target ? 'red' :
+    null
+  )
+
     return (
     <>
       <HeaderContainer>
@@ -74,9 +80,9 @@ const Counter = () => {
         { target !== totalCash ?
         (<div>
           <RingProgress
-            sections={[{ value: (totalCash / target) * 100, color: 'violet' }]}
+            sections={[{ value: (totalCash / target) * 100, color: ringColor }]}
             label={
-              <Text color="pink" weight={700} align="center" size="150">
+              <Text color={ringColor} weight={700} align="center" size="150">
                 {totalCash}
               </Text>
             }

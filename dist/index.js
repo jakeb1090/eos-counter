@@ -28305,7 +28305,11 @@ function NumberComponent(props) {
     hideControls: true,
     value: sum,
     disabled: true,
-    styles: { input: { width: 60, textAlign: "center" } }
+    styles: {
+      input: { width: 60, textAlign: "center" },
+      label: { color: "red" },
+      wrapper: { color: "red" }
+    }
   }), /* @__PURE__ */ import_react41.default.createElement(ActionIcon, {
     size: 35,
     variant: "default",
@@ -31021,7 +31025,7 @@ var HeaderContainer = styled_components_browser_esm_default.div`
   flex-direction: row;
   justify-content: center;
   color: teal;
-  border: 1px solid gray;
+  border: 2px solid gray;
 `;
 var ToggleBills = styled_components_browser_esm_default.div`
   display: ${(props) => props.toggle ? "block" : "none"}
@@ -31054,15 +31058,16 @@ var Counter = () => {
   let handleToggle = () => {
     setToggle(!toggle);
   };
+  let ringColor = totalCash < target ? "cyan" : totalCash > target ? "red" : null;
   return /* @__PURE__ */ import_react43.default.createElement(import_react43.default.Fragment, null, /* @__PURE__ */ import_react43.default.createElement(HeaderContainer, null, /* @__PURE__ */ import_react43.default.createElement(NumberInput, {
     hideControls: true,
     value: target,
     onChange: (value) => setTarget(value),
     styles: { input: { width: 64, textAlign: "center" } }
   }), /* @__PURE__ */ import_react43.default.createElement("div", null, "TARGET: ", target, /* @__PURE__ */ import_react43.default.createElement("br", null), "TOTAL: ", totalCash, /* @__PURE__ */ import_react43.default.createElement("br", null), "DIFFERENCE: ", (target - totalCash).toFixed(2), /* @__PURE__ */ import_react43.default.createElement("br", null)), target !== totalCash ? /* @__PURE__ */ import_react43.default.createElement("div", null, /* @__PURE__ */ import_react43.default.createElement(RingProgress, {
-    sections: [{ value: totalCash / target * 100, color: "violet" }],
+    sections: [{ value: totalCash / target * 100, color: ringColor }],
     label: /* @__PURE__ */ import_react43.default.createElement(Text, {
-      color: "pink",
+      color: ringColor,
       weight: 700,
       align: "center",
       size: "150"
