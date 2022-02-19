@@ -68,7 +68,11 @@ function NumberComponent(props) {
           hideControls
           value={sum}
           disabled={true}
-          styles={{ input: { width: 60, textAlign: 'center' } }}
+          styles={{
+            input: { width: 60, textAlign: 'center'},
+            label: {color: 'red'},
+            wrapper: {color: 'red'},
+            }}
         />
           <ActionIcon size={35} variant="default" onClick={handleClick}>
             -
