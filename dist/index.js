@@ -937,7 +937,7 @@ var require_react_development = __commonJS({
           }
           return lazyType;
         }
-        function forwardRef17(render3) {
+        function forwardRef20(render3) {
           {
             if (render3 != null && render3.$$typeof === REACT_MEMO_TYPE) {
               error("forwardRef requires a render function but received a `memo` component. Instead of forwardRef(memo(...)), use memo(forwardRef(...)).");
@@ -1046,7 +1046,7 @@ var require_react_development = __commonJS({
           }
           return dispatcher.useContext(Context, unstable_observedBits);
         }
-        function useState11(initialState) {
+        function useState14(initialState) {
           var dispatcher = resolveDispatcher();
           return dispatcher.useState(initialState);
         }
@@ -1054,11 +1054,11 @@ var require_react_development = __commonJS({
           var dispatcher = resolveDispatcher();
           return dispatcher.useReducer(reducer, initialArg, init);
         }
-        function useRef12(initialValue) {
+        function useRef16(initialValue) {
           var dispatcher = resolveDispatcher();
           return dispatcher.useRef(initialValue);
         }
-        function useEffect10(create, deps) {
+        function useEffect13(create, deps) {
           var dispatcher = resolveDispatcher();
           return dispatcher.useEffect(create, deps);
         }
@@ -1066,7 +1066,7 @@ var require_react_development = __commonJS({
           var dispatcher = resolveDispatcher();
           return dispatcher.useLayoutEffect(create, deps);
         }
-        function useCallback2(callback, deps) {
+        function useCallback3(callback, deps) {
           var dispatcher = resolveDispatcher();
           return dispatcher.useCallback(callback, deps);
         }
@@ -1621,20 +1621,20 @@ var require_react_development = __commonJS({
         exports2.createElement = createElement$1;
         exports2.createFactory = createFactory;
         exports2.createRef = createRef;
-        exports2.forwardRef = forwardRef17;
+        exports2.forwardRef = forwardRef20;
         exports2.isValidElement = isValidElement;
         exports2.lazy = lazy;
         exports2.memo = memo;
-        exports2.useCallback = useCallback2;
+        exports2.useCallback = useCallback3;
         exports2.useContext = useContext4;
         exports2.useDebugValue = useDebugValue;
-        exports2.useEffect = useEffect10;
+        exports2.useEffect = useEffect13;
         exports2.useImperativeHandle = useImperativeHandle;
         exports2.useLayoutEffect = useLayoutEffect3;
         exports2.useMemo = useMemo;
         exports2.useReducer = useReducer;
-        exports2.useRef = useRef12;
-        exports2.useState = useState11;
+        exports2.useRef = useRef16;
+        exports2.useState = useState14;
         exports2.version = ReactVersion;
       })();
     }
@@ -2442,11 +2442,11 @@ var require_react_dom_development = __commonJS({
     if (true) {
       (function() {
         "use strict";
-        var React32 = require_react();
+        var React40 = require_react();
         var _assign = require_object_assign();
         var Scheduler = require_scheduler();
         var tracing = require_tracing();
-        var ReactSharedInternals = React32.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED;
+        var ReactSharedInternals = React40.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED;
         function warn(format) {
           {
             for (var _len = arguments.length, args = new Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {
@@ -2478,7 +2478,7 @@ var require_react_dom_development = __commonJS({
             Function.prototype.apply.call(console[level], console, argsWithFormat);
           }
         }
-        if (!React32) {
+        if (!React40) {
           {
             throw Error("ReactDOM was loaded before React. Make sure you load the React package before loading ReactDOM.");
           }
@@ -3694,7 +3694,7 @@ var require_react_dom_development = __commonJS({
         var didWarnInvalidChild = false;
         function flattenChildren(children) {
           var content = "";
-          React32.Children.forEach(children, function(child) {
+          React40.Children.forEach(children, function(child) {
             if (child == null) {
               return;
             }
@@ -3705,7 +3705,7 @@ var require_react_dom_development = __commonJS({
         function validateProps(element, props) {
           {
             if (typeof props.children === "object" && props.children !== null) {
-              React32.Children.forEach(props.children, function(child) {
+              React40.Children.forEach(props.children, function(child) {
                 if (child == null) {
                   return;
                 }
@@ -10898,7 +10898,7 @@ var require_react_dom_development = __commonJS({
         }
         var fakeInternalInstance = {};
         var isArray = Array.isArray;
-        var emptyRefsObject = new React32.Component().refs;
+        var emptyRefsObject = new React40.Component().refs;
         var didWarnAboutStateAssignmentForComponent;
         var didWarnAboutUninitializedState;
         var didWarnAboutGetSnapshotBeforeUpdateWithoutDidUpdate;
@@ -19697,7 +19697,7 @@ For more info, visit https://reactjs.org/link/mock-scheduler`);
             root2.mutableSourceEagerHydrationData.push(mutableSource, version);
           }
         }
-        function createPortal(children, containerInfo, implementation) {
+        function createPortal2(children, containerInfo, implementation) {
           var key = arguments.length > 3 && arguments[3] !== void 0 ? arguments[3] : null;
           return {
             $$typeof: REACT_PORTAL_TYPE,
@@ -20350,7 +20350,7 @@ For more info, visit https://reactjs.org/link/mock-scheduler`);
               throw Error("Target container is not a DOM element.");
             }
           }
-          return createPortal(children, container, null, key);
+          return createPortal2(children, container, null, key);
         }
         function renderSubtreeIntoContainer(parentComponent, element, containerNode, callback) {
           return unstable_renderSubtreeIntoContainer(parentComponent, element, containerNode, callback);
@@ -20492,7 +20492,7 @@ var require_react_is_development = __commonJS({
         var Fragment3 = REACT_FRAGMENT_TYPE;
         var Lazy = REACT_LAZY_TYPE;
         var Memo = REACT_MEMO_TYPE;
-        var Portal = REACT_PORTAL_TYPE;
+        var Portal2 = REACT_PORTAL_TYPE;
         var Profiler = REACT_PROFILER_TYPE;
         var StrictMode = REACT_STRICT_MODE_TYPE;
         var Suspense = REACT_SUSPENSE_TYPE;
@@ -20551,7 +20551,7 @@ var require_react_is_development = __commonJS({
         exports2.Fragment = Fragment3;
         exports2.Lazy = Lazy;
         exports2.Memo = Memo;
-        exports2.Portal = Portal;
+        exports2.Portal = Portal2;
         exports2.Profiler = Profiler;
         exports2.StrictMode = StrictMode;
         exports2.Suspense = Suspense;
@@ -21231,8 +21231,8 @@ var require_prop_types = __commonJS({
 });
 
 // src/index.jsx
-var import_react48 = __toModule(require_react());
-var import_react_dom = __toModule(require_react_dom());
+var import_react59 = __toModule(require_react());
+var import_react_dom2 = __toModule(require_react_dom());
 
 // node_modules/@mantine/styles/esm/theme/default-colors.js
 var DEFAULT_COLORS = {
@@ -23169,13 +23169,13 @@ function mergeTheme(currentTheme, themeOverride) {
   }
   return attachFunctions(Object.keys(currentTheme).reduce((acc, key) => {
     if (key === "headings" && themeOverride.headings) {
-      const sizes6 = themeOverride.headings.sizes ? Object.keys(currentTheme.headings.sizes).reduce((headingsAcc, h2) => {
+      const sizes7 = themeOverride.headings.sizes ? Object.keys(currentTheme.headings.sizes).reduce((headingsAcc, h2) => {
         headingsAcc[h2] = __spreadValues2(__spreadValues2({}, currentTheme.headings.sizes[h2]), themeOverride.headings.sizes[h2]);
         return headingsAcc;
       }, {}) : currentTheme.headings.sizes;
       return __spreadProps2(__spreadValues2({}, acc), {
         headings: __spreadProps2(__spreadValues2(__spreadValues2({}, currentTheme.headings), themeOverride.headings), {
-          sizes: sizes6
+          sizes: sizes7
         })
       });
     }
@@ -23407,6 +23407,17 @@ function MantineProvider({
   }, withNormalizeCSS && /* @__PURE__ */ import_react5.default.createElement(NormalizeCSS, null), withGlobalStyles && /* @__PURE__ */ import_react5.default.createElement(GlobalStyles, null), children);
 }
 MantineProvider.displayName = "@mantine/core/MantineProvider";
+
+// node_modules/@mantine/styles/esm/theme/utils/get-default-z-index/get-default-z-index.js
+var elevations = {
+  app: 100,
+  modal: 200,
+  popover: 300,
+  overlay: 400
+};
+function getDefaultZIndex(level) {
+  return elevations[level];
+}
 
 // node_modules/@mantine/styles/esm/theme/utils/get-shared-color-scheme/get-shared-color-scheme.js
 var DEFAULT_GRADIENT = {
@@ -23660,7 +23671,7 @@ function mergeClassNames(cx, classes, classNames, name) {
 // node_modules/@mantine/styles/esm/tss/create-styles.js
 function createStyles(getCssObjectOrCssObject) {
   const getCssObject = typeof getCssObjectOrCssObject === "function" ? getCssObjectOrCssObject : () => getCssObjectOrCssObject;
-  function useStyles14(params, options) {
+  function useStyles16(params, options) {
     const theme = useMantineTheme();
     const themeStyles = useMantineThemeStyles()[options == null ? void 0 : options.name];
     const { css: css2, cx } = useCss();
@@ -23678,7 +23689,7 @@ function createStyles(getCssObjectOrCssObject) {
     }));
     return { classes: mergeClassNames(cx, classes, options == null ? void 0 : options.classNames, options == null ? void 0 : options.name), cx, theme };
   }
-  return useStyles14;
+  return useStyles16;
 }
 
 // node_modules/@mantine/core/esm/components/Transition/transitions.js
@@ -23829,6 +23840,9 @@ function useMediaQuery(query) {
 var import_react9 = __toModule(require_react());
 var useIsomorphicEffect = typeof document !== "undefined" ? import_react9.useLayoutEffect : import_react9.useEffect;
 
+// node_modules/@mantine/hooks/esm/use-focus-return/use-focus-return.js
+var import_react11 = __toModule(require_react());
+
 // node_modules/@mantine/hooks/esm/use-did-update/use-did-update.js
 var import_react10 = __toModule(require_react());
 function useDidUpdate(fn, dependencies) {
@@ -23842,13 +23856,195 @@ function useDidUpdate(fn, dependencies) {
   }, dependencies);
 }
 
+// node_modules/@mantine/hooks/esm/use-focus-return/use-focus-return.js
+function useFocusReturn({
+  opened,
+  transitionDuration,
+  shouldReturnFocus = true
+}) {
+  const lastActiveElement = (0, import_react11.useRef)();
+  const returnFocus = () => {
+    var _a;
+    if (lastActiveElement.current && "focus" in lastActiveElement.current && typeof lastActiveElement.current.focus === "function") {
+      (_a = lastActiveElement.current) == null ? void 0 : _a.focus();
+    }
+  };
+  useDidUpdate(() => {
+    let timeout = -1;
+    const clearFocusTimeout = (event) => {
+      if (event.code === "Tab") {
+        window.clearTimeout(timeout);
+      }
+    };
+    document.addEventListener("keydown", clearFocusTimeout);
+    if (opened) {
+      lastActiveElement.current = document.activeElement;
+    } else if (shouldReturnFocus) {
+      timeout = window.setTimeout(returnFocus, transitionDuration + 10);
+    }
+    return () => {
+      window.clearTimeout(timeout);
+      document.removeEventListener("keydown", clearFocusTimeout);
+    };
+  }, [opened]);
+  return returnFocus;
+}
+
+// node_modules/@mantine/hooks/esm/use-focus-trap/use-focus-trap.js
+var import_react12 = __toModule(require_react());
+
+// node_modules/@mantine/hooks/esm/use-focus-trap/tabbable.js
+var TABBABLE_NODES = /input|select|textarea|button|object/;
+var FOCUS_SELECTOR = "a, input, select, textarea, button, object, [tabindex]";
+function hidden(element) {
+  if (false) {
+    return false;
+  }
+  return element.style.display === "none";
+}
+function visible(element) {
+  let parentElement = element;
+  while (parentElement) {
+    if (parentElement === document.body) {
+      break;
+    }
+    if (hidden(parentElement)) {
+      return false;
+    }
+    parentElement = parentElement.parentNode;
+  }
+  return true;
+}
+function getElementTabIndex(element) {
+  let tabIndex = element.getAttribute("tabindex");
+  if (tabIndex === null) {
+    tabIndex = void 0;
+  }
+  return parseInt(tabIndex, 10);
+}
+function focusable(element) {
+  const nodeName = element.nodeName.toLowerCase();
+  const isTabIndexNotNaN = !Number.isNaN(getElementTabIndex(element));
+  const res = TABBABLE_NODES.test(nodeName) && !element.disabled || (element instanceof HTMLAnchorElement ? element.href || isTabIndexNotNaN : isTabIndexNotNaN);
+  return res && visible(element);
+}
+function tabbable(element) {
+  const tabIndex = getElementTabIndex(element);
+  const isTabIndexNaN = Number.isNaN(tabIndex);
+  return (isTabIndexNaN || tabIndex >= 0) && focusable(element);
+}
+function findTabbableDescendants(element) {
+  return Array.from(element.querySelectorAll(FOCUS_SELECTOR)).filter(tabbable);
+}
+
+// node_modules/@mantine/hooks/esm/use-focus-trap/scope-tab.js
+function scopeTab(node2, event) {
+  const tabbable2 = findTabbableDescendants(node2);
+  if (!tabbable2.length) {
+    event.preventDefault();
+    return;
+  }
+  const finalTabbable = tabbable2[event.shiftKey ? 0 : tabbable2.length - 1];
+  const leavingFinalTabbable = finalTabbable === document.activeElement || node2 === document.activeElement;
+  if (!leavingFinalTabbable) {
+    return;
+  }
+  event.preventDefault();
+  const target = tabbable2[event.shiftKey ? tabbable2.length - 1 : 0];
+  if (target) {
+    target.focus();
+  }
+}
+
+// node_modules/@mantine/hooks/esm/use-focus-trap/create-aria-hider.js
+function createAriaHider(containerNode, selector = "body > :not(script)") {
+  const rootNodes = Array.from(document.querySelectorAll(selector)).map((node2) => {
+    if (node2.contains(containerNode)) {
+      return void 0;
+    }
+    const ariaHidden = node2.getAttribute("aria-hidden");
+    if (ariaHidden === null || ariaHidden === "false") {
+      node2.setAttribute("aria-hidden", "true");
+    }
+    return { node: node2, ariaHidden };
+  });
+  return () => {
+    rootNodes.forEach((item) => {
+      if (!item) {
+        return;
+      }
+      if (item.ariaHidden === null) {
+        item.node.removeAttribute("aria-hidden");
+      } else {
+        item.node.setAttribute("aria-hidden", item.ariaHidden);
+      }
+    });
+  };
+}
+
+// node_modules/@mantine/hooks/esm/use-focus-trap/use-focus-trap.js
+function useFocusTrap(active = true) {
+  const ref = (0, import_react12.useRef)();
+  const restoreAria = (0, import_react12.useRef)(null);
+  const setRef = (0, import_react12.useCallback)((node2) => {
+    if (!active) {
+      return;
+    }
+    if (restoreAria.current) {
+      restoreAria.current();
+    }
+    if (node2) {
+      const processNode = (_node) => {
+        restoreAria.current = createAriaHider(_node);
+        let focusElement = node2.querySelector("[data-autofocus]");
+        if (!focusElement) {
+          const children = Array.from(node2.querySelectorAll(FOCUS_SELECTOR));
+          focusElement = children.find(tabbable) || children.find(focusable) || null;
+          if (!focusElement && focusable(node2))
+            focusElement = node2;
+        }
+        if (focusElement) {
+          focusElement.focus();
+        } else if (true) {
+          console.warn("[@mantine/hooks/use-focus-trap] Failed to find focusable element within provided node", node2);
+        }
+      };
+      setTimeout(() => {
+        if (node2.ownerDocument) {
+          processNode(node2);
+        } else if (true) {
+          console.warn("[@mantine/hooks/use-focus-trap] Ref node is not part of the dom", node2);
+        }
+      });
+      ref.current = node2;
+    } else {
+      ref.current = null;
+    }
+  }, [active]);
+  (0, import_react12.useEffect)(() => {
+    if (!active) {
+      return void 0;
+    }
+    const handleKeyDown = (event) => {
+      if (event.key === "Tab" && ref.current) {
+        scopeTab(ref.current, event);
+      }
+    };
+    document.addEventListener("keydown", handleKeyDown);
+    return () => {
+      document.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [active]);
+  return setRef;
+}
+
 // node_modules/@mantine/hooks/esm/utils/random-id/random-id.js
 function randomId() {
   return `mantine-${Math.random().toString(36).substr(2, 9)}`;
 }
 
 // node_modules/@mantine/hooks/esm/use-merged-ref/use-merged-ref.js
-var import_react11 = __toModule(require_react());
+var import_react13 = __toModule(require_react());
 
 // node_modules/@mantine/hooks/esm/utils/assign-ref/assign-ref.js
 function assignRef(ref, value) {
@@ -23861,13 +24057,13 @@ function assignRef(ref, value) {
 
 // node_modules/@mantine/hooks/esm/use-merged-ref/use-merged-ref.js
 function useMergedRef(...refs) {
-  return (0, import_react11.useCallback)((node2) => {
+  return (0, import_react13.useCallback)((node2) => {
     refs.forEach((ref) => assignRef(ref, node2));
   }, refs);
 }
 
 // node_modules/@mantine/hooks/esm/use-move/use-move.js
-var import_react12 = __toModule(require_react());
+var import_react14 = __toModule(require_react());
 
 // node_modules/@mantine/hooks/esm/utils/clamp/clamp.js
 function clamp({ value, min, max }) {
@@ -23876,15 +24072,15 @@ function clamp({ value, min, max }) {
 
 // node_modules/@mantine/hooks/esm/use-move/use-move.js
 function useMove(onChange2, handlers, dir = "ltr") {
-  const ref = (0, import_react12.useRef)();
-  const mounted = (0, import_react12.useRef)(false);
-  const isSliding = (0, import_react12.useRef)(false);
-  const frame = (0, import_react12.useRef)(0);
-  const [active, setActive] = (0, import_react12.useState)(false);
-  (0, import_react12.useEffect)(() => {
+  const ref = (0, import_react14.useRef)();
+  const mounted = (0, import_react14.useRef)(false);
+  const isSliding = (0, import_react14.useRef)(false);
+  const frame = (0, import_react14.useRef)(0);
+  const [active, setActive] = (0, import_react14.useState)(false);
+  (0, import_react14.useEffect)(() => {
     mounted.current = true;
   }, []);
-  (0, import_react12.useEffect)(() => {
+  (0, import_react14.useEffect)(() => {
     const onScrub = ({ x: x2, y: y2 }) => {
       cancelAnimationFrame(frame.current);
       frame.current = requestAnimationFrame(() => {
@@ -23956,7 +24152,7 @@ function useMove(onChange2, handlers, dir = "ltr") {
 }
 
 // node_modules/@mantine/hooks/esm/use-uncontrolled/use-uncontrolled.js
-var import_react13 = __toModule(require_react());
+var import_react15 = __toModule(require_react());
 function useUncontrolled({
   value,
   defaultValue,
@@ -23966,9 +24162,9 @@ function useUncontrolled({
   onValueUpdate
 }) {
   const shouldBeControlled = rule(value);
-  const modeRef = (0, import_react13.useRef)("initial");
+  const modeRef = (0, import_react15.useRef)("initial");
   const initialValue = rule(defaultValue) ? defaultValue : finalValue;
-  const [uncontrolledValue, setUncontrolledValue] = (0, import_react13.useState)(initialValue);
+  const [uncontrolledValue, setUncontrolledValue] = (0, import_react15.useState)(initialValue);
   let effectiveValue = shouldBeControlled ? value : uncontrolledValue;
   if (!shouldBeControlled && modeRef.current === "controlled") {
     effectiveValue = finalValue;
@@ -23981,7 +24177,7 @@ function useUncontrolled({
       setUncontrolledValue(nextValue);
     }
   };
-  (0, import_react13.useEffect)(() => {
+  (0, import_react15.useEffect)(() => {
     if (mode === "uncontrolled") {
       setUncontrolledValue(effectiveValue);
     }
@@ -23995,10 +24191,101 @@ function useReducedMotion() {
   return useMediaQuery("(prefers-reduced-motion: reduce)");
 }
 
+// node_modules/@mantine/hooks/esm/use-scroll-lock/use-scroll-lock.js
+var import_react16 = __toModule(require_react());
+
+// node_modules/@mantine/hooks/esm/use-scroll-lock/utils/get-scroll-width.js
+function getScrollWidth() {
+  if (typeof window === "undefined" || typeof document === "undefined")
+    return 0;
+  const paddingRight = parseInt(window.getComputedStyle(document.body).paddingRight, 10);
+  const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
+  return paddingRight + scrollbarWidth;
+}
+
+// node_modules/@mantine/hooks/esm/use-scroll-lock/utils/get-lock-styles.js
+var getLockStyles = ({ disableBodyPadding }) => {
+  const scrollWidth = disableBodyPadding ? null : getScrollWidth();
+  const styles3 = `body {
+        --removed-scroll-width: ${scrollWidth}px;
+        touch-action: none;
+        overflow: hidden !important;
+        position: relative !important;
+        ${scrollWidth ? "padding-right: var(--removed-scroll-width) !important;" : ""}
+        `;
+  return styles3;
+};
+
+// node_modules/@mantine/hooks/esm/use-scroll-lock/utils/inject-style-tag.js
+function injectStyles(tag, css2) {
+  if (tag.styleSheet) {
+    tag.styleSheet.cssText = css2;
+  } else {
+    tag.appendChild(document.createTextNode(css2));
+  }
+}
+
+// node_modules/@mantine/hooks/esm/use-scroll-lock/utils/insert-style-tag.js
+function insertStyleTag(tag) {
+  const head = document.head || document.getElementsByTagName("head")[0];
+  head.appendChild(tag);
+}
+
+// node_modules/@mantine/hooks/esm/use-scroll-lock/utils/make-style-tag.js
+function makeStyleTag() {
+  const tag = document.createElement("style");
+  tag.type = "text/css";
+  tag.setAttribute("mantine-scroll-lock", "");
+  return tag;
+}
+
+// node_modules/@mantine/hooks/esm/use-scroll-lock/use-scroll-lock.js
+function useScrollLock(lock, options = {
+  disableBodyPadding: false
+}) {
+  const [scrollLocked, setScrollLocked] = (0, import_react16.useState)(lock || false);
+  const scrollTop = (0, import_react16.useRef)(0);
+  const { disableBodyPadding } = options;
+  const stylesheet = (0, import_react16.useRef)(null);
+  const lockScroll = () => {
+    scrollTop.current = window.scrollY;
+    const styles3 = getLockStyles({ disableBodyPadding });
+    const sheet = makeStyleTag();
+    injectStyles(sheet, styles3);
+    insertStyleTag(sheet);
+    stylesheet.current = sheet;
+  };
+  const unlockScroll = () => {
+    if (!(stylesheet == null ? void 0 : stylesheet.current))
+      return;
+    stylesheet.current.parentNode.removeChild(stylesheet.current);
+    stylesheet.current = null;
+  };
+  (0, import_react16.useEffect)(() => {
+    if (scrollLocked) {
+      lockScroll();
+    } else {
+      unlockScroll();
+    }
+    return unlockScroll;
+  }, [scrollLocked]);
+  (0, import_react16.useEffect)(() => {
+    if (lock !== void 0) {
+      setScrollLocked(lock);
+    }
+  }, [lock]);
+  (0, import_react16.useEffect)(() => {
+    if (lock === void 0 && typeof window !== "undefined") {
+      window.document.body.style.overflow === "hidden" && setScrollLocked(true);
+    }
+  }, [setScrollLocked]);
+  return [scrollLocked, setScrollLocked];
+}
+
 // node_modules/@mantine/hooks/esm/use-uuid/use-uuid.js
-var import_react14 = __toModule(require_react());
+var import_react17 = __toModule(require_react());
 function useUuid(staticId) {
-  const [uuid, setUuid] = (0, import_react14.useState)("");
+  const [uuid, setUuid] = (0, import_react17.useState)("");
   useIsomorphicEffect(() => {
     setUuid(randomId());
   }, []);
@@ -24006,7 +24293,7 @@ function useUuid(staticId) {
 }
 
 // node_modules/@mantine/core/esm/components/Box/Box.js
-var import_react15 = __toModule(require_react());
+var import_react18 = __toModule(require_react());
 
 // node_modules/@mantine/core/esm/components/Box/use-sx/get-margins/get-margins.js
 function isValidMargin(margin) {
@@ -24084,11 +24371,11 @@ var __objRest2 = (source, exclude) => {
     }
   return target;
 };
-var Box = (0, import_react15.forwardRef)((_a, ref) => {
+var Box = (0, import_react18.forwardRef)((_a, ref) => {
   var _b = _a, { className, component, style, sx } = _b, others = __objRest2(_b, ["className", "component", "style", "sx"]);
   const { margins, rest } = extractMargins(others);
   const Element = component || "div";
-  return /* @__PURE__ */ import_react15.default.createElement(Element, __spreadValues6({
+  return /* @__PURE__ */ import_react18.default.createElement(Element, __spreadValues6({
     ref,
     className: useSx(sx, margins, className),
     style
@@ -24097,7 +24384,7 @@ var Box = (0, import_react15.forwardRef)((_a, ref) => {
 Box.displayName = "@mantine/core/Box";
 
 // node_modules/@mantine/core/esm/components/Center/Center.js
-var import_react16 = __toModule(require_react());
+var import_react19 = __toModule(require_react());
 var __defProp8 = Object.defineProperty;
 var __getOwnPropSymbols8 = Object.getOwnPropertySymbols;
 var __hasOwnProp9 = Object.prototype.hasOwnProperty;
@@ -24126,9 +24413,9 @@ var __objRest3 = (source, exclude) => {
     }
   return target;
 };
-var Center = (0, import_react16.forwardRef)((_a, ref) => {
+var Center = (0, import_react19.forwardRef)((_a, ref) => {
   var _b = _a, { inline = false, sx } = _b, others = __objRest3(_b, ["inline", "sx"]);
-  return /* @__PURE__ */ import_react16.default.createElement(Box, __spreadValues7({
+  return /* @__PURE__ */ import_react19.default.createElement(Box, __spreadValues7({
     ref,
     sx: [
       {
@@ -24143,7 +24430,7 @@ var Center = (0, import_react16.forwardRef)((_a, ref) => {
 Center.displayName = "@mantine/core/Center";
 
 // node_modules/@mantine/core/esm/components/ActionIcon/ActionIcon.js
-var import_react21 = __toModule(require_react());
+var import_react24 = __toModule(require_react());
 
 // node_modules/@mantine/core/esm/components/ActionIcon/ActionIcon.styles.js
 var __defProp9 = Object.defineProperty;
@@ -24244,10 +24531,10 @@ var useStyles = createStyles((theme, { color, size: size2, radius }) => ({
 var ActionIcon_styles_default = useStyles;
 
 // node_modules/@mantine/core/esm/components/Loader/Loader.js
-var import_react20 = __toModule(require_react());
+var import_react23 = __toModule(require_react());
 
 // node_modules/@mantine/core/esm/components/Loader/loaders/Bars.js
-var import_react17 = __toModule(require_react());
+var import_react20 = __toModule(require_react());
 var __defProp10 = Object.defineProperty;
 var __getOwnPropSymbols10 = Object.getOwnPropertySymbols;
 var __hasOwnProp11 = Object.prototype.hasOwnProperty;
@@ -24278,103 +24565,103 @@ var __objRest4 = (source, exclude) => {
 };
 function Bars(_a) {
   var _b = _a, { size: size2, color } = _b, others = __objRest4(_b, ["size", "color"]);
-  return /* @__PURE__ */ import_react17.default.createElement("svg", __spreadValues9({
+  return /* @__PURE__ */ import_react20.default.createElement("svg", __spreadValues9({
     viewBox: "0 0 135 140",
     xmlns: "http://www.w3.org/2000/svg",
     fill: color,
     width: `${size2}px`
-  }, others), /* @__PURE__ */ import_react17.default.createElement("rect", {
+  }, others), /* @__PURE__ */ import_react20.default.createElement("rect", {
     y: "10",
     width: "15",
     height: "120",
     rx: "6"
-  }, /* @__PURE__ */ import_react17.default.createElement("animate", {
+  }, /* @__PURE__ */ import_react20.default.createElement("animate", {
     attributeName: "height",
     begin: "0.5s",
     dur: "1s",
     values: "120;110;100;90;80;70;60;50;40;140;120",
     calcMode: "linear",
     repeatCount: "indefinite"
-  }), /* @__PURE__ */ import_react17.default.createElement("animate", {
+  }), /* @__PURE__ */ import_react20.default.createElement("animate", {
     attributeName: "y",
     begin: "0.5s",
     dur: "1s",
     values: "10;15;20;25;30;35;40;45;50;0;10",
     calcMode: "linear",
     repeatCount: "indefinite"
-  })), /* @__PURE__ */ import_react17.default.createElement("rect", {
+  })), /* @__PURE__ */ import_react20.default.createElement("rect", {
     x: "30",
     y: "10",
     width: "15",
     height: "120",
     rx: "6"
-  }, /* @__PURE__ */ import_react17.default.createElement("animate", {
+  }, /* @__PURE__ */ import_react20.default.createElement("animate", {
     attributeName: "height",
     begin: "0.25s",
     dur: "1s",
     values: "120;110;100;90;80;70;60;50;40;140;120",
     calcMode: "linear",
     repeatCount: "indefinite"
-  }), /* @__PURE__ */ import_react17.default.createElement("animate", {
+  }), /* @__PURE__ */ import_react20.default.createElement("animate", {
     attributeName: "y",
     begin: "0.25s",
     dur: "1s",
     values: "10;15;20;25;30;35;40;45;50;0;10",
     calcMode: "linear",
     repeatCount: "indefinite"
-  })), /* @__PURE__ */ import_react17.default.createElement("rect", {
+  })), /* @__PURE__ */ import_react20.default.createElement("rect", {
     x: "60",
     width: "15",
     height: "140",
     rx: "6"
-  }, /* @__PURE__ */ import_react17.default.createElement("animate", {
+  }, /* @__PURE__ */ import_react20.default.createElement("animate", {
     attributeName: "height",
     begin: "0s",
     dur: "1s",
     values: "120;110;100;90;80;70;60;50;40;140;120",
     calcMode: "linear",
     repeatCount: "indefinite"
-  }), /* @__PURE__ */ import_react17.default.createElement("animate", {
+  }), /* @__PURE__ */ import_react20.default.createElement("animate", {
     attributeName: "y",
     begin: "0s",
     dur: "1s",
     values: "10;15;20;25;30;35;40;45;50;0;10",
     calcMode: "linear",
     repeatCount: "indefinite"
-  })), /* @__PURE__ */ import_react17.default.createElement("rect", {
+  })), /* @__PURE__ */ import_react20.default.createElement("rect", {
     x: "90",
     y: "10",
     width: "15",
     height: "120",
     rx: "6"
-  }, /* @__PURE__ */ import_react17.default.createElement("animate", {
+  }, /* @__PURE__ */ import_react20.default.createElement("animate", {
     attributeName: "height",
     begin: "0.25s",
     dur: "1s",
     values: "120;110;100;90;80;70;60;50;40;140;120",
     calcMode: "linear",
     repeatCount: "indefinite"
-  }), /* @__PURE__ */ import_react17.default.createElement("animate", {
+  }), /* @__PURE__ */ import_react20.default.createElement("animate", {
     attributeName: "y",
     begin: "0.25s",
     dur: "1s",
     values: "10;15;20;25;30;35;40;45;50;0;10",
     calcMode: "linear",
     repeatCount: "indefinite"
-  })), /* @__PURE__ */ import_react17.default.createElement("rect", {
+  })), /* @__PURE__ */ import_react20.default.createElement("rect", {
     x: "120",
     y: "10",
     width: "15",
     height: "120",
     rx: "6"
-  }, /* @__PURE__ */ import_react17.default.createElement("animate", {
+  }, /* @__PURE__ */ import_react20.default.createElement("animate", {
     attributeName: "height",
     begin: "0.5s",
     dur: "1s",
     values: "120;110;100;90;80;70;60;50;40;140;120",
     calcMode: "linear",
     repeatCount: "indefinite"
-  }), /* @__PURE__ */ import_react17.default.createElement("animate", {
+  }), /* @__PURE__ */ import_react20.default.createElement("animate", {
     attributeName: "y",
     begin: "0.5s",
     dur: "1s",
@@ -24385,7 +24672,7 @@ function Bars(_a) {
 }
 
 // node_modules/@mantine/core/esm/components/Loader/loaders/Oval.js
-var import_react18 = __toModule(require_react());
+var import_react21 = __toModule(require_react());
 var __defProp11 = Object.defineProperty;
 var __getOwnPropSymbols11 = Object.getOwnPropertySymbols;
 var __hasOwnProp12 = Object.prototype.hasOwnProperty;
@@ -24416,26 +24703,26 @@ var __objRest5 = (source, exclude) => {
 };
 function Oval(_a) {
   var _b = _a, { size: size2, color } = _b, others = __objRest5(_b, ["size", "color"]);
-  return /* @__PURE__ */ import_react18.default.createElement("svg", __spreadValues10({
+  return /* @__PURE__ */ import_react21.default.createElement("svg", __spreadValues10({
     width: `${size2}px`,
     height: `${size2}px`,
     viewBox: "0 0 38 38",
     xmlns: "http://www.w3.org/2000/svg",
     stroke: color
-  }, others), /* @__PURE__ */ import_react18.default.createElement("g", {
+  }, others), /* @__PURE__ */ import_react21.default.createElement("g", {
     fill: "none",
     fillRule: "evenodd"
-  }, /* @__PURE__ */ import_react18.default.createElement("g", {
+  }, /* @__PURE__ */ import_react21.default.createElement("g", {
     transform: "translate(2.5 2.5)",
     strokeWidth: "5"
-  }, /* @__PURE__ */ import_react18.default.createElement("circle", {
+  }, /* @__PURE__ */ import_react21.default.createElement("circle", {
     strokeOpacity: ".5",
     cx: "16",
     cy: "16",
     r: "16"
-  }), /* @__PURE__ */ import_react18.default.createElement("path", {
+  }), /* @__PURE__ */ import_react21.default.createElement("path", {
     d: "M32 16c0-9.94-8.06-16-16-16"
-  }, /* @__PURE__ */ import_react18.default.createElement("animateTransform", {
+  }, /* @__PURE__ */ import_react21.default.createElement("animateTransform", {
     attributeName: "transform",
     type: "rotate",
     from: "0 16 16",
@@ -24446,7 +24733,7 @@ function Oval(_a) {
 }
 
 // node_modules/@mantine/core/esm/components/Loader/loaders/Dots.js
-var import_react19 = __toModule(require_react());
+var import_react22 = __toModule(require_react());
 var __defProp12 = Object.defineProperty;
 var __getOwnPropSymbols12 = Object.getOwnPropertySymbols;
 var __hasOwnProp13 = Object.prototype.hasOwnProperty;
@@ -24477,17 +24764,17 @@ var __objRest6 = (source, exclude) => {
 };
 function Dots(_a) {
   var _b = _a, { size: size2, color } = _b, others = __objRest6(_b, ["size", "color"]);
-  return /* @__PURE__ */ import_react19.default.createElement("svg", __spreadValues11({
+  return /* @__PURE__ */ import_react22.default.createElement("svg", __spreadValues11({
     width: `${size2}px`,
     height: `${size2 / 4}px`,
     viewBox: "0 0 120 30",
     xmlns: "http://www.w3.org/2000/svg",
     fill: color
-  }, others), /* @__PURE__ */ import_react19.default.createElement("circle", {
+  }, others), /* @__PURE__ */ import_react22.default.createElement("circle", {
     cx: "15",
     cy: "15",
     r: "15"
-  }, /* @__PURE__ */ import_react19.default.createElement("animate", {
+  }, /* @__PURE__ */ import_react22.default.createElement("animate", {
     attributeName: "r",
     from: "15",
     to: "15",
@@ -24496,7 +24783,7 @@ function Dots(_a) {
     values: "15;9;15",
     calcMode: "linear",
     repeatCount: "indefinite"
-  }), /* @__PURE__ */ import_react19.default.createElement("animate", {
+  }), /* @__PURE__ */ import_react22.default.createElement("animate", {
     attributeName: "fill-opacity",
     from: "1",
     to: "1",
@@ -24505,12 +24792,12 @@ function Dots(_a) {
     values: "1;.5;1",
     calcMode: "linear",
     repeatCount: "indefinite"
-  })), /* @__PURE__ */ import_react19.default.createElement("circle", {
+  })), /* @__PURE__ */ import_react22.default.createElement("circle", {
     cx: "60",
     cy: "15",
     r: "9",
     fillOpacity: "0.3"
-  }, /* @__PURE__ */ import_react19.default.createElement("animate", {
+  }, /* @__PURE__ */ import_react22.default.createElement("animate", {
     attributeName: "r",
     from: "9",
     to: "9",
@@ -24519,7 +24806,7 @@ function Dots(_a) {
     values: "9;15;9",
     calcMode: "linear",
     repeatCount: "indefinite"
-  }), /* @__PURE__ */ import_react19.default.createElement("animate", {
+  }), /* @__PURE__ */ import_react22.default.createElement("animate", {
     attributeName: "fill-opacity",
     from: "0.5",
     to: "0.5",
@@ -24528,11 +24815,11 @@ function Dots(_a) {
     values: ".5;1;.5",
     calcMode: "linear",
     repeatCount: "indefinite"
-  })), /* @__PURE__ */ import_react19.default.createElement("circle", {
+  })), /* @__PURE__ */ import_react22.default.createElement("circle", {
     cx: "105",
     cy: "15",
     r: "15"
-  }, /* @__PURE__ */ import_react19.default.createElement("animate", {
+  }, /* @__PURE__ */ import_react22.default.createElement("animate", {
     attributeName: "r",
     from: "15",
     to: "15",
@@ -24541,7 +24828,7 @@ function Dots(_a) {
     values: "15;9;15",
     calcMode: "linear",
     repeatCount: "indefinite"
-  }), /* @__PURE__ */ import_react19.default.createElement("animate", {
+  }), /* @__PURE__ */ import_react22.default.createElement("animate", {
     attributeName: "fill-opacity",
     from: "1",
     to: "1",
@@ -24599,7 +24886,7 @@ function Loader(_a) {
   const theme = useMantineTheme();
   const defaultLoader = variant in LOADERS ? variant : theme.loader;
   const _color = color || theme.primaryColor;
-  return /* @__PURE__ */ import_react20.default.createElement(Box, __spreadValues12({
+  return /* @__PURE__ */ import_react23.default.createElement(Box, __spreadValues12({
     role: "presentation",
     component: LOADERS[defaultLoader] || LOADERS.bars,
     size: theme.fn.size({ size: size2, sizes: LOADER_SIZES }),
@@ -24637,7 +24924,7 @@ var __objRest8 = (source, exclude) => {
     }
   return target;
 };
-var ActionIcon = (0, import_react21.forwardRef)((_a, ref) => {
+var ActionIcon = (0, import_react24.forwardRef)((_a, ref) => {
   var _b = _a, {
     className,
     color = "gray",
@@ -24668,11 +24955,11 @@ var ActionIcon = (0, import_react21.forwardRef)((_a, ref) => {
   const theme = useMantineTheme();
   const { classes, cx } = ActionIcon_styles_default({ size: size2, radius, color }, { name: "ActionIcon", classNames, styles: styles3 });
   const colors = getSharedColorScheme({ color, theme, variant: "light" });
-  const loader = /* @__PURE__ */ import_react21.default.createElement(Loader, __spreadValues13({
+  const loader = /* @__PURE__ */ import_react24.default.createElement(Loader, __spreadValues13({
     color: colors.color,
     size: theme.fn.size({ size: size2, sizes }) - 12
   }, loaderProps));
-  return /* @__PURE__ */ import_react21.default.createElement(Box, __spreadValues13({
+  return /* @__PURE__ */ import_react24.default.createElement(Box, __spreadValues13({
     component: component || "button",
     className: cx(classes[variant], classes.root, { [classes.loading]: loading }, className),
     type: "button",
@@ -24682,13 +24969,12 @@ var ActionIcon = (0, import_react21.forwardRef)((_a, ref) => {
 });
 ActionIcon.displayName = "@mantine/core/ActionIcon";
 
-// node_modules/@mantine/core/esm/components/Text/Text.js
-var import_react22 = __toModule(require_react());
+// node_modules/@mantine/core/esm/components/ActionIcon/CloseButton/CloseButton.js
+var import_react26 = __toModule(require_react());
 
-// node_modules/@mantine/core/esm/components/Text/Text.styles.js
+// node_modules/@mantine/core/esm/components/ActionIcon/CloseButton/CloseIcon.js
+var import_react25 = __toModule(require_react());
 var __defProp15 = Object.defineProperty;
-var __defProps6 = Object.defineProperties;
-var __getOwnPropDescs6 = Object.getOwnPropertyDescriptors;
 var __getOwnPropSymbols15 = Object.getOwnPropertySymbols;
 var __hasOwnProp16 = Object.prototype.hasOwnProperty;
 var __propIsEnum15 = Object.prototype.propertyIsEnumerable;
@@ -24701,6 +24987,120 @@ var __spreadValues14 = (a2, b2) => {
     for (var prop of __getOwnPropSymbols15(b2)) {
       if (__propIsEnum15.call(b2, prop))
         __defNormalProp14(a2, prop, b2[prop]);
+    }
+  return a2;
+};
+function CloseIcon(props) {
+  return /* @__PURE__ */ import_react25.default.createElement("svg", __spreadValues14({
+    viewBox: "0 0 15 15",
+    fill: "none",
+    xmlns: "http://www.w3.org/2000/svg"
+  }, props), /* @__PURE__ */ import_react25.default.createElement("path", {
+    d: "M11.7816 4.03157C12.0062 3.80702 12.0062 3.44295 11.7816 3.2184C11.5571 2.99385 11.193 2.99385 10.9685 3.2184L7.50005 6.68682L4.03164 3.2184C3.80708 2.99385 3.44301 2.99385 3.21846 3.2184C2.99391 3.44295 2.99391 3.80702 3.21846 4.03157L6.68688 7.49999L3.21846 10.9684C2.99391 11.193 2.99391 11.557 3.21846 11.7816C3.44301 12.0061 3.80708 12.0061 4.03164 11.7816L7.50005 8.31316L10.9685 11.7816C11.193 12.0061 11.5571 12.0061 11.7816 11.7816C12.0062 11.557 12.0062 11.193 11.7816 10.9684L8.31322 7.49999L11.7816 4.03157Z",
+    fill: "currentColor",
+    fillRule: "evenodd",
+    clipRule: "evenodd"
+  }));
+}
+CloseIcon.displayName = "@mantine/core/CloseIcon";
+
+// node_modules/@mantine/core/esm/components/ActionIcon/CloseButton/CloseButton.js
+var __defProp16 = Object.defineProperty;
+var __getOwnPropSymbols16 = Object.getOwnPropertySymbols;
+var __hasOwnProp17 = Object.prototype.hasOwnProperty;
+var __propIsEnum16 = Object.prototype.propertyIsEnumerable;
+var __defNormalProp15 = (obj, key, value) => key in obj ? __defProp16(obj, key, { enumerable: true, configurable: true, writable: true, value }) : obj[key] = value;
+var __spreadValues15 = (a2, b2) => {
+  for (var prop in b2 || (b2 = {}))
+    if (__hasOwnProp17.call(b2, prop))
+      __defNormalProp15(a2, prop, b2[prop]);
+  if (__getOwnPropSymbols16)
+    for (var prop of __getOwnPropSymbols16(b2)) {
+      if (__propIsEnum16.call(b2, prop))
+        __defNormalProp15(a2, prop, b2[prop]);
+    }
+  return a2;
+};
+var __objRest9 = (source, exclude) => {
+  var target = {};
+  for (var prop in source)
+    if (__hasOwnProp17.call(source, prop) && exclude.indexOf(prop) < 0)
+      target[prop] = source[prop];
+  if (source != null && __getOwnPropSymbols16)
+    for (var prop of __getOwnPropSymbols16(source)) {
+      if (exclude.indexOf(prop) < 0 && __propIsEnum16.call(source, prop))
+        target[prop] = source[prop];
+    }
+  return target;
+};
+var iconSizes = {
+  xs: 12,
+  sm: 14,
+  md: 16,
+  lg: 20,
+  xl: 24
+};
+var CloseButton = (0, import_react26.forwardRef)((_a, ref) => {
+  var _b = _a, { iconSize, size: size2 = "md" } = _b, others = __objRest9(_b, ["iconSize", "size"]);
+  const theme = useMantineTheme();
+  const _iconSize = iconSize || theme.fn.size({ size: size2, sizes: iconSizes });
+  return /* @__PURE__ */ import_react26.default.createElement(ActionIcon, __spreadValues15({
+    size: size2,
+    ref
+  }, others), /* @__PURE__ */ import_react26.default.createElement(CloseIcon, {
+    width: _iconSize,
+    height: _iconSize
+  }));
+});
+CloseButton.displayName = "@mantine/core/CloseButton";
+
+// node_modules/@mantine/core/esm/components/Portal/Portal.js
+var import_react27 = __toModule(require_react());
+var import_react_dom = __toModule(require_react_dom());
+function Portal({ children, zIndex = 1, target, className }) {
+  const theme = useMantineTheme();
+  const [mounted, setMounted] = (0, import_react27.useState)(false);
+  const ref = (0, import_react27.useRef)();
+  useIsomorphicEffect(() => {
+    setMounted(true);
+    ref.current = !target ? document.createElement("div") : typeof target === "string" ? document.querySelector(target) : target;
+    if (!target) {
+      document.body.appendChild(ref.current);
+    }
+    return () => {
+      !target && document.body.removeChild(ref.current);
+    };
+  }, [target]);
+  if (!mounted) {
+    return null;
+  }
+  return (0, import_react_dom.createPortal)(/* @__PURE__ */ import_react27.default.createElement("div", {
+    className,
+    dir: theme.dir,
+    style: { position: "relative", zIndex }
+  }, children), ref.current);
+}
+Portal.displayName = "@mantine/core/Portal";
+
+// node_modules/@mantine/core/esm/components/Text/Text.js
+var import_react28 = __toModule(require_react());
+
+// node_modules/@mantine/core/esm/components/Text/Text.styles.js
+var __defProp17 = Object.defineProperty;
+var __defProps6 = Object.defineProperties;
+var __getOwnPropDescs6 = Object.getOwnPropertyDescriptors;
+var __getOwnPropSymbols17 = Object.getOwnPropertySymbols;
+var __hasOwnProp18 = Object.prototype.hasOwnProperty;
+var __propIsEnum17 = Object.prototype.propertyIsEnumerable;
+var __defNormalProp16 = (obj, key, value) => key in obj ? __defProp17(obj, key, { enumerable: true, configurable: true, writable: true, value }) : obj[key] = value;
+var __spreadValues16 = (a2, b2) => {
+  for (var prop in b2 || (b2 = {}))
+    if (__hasOwnProp18.call(b2, prop))
+      __defNormalProp16(a2, prop, b2[prop]);
+  if (__getOwnPropSymbols17)
+    for (var prop of __getOwnPropSymbols17(b2)) {
+      if (__propIsEnum17.call(b2, prop))
+        __defNormalProp16(a2, prop, b2[prop]);
     }
   return a2;
 };
@@ -24743,7 +25143,7 @@ var useStyles2 = createStyles((theme, {
     gradient: { from: gradientFrom, to: gradientTo, deg: gradientDeg }
   });
   return {
-    root: __spreadProps6(__spreadValues14(__spreadValues14(__spreadValues14({}, theme.fn.fontStyles()), theme.fn.focusStyles()), getLineClamp(lineClamp)), {
+    root: __spreadProps6(__spreadValues16(__spreadValues16(__spreadValues16({}, theme.fn.fontStyles()), theme.fn.focusStyles()), getLineClamp(lineClamp)), {
       color: getTextColor({ color, theme, variant }),
       fontFamily: inherit ? "inherit" : theme.fontFamily,
       fontSize: inherit ? "inherit" : theme.fontSizes[size2],
@@ -24767,35 +25167,35 @@ var useStyles2 = createStyles((theme, {
 var Text_styles_default = useStyles2;
 
 // node_modules/@mantine/core/esm/components/Text/Text.js
-var __defProp16 = Object.defineProperty;
-var __getOwnPropSymbols16 = Object.getOwnPropertySymbols;
-var __hasOwnProp17 = Object.prototype.hasOwnProperty;
-var __propIsEnum16 = Object.prototype.propertyIsEnumerable;
-var __defNormalProp15 = (obj, key, value) => key in obj ? __defProp16(obj, key, { enumerable: true, configurable: true, writable: true, value }) : obj[key] = value;
-var __spreadValues15 = (a2, b2) => {
+var __defProp18 = Object.defineProperty;
+var __getOwnPropSymbols18 = Object.getOwnPropertySymbols;
+var __hasOwnProp19 = Object.prototype.hasOwnProperty;
+var __propIsEnum18 = Object.prototype.propertyIsEnumerable;
+var __defNormalProp17 = (obj, key, value) => key in obj ? __defProp18(obj, key, { enumerable: true, configurable: true, writable: true, value }) : obj[key] = value;
+var __spreadValues17 = (a2, b2) => {
   for (var prop in b2 || (b2 = {}))
-    if (__hasOwnProp17.call(b2, prop))
-      __defNormalProp15(a2, prop, b2[prop]);
-  if (__getOwnPropSymbols16)
-    for (var prop of __getOwnPropSymbols16(b2)) {
-      if (__propIsEnum16.call(b2, prop))
-        __defNormalProp15(a2, prop, b2[prop]);
+    if (__hasOwnProp19.call(b2, prop))
+      __defNormalProp17(a2, prop, b2[prop]);
+  if (__getOwnPropSymbols18)
+    for (var prop of __getOwnPropSymbols18(b2)) {
+      if (__propIsEnum18.call(b2, prop))
+        __defNormalProp17(a2, prop, b2[prop]);
     }
   return a2;
 };
-var __objRest9 = (source, exclude) => {
+var __objRest10 = (source, exclude) => {
   var target = {};
   for (var prop in source)
-    if (__hasOwnProp17.call(source, prop) && exclude.indexOf(prop) < 0)
+    if (__hasOwnProp19.call(source, prop) && exclude.indexOf(prop) < 0)
       target[prop] = source[prop];
-  if (source != null && __getOwnPropSymbols16)
-    for (var prop of __getOwnPropSymbols16(source)) {
-      if (exclude.indexOf(prop) < 0 && __propIsEnum16.call(source, prop))
+  if (source != null && __getOwnPropSymbols18)
+    for (var prop of __getOwnPropSymbols18(source)) {
+      if (exclude.indexOf(prop) < 0 && __propIsEnum18.call(source, prop))
         target[prop] = source[prop];
     }
   return target;
 };
-var Text = (0, import_react22.forwardRef)((_a, ref) => {
+var Text = (0, import_react28.forwardRef)((_a, ref) => {
   var _b = _a, {
     className,
     component,
@@ -24811,7 +25211,7 @@ var Text = (0, import_react22.forwardRef)((_a, ref) => {
     inherit = false,
     classNames,
     styles: styles3
-  } = _b, others = __objRest9(_b, [
+  } = _b, others = __objRest10(_b, [
     "className",
     "component",
     "size",
@@ -24841,7 +25241,7 @@ var Text = (0, import_react22.forwardRef)((_a, ref) => {
     gradientTo: gradient.to,
     gradientDeg: gradient.deg
   }, { classNames, styles: styles3, name: "Text" });
-  return /* @__PURE__ */ import_react22.default.createElement(Box, __spreadValues15({
+  return /* @__PURE__ */ import_react28.default.createElement(Box, __spreadValues17({
     ref,
     component: component || "div",
     className: cx(classes.root, { [classes.gradient]: variant === "gradient" }, className)
@@ -24850,22 +25250,22 @@ var Text = (0, import_react22.forwardRef)((_a, ref) => {
 Text.displayName = "@mantine/core/Text";
 
 // node_modules/@mantine/core/esm/components/Transition/Transition.js
-var import_react24 = __toModule(require_react());
+var import_react30 = __toModule(require_react());
 
 // node_modules/@mantine/core/esm/components/Transition/get-transition-styles/get-transition-styles.js
-var __defProp17 = Object.defineProperty;
-var __getOwnPropSymbols17 = Object.getOwnPropertySymbols;
-var __hasOwnProp18 = Object.prototype.hasOwnProperty;
-var __propIsEnum17 = Object.prototype.propertyIsEnumerable;
-var __defNormalProp16 = (obj, key, value) => key in obj ? __defProp17(obj, key, { enumerable: true, configurable: true, writable: true, value }) : obj[key] = value;
-var __spreadValues16 = (a2, b2) => {
+var __defProp19 = Object.defineProperty;
+var __getOwnPropSymbols19 = Object.getOwnPropertySymbols;
+var __hasOwnProp20 = Object.prototype.hasOwnProperty;
+var __propIsEnum19 = Object.prototype.propertyIsEnumerable;
+var __defNormalProp18 = (obj, key, value) => key in obj ? __defProp19(obj, key, { enumerable: true, configurable: true, writable: true, value }) : obj[key] = value;
+var __spreadValues18 = (a2, b2) => {
   for (var prop in b2 || (b2 = {}))
-    if (__hasOwnProp18.call(b2, prop))
-      __defNormalProp16(a2, prop, b2[prop]);
-  if (__getOwnPropSymbols17)
-    for (var prop of __getOwnPropSymbols17(b2)) {
-      if (__propIsEnum17.call(b2, prop))
-        __defNormalProp16(a2, prop, b2[prop]);
+    if (__hasOwnProp20.call(b2, prop))
+      __defNormalProp18(a2, prop, b2[prop]);
+  if (__getOwnPropSymbols19)
+    for (var prop of __getOwnPropSymbols19(b2)) {
+      if (__propIsEnum19.call(b2, prop))
+        __defNormalProp18(a2, prop, b2[prop]);
     }
   return a2;
 };
@@ -24891,17 +25291,17 @@ function getTransitionStyles({
     if (!(transition in transitions)) {
       return null;
     }
-    return __spreadValues16(__spreadValues16(__spreadValues16({
+    return __spreadValues18(__spreadValues18(__spreadValues18({
       transitionProperty: transitions[transition].transitionProperty
     }, shared), transitions[transition].common), transitions[transition][transitionStatuses[state]]);
   }
-  return __spreadValues16(__spreadValues16(__spreadValues16({
+  return __spreadValues18(__spreadValues18(__spreadValues18({
     transitionProperty: transition.transitionProperty
   }, shared), transition.common), transition[transitionStatuses[state]]);
 }
 
 // node_modules/@mantine/core/esm/components/Transition/use-transition.js
-var import_react23 = __toModule(require_react());
+var import_react29 = __toModule(require_react());
 function useTransition({
   duration,
   exitDuration,
@@ -24914,9 +25314,9 @@ function useTransition({
 }) {
   const theme = useMantineTheme();
   const reduceMotion = useReducedMotion();
-  const [transitionStatus, setStatus] = (0, import_react23.useState)(mounted ? "entered" : "exited");
-  const [transitionDuration, setTransitionDuration] = (0, import_react23.useState)(reduceMotion ? 0 : duration);
-  const timeoutRef = (0, import_react23.useRef)(-1);
+  const [transitionStatus, setStatus] = (0, import_react29.useState)(mounted ? "entered" : "exited");
+  const [transitionDuration, setTransitionDuration] = (0, import_react29.useState)(reduceMotion ? 0 : duration);
+  const timeoutRef = (0, import_react29.useRef)(-1);
   const handleStateChange = (shouldMount) => {
     const preHandler = shouldMount ? onEnter : onExit;
     const handler = shouldMount ? onEntered : onExited;
@@ -24943,7 +25343,7 @@ function useTransition({
   useDidUpdate(() => {
     handleStateChange(mounted);
   }, [mounted]);
-  (0, import_react23.useEffect)(() => () => window.clearTimeout(timeoutRef.current), []);
+  (0, import_react29.useEffect)(() => () => window.clearTimeout(timeoutRef.current), []);
   return {
     transitionDuration,
     transitionStatus,
@@ -24975,9 +25375,9 @@ function Transition({
     onExited
   });
   if (transitionDuration === 0) {
-    return mounted ? /* @__PURE__ */ import_react24.default.createElement(import_react24.default.Fragment, null, children({})) : null;
+    return mounted ? /* @__PURE__ */ import_react30.default.createElement(import_react30.default.Fragment, null, children({})) : null;
   }
-  return transitionStatus === "exited" ? null : /* @__PURE__ */ import_react24.default.createElement(import_react24.default.Fragment, null, children(getTransitionStyles({
+  return transitionStatus === "exited" ? null : /* @__PURE__ */ import_react30.default.createElement(import_react30.default.Fragment, null, children(getTransitionStyles({
     transition,
     duration: transitionDuration,
     state: transitionStatus,
@@ -24986,31 +25386,126 @@ function Transition({
 }
 Transition.displayName = "@mantine/core/Transition";
 
-// node_modules/@mantine/core/esm/components/InputWrapper/InputWrapper.js
-var import_react25 = __toModule(require_react());
+// node_modules/@mantine/core/esm/components/Paper/Paper.js
+var import_react31 = __toModule(require_react());
 
-// node_modules/@mantine/core/esm/components/InputWrapper/InputWrapper.styles.js
-var __defProp18 = Object.defineProperty;
+// node_modules/@mantine/core/esm/components/Paper/Paper.styles.js
+var __defProp20 = Object.defineProperty;
 var __defProps7 = Object.defineProperties;
 var __getOwnPropDescs7 = Object.getOwnPropertyDescriptors;
-var __getOwnPropSymbols18 = Object.getOwnPropertySymbols;
-var __hasOwnProp19 = Object.prototype.hasOwnProperty;
-var __propIsEnum18 = Object.prototype.propertyIsEnumerable;
-var __defNormalProp17 = (obj, key, value) => key in obj ? __defProp18(obj, key, { enumerable: true, configurable: true, writable: true, value }) : obj[key] = value;
-var __spreadValues17 = (a2, b2) => {
+var __getOwnPropSymbols20 = Object.getOwnPropertySymbols;
+var __hasOwnProp21 = Object.prototype.hasOwnProperty;
+var __propIsEnum20 = Object.prototype.propertyIsEnumerable;
+var __defNormalProp19 = (obj, key, value) => key in obj ? __defProp20(obj, key, { enumerable: true, configurable: true, writable: true, value }) : obj[key] = value;
+var __spreadValues19 = (a2, b2) => {
   for (var prop in b2 || (b2 = {}))
-    if (__hasOwnProp19.call(b2, prop))
-      __defNormalProp17(a2, prop, b2[prop]);
-  if (__getOwnPropSymbols18)
-    for (var prop of __getOwnPropSymbols18(b2)) {
-      if (__propIsEnum18.call(b2, prop))
-        __defNormalProp17(a2, prop, b2[prop]);
+    if (__hasOwnProp21.call(b2, prop))
+      __defNormalProp19(a2, prop, b2[prop]);
+  if (__getOwnPropSymbols20)
+    for (var prop of __getOwnPropSymbols20(b2)) {
+      if (__propIsEnum20.call(b2, prop))
+        __defNormalProp19(a2, prop, b2[prop]);
     }
   return a2;
 };
 var __spreadProps7 = (a2, b2) => __defProps7(a2, __getOwnPropDescs7(b2));
-var useStyles3 = createStyles((theme, { size: size2 }) => ({
-  root: __spreadProps7(__spreadValues17({}, theme.fn.fontStyles()), {
+var useStyles3 = createStyles((theme, { radius, shadow, padding, withBorder }) => ({
+  root: __spreadProps7(__spreadValues19({}, theme.fn.focusStyles()), {
+    WebkitTapHighlightColor: "transparent",
+    display: "block",
+    textDecoration: "none",
+    color: theme.colorScheme === "dark" ? theme.colors.dark[0] : theme.black,
+    backgroundColor: theme.colorScheme === "dark" ? theme.colors.dark[7] : theme.white,
+    boxSizing: "border-box",
+    borderRadius: theme.fn.size({ size: radius, sizes: theme.radius }),
+    boxShadow: theme.shadows[shadow] || shadow || "none",
+    padding: theme.fn.size({ size: padding, sizes: theme.spacing }),
+    border: withBorder ? `1px solid ${theme.colorScheme === "dark" ? theme.colors.dark[6] : theme.colors.gray[2]}` : void 0
+  })
+}));
+var Paper_styles_default = useStyles3;
+
+// node_modules/@mantine/core/esm/components/Paper/Paper.js
+var __defProp21 = Object.defineProperty;
+var __getOwnPropSymbols21 = Object.getOwnPropertySymbols;
+var __hasOwnProp22 = Object.prototype.hasOwnProperty;
+var __propIsEnum21 = Object.prototype.propertyIsEnumerable;
+var __defNormalProp20 = (obj, key, value) => key in obj ? __defProp21(obj, key, { enumerable: true, configurable: true, writable: true, value }) : obj[key] = value;
+var __spreadValues20 = (a2, b2) => {
+  for (var prop in b2 || (b2 = {}))
+    if (__hasOwnProp22.call(b2, prop))
+      __defNormalProp20(a2, prop, b2[prop]);
+  if (__getOwnPropSymbols21)
+    for (var prop of __getOwnPropSymbols21(b2)) {
+      if (__propIsEnum21.call(b2, prop))
+        __defNormalProp20(a2, prop, b2[prop]);
+    }
+  return a2;
+};
+var __objRest11 = (source, exclude) => {
+  var target = {};
+  for (var prop in source)
+    if (__hasOwnProp22.call(source, prop) && exclude.indexOf(prop) < 0)
+      target[prop] = source[prop];
+  if (source != null && __getOwnPropSymbols21)
+    for (var prop of __getOwnPropSymbols21(source)) {
+      if (exclude.indexOf(prop) < 0 && __propIsEnum21.call(source, prop))
+        target[prop] = source[prop];
+    }
+  return target;
+};
+var Paper = (0, import_react31.forwardRef)((_a, ref) => {
+  var _b = _a, {
+    component,
+    className,
+    children,
+    padding = 0,
+    radius = "sm",
+    withBorder = false,
+    shadow
+  } = _b, others = __objRest11(_b, [
+    "component",
+    "className",
+    "children",
+    "padding",
+    "radius",
+    "withBorder",
+    "shadow"
+  ]);
+  const { classes, cx } = Paper_styles_default({ radius, shadow, padding, withBorder }, { name: "Paper" });
+  return /* @__PURE__ */ import_react31.default.createElement(Box, __spreadValues20({
+    component: component || "div",
+    className: cx(classes.root, className),
+    ref
+  }, others), children);
+});
+Paper.displayName = "@mantine/core/Paper";
+
+// node_modules/@mantine/core/esm/components/InputWrapper/InputWrapper.js
+var import_react32 = __toModule(require_react());
+
+// node_modules/@mantine/core/esm/components/InputWrapper/InputWrapper.styles.js
+var __defProp22 = Object.defineProperty;
+var __defProps8 = Object.defineProperties;
+var __getOwnPropDescs8 = Object.getOwnPropertyDescriptors;
+var __getOwnPropSymbols22 = Object.getOwnPropertySymbols;
+var __hasOwnProp23 = Object.prototype.hasOwnProperty;
+var __propIsEnum22 = Object.prototype.propertyIsEnumerable;
+var __defNormalProp21 = (obj, key, value) => key in obj ? __defProp22(obj, key, { enumerable: true, configurable: true, writable: true, value }) : obj[key] = value;
+var __spreadValues21 = (a2, b2) => {
+  for (var prop in b2 || (b2 = {}))
+    if (__hasOwnProp23.call(b2, prop))
+      __defNormalProp21(a2, prop, b2[prop]);
+  if (__getOwnPropSymbols22)
+    for (var prop of __getOwnPropSymbols22(b2)) {
+      if (__propIsEnum22.call(b2, prop))
+        __defNormalProp21(a2, prop, b2[prop]);
+    }
+  return a2;
+};
+var __spreadProps8 = (a2, b2) => __defProps8(a2, __getOwnPropDescs8(b2));
+var useStyles4 = createStyles((theme, { size: size2 }) => ({
+  root: __spreadProps8(__spreadValues21({}, theme.fn.fontStyles()), {
     lineHeight: theme.lineHeight
   }),
   label: {
@@ -25040,41 +25535,41 @@ var useStyles3 = createStyles((theme, { size: size2 }) => ({
     color: theme.colorScheme === "dark" ? theme.colors.red[5] : theme.colors.red[7]
   }
 }));
-var InputWrapper_styles_default = useStyles3;
+var InputWrapper_styles_default = useStyles4;
 
 // node_modules/@mantine/core/esm/components/InputWrapper/InputWrapper.js
-var __defProp19 = Object.defineProperty;
-var __defProps8 = Object.defineProperties;
-var __getOwnPropDescs8 = Object.getOwnPropertyDescriptors;
-var __getOwnPropSymbols19 = Object.getOwnPropertySymbols;
-var __hasOwnProp20 = Object.prototype.hasOwnProperty;
-var __propIsEnum19 = Object.prototype.propertyIsEnumerable;
-var __defNormalProp18 = (obj, key, value) => key in obj ? __defProp19(obj, key, { enumerable: true, configurable: true, writable: true, value }) : obj[key] = value;
-var __spreadValues18 = (a2, b2) => {
+var __defProp23 = Object.defineProperty;
+var __defProps9 = Object.defineProperties;
+var __getOwnPropDescs9 = Object.getOwnPropertyDescriptors;
+var __getOwnPropSymbols23 = Object.getOwnPropertySymbols;
+var __hasOwnProp24 = Object.prototype.hasOwnProperty;
+var __propIsEnum23 = Object.prototype.propertyIsEnumerable;
+var __defNormalProp22 = (obj, key, value) => key in obj ? __defProp23(obj, key, { enumerable: true, configurable: true, writable: true, value }) : obj[key] = value;
+var __spreadValues22 = (a2, b2) => {
   for (var prop in b2 || (b2 = {}))
-    if (__hasOwnProp20.call(b2, prop))
-      __defNormalProp18(a2, prop, b2[prop]);
-  if (__getOwnPropSymbols19)
-    for (var prop of __getOwnPropSymbols19(b2)) {
-      if (__propIsEnum19.call(b2, prop))
-        __defNormalProp18(a2, prop, b2[prop]);
+    if (__hasOwnProp24.call(b2, prop))
+      __defNormalProp22(a2, prop, b2[prop]);
+  if (__getOwnPropSymbols23)
+    for (var prop of __getOwnPropSymbols23(b2)) {
+      if (__propIsEnum23.call(b2, prop))
+        __defNormalProp22(a2, prop, b2[prop]);
     }
   return a2;
 };
-var __spreadProps8 = (a2, b2) => __defProps8(a2, __getOwnPropDescs8(b2));
-var __objRest10 = (source, exclude) => {
+var __spreadProps9 = (a2, b2) => __defProps9(a2, __getOwnPropDescs9(b2));
+var __objRest12 = (source, exclude) => {
   var target = {};
   for (var prop in source)
-    if (__hasOwnProp20.call(source, prop) && exclude.indexOf(prop) < 0)
+    if (__hasOwnProp24.call(source, prop) && exclude.indexOf(prop) < 0)
       target[prop] = source[prop];
-  if (source != null && __getOwnPropSymbols19)
-    for (var prop of __getOwnPropSymbols19(source)) {
-      if (exclude.indexOf(prop) < 0 && __propIsEnum19.call(source, prop))
+  if (source != null && __getOwnPropSymbols23)
+    for (var prop of __getOwnPropSymbols23(source)) {
+      if (exclude.indexOf(prop) < 0 && __propIsEnum23.call(source, prop))
         target[prop] = source[prop];
     }
   return target;
 };
-var InputWrapper = (0, import_react25.forwardRef)((_a, ref) => {
+var InputWrapper = (0, import_react32.forwardRef)((_a, ref) => {
   var _b = _a, {
     className,
     label,
@@ -25091,7 +25586,7 @@ var InputWrapper = (0, import_react25.forwardRef)((_a, ref) => {
     styles: styles3,
     size: size2 = "sm",
     __staticSelector = "InputWrapper"
-  } = _b, others = __objRest10(_b, [
+  } = _b, others = __objRest12(_b, [
     "className",
     "label",
     "children",
@@ -25110,19 +25605,19 @@ var InputWrapper = (0, import_react25.forwardRef)((_a, ref) => {
   ]);
   const { classes, cx } = InputWrapper_styles_default({ size: size2 }, { classNames, styles: styles3, name: __staticSelector });
   const _labelProps = labelElement === "label" ? { htmlFor: id } : {};
-  const inputLabel = (0, import_react25.createElement)(labelElement, __spreadProps8(__spreadValues18(__spreadValues18({}, _labelProps), labelProps), {
+  const inputLabel = (0, import_react32.createElement)(labelElement, __spreadProps9(__spreadValues22(__spreadValues22({}, _labelProps), labelProps), {
     id: id ? `${id}-label` : void 0,
     className: classes.label
-  }), /* @__PURE__ */ import_react25.default.createElement(import_react25.default.Fragment, null, label, required && /* @__PURE__ */ import_react25.default.createElement("span", {
+  }), /* @__PURE__ */ import_react32.default.createElement(import_react32.default.Fragment, null, label, required && /* @__PURE__ */ import_react32.default.createElement("span", {
     className: classes.required
   }, " *")));
-  return /* @__PURE__ */ import_react25.default.createElement(Box, __spreadValues18({
+  return /* @__PURE__ */ import_react32.default.createElement(Box, __spreadValues22({
     className: cx(classes.root, className),
     ref
-  }, others), label && inputLabel, description && /* @__PURE__ */ import_react25.default.createElement(Text, __spreadProps8(__spreadValues18({}, descriptionProps), {
+  }, others), label && inputLabel, description && /* @__PURE__ */ import_react32.default.createElement(Text, __spreadProps9(__spreadValues22({}, descriptionProps), {
     color: "gray",
     className: classes.description
-  }), description), children, typeof error !== "boolean" && error && /* @__PURE__ */ import_react25.default.createElement(Text, __spreadProps8(__spreadValues18({}, errorProps), {
+  }), description), children, typeof error !== "boolean" && error && /* @__PURE__ */ import_react32.default.createElement(Text, __spreadProps9(__spreadValues22({}, errorProps), {
     size: size2,
     className: classes.error
   }), error));
@@ -25130,28 +25625,28 @@ var InputWrapper = (0, import_react25.forwardRef)((_a, ref) => {
 InputWrapper.displayName = "@mantine/core/InputWrapper";
 
 // node_modules/@mantine/core/esm/components/Input/Input.js
-var import_react26 = __toModule(require_react());
+var import_react33 = __toModule(require_react());
 
 // node_modules/@mantine/core/esm/components/Input/Input.styles.js
-var __defProp20 = Object.defineProperty;
-var __defProps9 = Object.defineProperties;
-var __getOwnPropDescs9 = Object.getOwnPropertyDescriptors;
-var __getOwnPropSymbols20 = Object.getOwnPropertySymbols;
-var __hasOwnProp21 = Object.prototype.hasOwnProperty;
-var __propIsEnum20 = Object.prototype.propertyIsEnumerable;
-var __defNormalProp19 = (obj, key, value) => key in obj ? __defProp20(obj, key, { enumerable: true, configurable: true, writable: true, value }) : obj[key] = value;
-var __spreadValues19 = (a2, b2) => {
+var __defProp24 = Object.defineProperty;
+var __defProps10 = Object.defineProperties;
+var __getOwnPropDescs10 = Object.getOwnPropertyDescriptors;
+var __getOwnPropSymbols24 = Object.getOwnPropertySymbols;
+var __hasOwnProp25 = Object.prototype.hasOwnProperty;
+var __propIsEnum24 = Object.prototype.propertyIsEnumerable;
+var __defNormalProp23 = (obj, key, value) => key in obj ? __defProp24(obj, key, { enumerable: true, configurable: true, writable: true, value }) : obj[key] = value;
+var __spreadValues23 = (a2, b2) => {
   for (var prop in b2 || (b2 = {}))
-    if (__hasOwnProp21.call(b2, prop))
-      __defNormalProp19(a2, prop, b2[prop]);
-  if (__getOwnPropSymbols20)
-    for (var prop of __getOwnPropSymbols20(b2)) {
-      if (__propIsEnum20.call(b2, prop))
-        __defNormalProp19(a2, prop, b2[prop]);
+    if (__hasOwnProp25.call(b2, prop))
+      __defNormalProp23(a2, prop, b2[prop]);
+  if (__getOwnPropSymbols24)
+    for (var prop of __getOwnPropSymbols24(b2)) {
+      if (__propIsEnum24.call(b2, prop))
+        __defNormalProp23(a2, prop, b2[prop]);
     }
   return a2;
 };
-var __spreadProps9 = (a2, b2) => __defProps9(a2, __getOwnPropDescs9(b2));
+var __spreadProps10 = (a2, b2) => __defProps10(a2, __getOwnPropDescs10(b2));
 var sizes2 = {
   xs: 30,
   sm: 36,
@@ -25159,7 +25654,7 @@ var sizes2 = {
   lg: 50,
   xl: 60
 };
-var useStyles4 = createStyles((theme, {
+var useStyles5 = createStyles((theme, {
   size: size2,
   multiline,
   radius,
@@ -25180,7 +25675,7 @@ var useStyles4 = createStyles((theme, {
     wrapper: {
       position: "relative"
     },
-    input: variant === "headless" ? {} : __spreadProps9(__spreadValues19(__spreadProps9(__spreadValues19({}, theme.fn.fontStyles()), {
+    input: variant === "headless" ? {} : __spreadProps10(__spreadValues23(__spreadProps10(__spreadValues23({}, theme.fn.fontStyles()), {
       height: multiline ? variant === "unstyled" ? void 0 : "auto" : theme.fn.size({ size: size2, sizes: sizes2 }),
       WebkitTapHighlightColor: "transparent",
       lineHeight: multiline ? theme.lineHeight : `${theme.fn.size({ size: size2, sizes: sizes2 }) - 2}px`,
@@ -25294,41 +25789,41 @@ var useStyles4 = createStyles((theme, {
     }
   };
 });
-var Input_styles_default = useStyles4;
+var Input_styles_default = useStyles5;
 
 // node_modules/@mantine/core/esm/components/Input/Input.js
-var __defProp21 = Object.defineProperty;
-var __defProps10 = Object.defineProperties;
-var __getOwnPropDescs10 = Object.getOwnPropertyDescriptors;
-var __getOwnPropSymbols21 = Object.getOwnPropertySymbols;
-var __hasOwnProp22 = Object.prototype.hasOwnProperty;
-var __propIsEnum21 = Object.prototype.propertyIsEnumerable;
-var __defNormalProp20 = (obj, key, value) => key in obj ? __defProp21(obj, key, { enumerable: true, configurable: true, writable: true, value }) : obj[key] = value;
-var __spreadValues20 = (a2, b2) => {
+var __defProp25 = Object.defineProperty;
+var __defProps11 = Object.defineProperties;
+var __getOwnPropDescs11 = Object.getOwnPropertyDescriptors;
+var __getOwnPropSymbols25 = Object.getOwnPropertySymbols;
+var __hasOwnProp26 = Object.prototype.hasOwnProperty;
+var __propIsEnum25 = Object.prototype.propertyIsEnumerable;
+var __defNormalProp24 = (obj, key, value) => key in obj ? __defProp25(obj, key, { enumerable: true, configurable: true, writable: true, value }) : obj[key] = value;
+var __spreadValues24 = (a2, b2) => {
   for (var prop in b2 || (b2 = {}))
-    if (__hasOwnProp22.call(b2, prop))
-      __defNormalProp20(a2, prop, b2[prop]);
-  if (__getOwnPropSymbols21)
-    for (var prop of __getOwnPropSymbols21(b2)) {
-      if (__propIsEnum21.call(b2, prop))
-        __defNormalProp20(a2, prop, b2[prop]);
+    if (__hasOwnProp26.call(b2, prop))
+      __defNormalProp24(a2, prop, b2[prop]);
+  if (__getOwnPropSymbols25)
+    for (var prop of __getOwnPropSymbols25(b2)) {
+      if (__propIsEnum25.call(b2, prop))
+        __defNormalProp24(a2, prop, b2[prop]);
     }
   return a2;
 };
-var __spreadProps10 = (a2, b2) => __defProps10(a2, __getOwnPropDescs10(b2));
-var __objRest11 = (source, exclude) => {
+var __spreadProps11 = (a2, b2) => __defProps11(a2, __getOwnPropDescs11(b2));
+var __objRest13 = (source, exclude) => {
   var target = {};
   for (var prop in source)
-    if (__hasOwnProp22.call(source, prop) && exclude.indexOf(prop) < 0)
+    if (__hasOwnProp26.call(source, prop) && exclude.indexOf(prop) < 0)
       target[prop] = source[prop];
-  if (source != null && __getOwnPropSymbols21)
-    for (var prop of __getOwnPropSymbols21(source)) {
-      if (exclude.indexOf(prop) < 0 && __propIsEnum21.call(source, prop))
+  if (source != null && __getOwnPropSymbols25)
+    for (var prop of __getOwnPropSymbols25(source)) {
+      if (exclude.indexOf(prop) < 0 && __propIsEnum25.call(source, prop))
         target[prop] = source[prop];
     }
   return target;
 };
-var Input = (0, import_react26.forwardRef)((_a, ref) => {
+var Input = (0, import_react33.forwardRef)((_a, ref) => {
   var _b = _a, {
     component,
     className,
@@ -25350,7 +25845,7 @@ var Input = (0, import_react26.forwardRef)((_a, ref) => {
     __staticSelector = "Input",
     multiline = false,
     sx
-  } = _b, others = __objRest11(_b, [
+  } = _b, others = __objRest13(_b, [
     "component",
     "className",
     "invalid",
@@ -25386,13 +25881,13 @@ var Input = (0, import_react26.forwardRef)((_a, ref) => {
   }, { classNames, styles: styles3, name: __staticSelector });
   const { margins, rest } = extractMargins(others);
   const Element = component || "input";
-  return /* @__PURE__ */ import_react26.default.createElement(Box, __spreadValues20(__spreadValues20({
+  return /* @__PURE__ */ import_react33.default.createElement(Box, __spreadValues24(__spreadValues24({
     className: cx(classes.wrapper, className),
     sx,
     style
-  }, margins), wrapperProps), icon3 && /* @__PURE__ */ import_react26.default.createElement("div", {
+  }, margins), wrapperProps), icon3 && /* @__PURE__ */ import_react33.default.createElement("div", {
     className: classes.icon
-  }, icon3), /* @__PURE__ */ import_react26.default.createElement(Element, __spreadProps10(__spreadValues20({}, rest), {
+  }, icon3), /* @__PURE__ */ import_react33.default.createElement(Element, __spreadProps11(__spreadValues24({}, rest), {
     ref,
     "aria-required": required,
     "aria-invalid": invalid,
@@ -25402,14 +25897,14 @@ var Input = (0, import_react26.forwardRef)((_a, ref) => {
       [classes.invalid]: invalid,
       [classes.disabled]: disabled2
     })
-  })), rightSection && /* @__PURE__ */ import_react26.default.createElement("div", __spreadProps10(__spreadValues20({}, rightSectionProps), {
+  })), rightSection && /* @__PURE__ */ import_react33.default.createElement("div", __spreadProps11(__spreadValues24({}, rightSectionProps), {
     className: classes.rightSection
   }), rightSection));
 });
 Input.displayName = "@mantine/core/Input";
 
 // node_modules/@mantine/core/esm/components/Group/Group.js
-var import_react28 = __toModule(require_react());
+var import_react35 = __toModule(require_react());
 
 // node_modules/@mantine/core/esm/components/Group/Group.styles.js
 var POSITIONS = {
@@ -25418,7 +25913,7 @@ var POSITIONS = {
   right: "flex-end",
   apart: "space-between"
 };
-var useStyles5 = createStyles((theme, { spacing, position: position2, noWrap, direction, grow, align, count }) => ({
+var useStyles6 = createStyles((theme, { spacing, position: position2, noWrap, direction, grow, align, count }) => ({
   root: {
     boxSizing: "border-box",
     display: "flex",
@@ -25434,44 +25929,44 @@ var useStyles5 = createStyles((theme, { spacing, position: position2, noWrap, di
     flexGrow: grow ? 1 : 0
   }
 }));
-var Group_styles_default = useStyles5;
+var Group_styles_default = useStyles6;
 
 // node_modules/@mantine/core/esm/utils/filter-falsy-children/filter-falsy-children.js
-var import_react27 = __toModule(require_react());
+var import_react34 = __toModule(require_react());
 function filterFalsyChildren(children) {
-  return import_react27.Children.toArray(children).filter(Boolean);
+  return import_react34.Children.toArray(children).filter(Boolean);
 }
 
 // node_modules/@mantine/core/esm/components/Group/Group.js
-var __defProp22 = Object.defineProperty;
-var __getOwnPropSymbols22 = Object.getOwnPropertySymbols;
-var __hasOwnProp23 = Object.prototype.hasOwnProperty;
-var __propIsEnum22 = Object.prototype.propertyIsEnumerable;
-var __defNormalProp21 = (obj, key, value) => key in obj ? __defProp22(obj, key, { enumerable: true, configurable: true, writable: true, value }) : obj[key] = value;
-var __spreadValues21 = (a2, b2) => {
+var __defProp26 = Object.defineProperty;
+var __getOwnPropSymbols26 = Object.getOwnPropertySymbols;
+var __hasOwnProp27 = Object.prototype.hasOwnProperty;
+var __propIsEnum26 = Object.prototype.propertyIsEnumerable;
+var __defNormalProp25 = (obj, key, value) => key in obj ? __defProp26(obj, key, { enumerable: true, configurable: true, writable: true, value }) : obj[key] = value;
+var __spreadValues25 = (a2, b2) => {
   for (var prop in b2 || (b2 = {}))
-    if (__hasOwnProp23.call(b2, prop))
-      __defNormalProp21(a2, prop, b2[prop]);
-  if (__getOwnPropSymbols22)
-    for (var prop of __getOwnPropSymbols22(b2)) {
-      if (__propIsEnum22.call(b2, prop))
-        __defNormalProp21(a2, prop, b2[prop]);
+    if (__hasOwnProp27.call(b2, prop))
+      __defNormalProp25(a2, prop, b2[prop]);
+  if (__getOwnPropSymbols26)
+    for (var prop of __getOwnPropSymbols26(b2)) {
+      if (__propIsEnum26.call(b2, prop))
+        __defNormalProp25(a2, prop, b2[prop]);
     }
   return a2;
 };
-var __objRest12 = (source, exclude) => {
+var __objRest14 = (source, exclude) => {
   var target = {};
   for (var prop in source)
-    if (__hasOwnProp23.call(source, prop) && exclude.indexOf(prop) < 0)
+    if (__hasOwnProp27.call(source, prop) && exclude.indexOf(prop) < 0)
       target[prop] = source[prop];
-  if (source != null && __getOwnPropSymbols22)
-    for (var prop of __getOwnPropSymbols22(source)) {
-      if (exclude.indexOf(prop) < 0 && __propIsEnum22.call(source, prop))
+  if (source != null && __getOwnPropSymbols26)
+    for (var prop of __getOwnPropSymbols26(source)) {
+      if (exclude.indexOf(prop) < 0 && __propIsEnum26.call(source, prop))
         target[prop] = source[prop];
     }
   return target;
 };
-var Group = (0, import_react28.forwardRef)((_a, ref) => {
+var Group = (0, import_react35.forwardRef)((_a, ref) => {
   var _b = _a, {
     className,
     position: position2 = "left",
@@ -25483,7 +25978,7 @@ var Group = (0, import_react28.forwardRef)((_a, ref) => {
     direction = "row",
     classNames,
     styles: styles3
-  } = _b, others = __objRest12(_b, [
+  } = _b, others = __objRest14(_b, [
     "className",
     "position",
     "align",
@@ -25505,53 +26000,405 @@ var Group = (0, import_react28.forwardRef)((_a, ref) => {
     direction,
     count: filteredChildren.length
   }, { classNames, styles: styles3, name: "Group" });
-  const items = filteredChildren.map((child) => import_react28.default.cloneElement(child, {
+  const items = filteredChildren.map((child) => import_react35.default.cloneElement(child, {
     className: cx(classes.child, child.props.className)
   }));
-  return /* @__PURE__ */ import_react28.default.createElement(Box, __spreadValues21({
+  return /* @__PURE__ */ import_react35.default.createElement(Box, __spreadValues25({
     className: cx(classes.root, className),
     ref
   }, others), items);
 });
 Group.displayName = "@mantine/core/Group";
 
-// node_modules/@mantine/core/esm/components/NumberInput/NumberInput.js
-var import_react30 = __toModule(require_react());
+// node_modules/@mantine/core/esm/components/Transition/GroupedTransition.js
+var import_react36 = __toModule(require_react());
+function GroupedTransition({
+  transitions: transitions2,
+  duration = 250,
+  exitDuration = duration,
+  mounted,
+  children,
+  timingFunction,
+  onExit,
+  onEntered,
+  onEnter,
+  onExited
+}) {
+  const { transitionDuration, transitionStatus, transitionTimingFunction } = useTransition({
+    mounted,
+    duration,
+    exitDuration,
+    timingFunction,
+    onExit,
+    onEntered,
+    onEnter,
+    onExited
+  });
+  if (transitionDuration === 0) {
+    return mounted ? /* @__PURE__ */ import_react36.default.createElement(import_react36.default.Fragment, null, children({})) : null;
+  }
+  if (transitionStatus === "exited") {
+    return null;
+  }
+  const transitionsStyles = Object.keys(transitions2).reduce((acc, transition) => {
+    acc[transition] = getTransitionStyles({
+      duration: transitions2[transition].duration,
+      transition: transitions2[transition].transition,
+      timingFunction: transitions2[transition].timingFunction || transitionTimingFunction,
+      state: transitionStatus
+    });
+    return acc;
+  }, {});
+  return /* @__PURE__ */ import_react36.default.createElement(import_react36.default.Fragment, null, children(transitionsStyles));
+}
+GroupedTransition.displayName = "@mantine/core/GroupedTransition";
 
-// node_modules/@mantine/core/esm/components/TextInput/TextInput.js
-var import_react29 = __toModule(require_react());
-var __defProp23 = Object.defineProperty;
-var __defProps11 = Object.defineProperties;
-var __getOwnPropDescs11 = Object.getOwnPropertyDescriptors;
-var __getOwnPropSymbols23 = Object.getOwnPropertySymbols;
-var __hasOwnProp24 = Object.prototype.hasOwnProperty;
-var __propIsEnum23 = Object.prototype.propertyIsEnumerable;
-var __defNormalProp22 = (obj, key, value) => key in obj ? __defProp23(obj, key, { enumerable: true, configurable: true, writable: true, value }) : obj[key] = value;
-var __spreadValues22 = (a2, b2) => {
+// node_modules/@mantine/core/esm/components/Overlay/Overlay.js
+var import_react37 = __toModule(require_react());
+var __defProp27 = Object.defineProperty;
+var __defProps12 = Object.defineProperties;
+var __getOwnPropDescs12 = Object.getOwnPropertyDescriptors;
+var __getOwnPropSymbols27 = Object.getOwnPropertySymbols;
+var __hasOwnProp28 = Object.prototype.hasOwnProperty;
+var __propIsEnum27 = Object.prototype.propertyIsEnumerable;
+var __defNormalProp26 = (obj, key, value) => key in obj ? __defProp27(obj, key, { enumerable: true, configurable: true, writable: true, value }) : obj[key] = value;
+var __spreadValues26 = (a2, b2) => {
   for (var prop in b2 || (b2 = {}))
-    if (__hasOwnProp24.call(b2, prop))
-      __defNormalProp22(a2, prop, b2[prop]);
-  if (__getOwnPropSymbols23)
-    for (var prop of __getOwnPropSymbols23(b2)) {
-      if (__propIsEnum23.call(b2, prop))
-        __defNormalProp22(a2, prop, b2[prop]);
+    if (__hasOwnProp28.call(b2, prop))
+      __defNormalProp26(a2, prop, b2[prop]);
+  if (__getOwnPropSymbols27)
+    for (var prop of __getOwnPropSymbols27(b2)) {
+      if (__propIsEnum27.call(b2, prop))
+        __defNormalProp26(a2, prop, b2[prop]);
     }
   return a2;
 };
-var __spreadProps11 = (a2, b2) => __defProps11(a2, __getOwnPropDescs11(b2));
-var __objRest13 = (source, exclude) => {
+var __spreadProps12 = (a2, b2) => __defProps12(a2, __getOwnPropDescs12(b2));
+var __objRest15 = (source, exclude) => {
   var target = {};
   for (var prop in source)
-    if (__hasOwnProp24.call(source, prop) && exclude.indexOf(prop) < 0)
+    if (__hasOwnProp28.call(source, prop) && exclude.indexOf(prop) < 0)
       target[prop] = source[prop];
-  if (source != null && __getOwnPropSymbols23)
-    for (var prop of __getOwnPropSymbols23(source)) {
-      if (exclude.indexOf(prop) < 0 && __propIsEnum23.call(source, prop))
+  if (source != null && __getOwnPropSymbols27)
+    for (var prop of __getOwnPropSymbols27(source)) {
+      if (exclude.indexOf(prop) < 0 && __propIsEnum27.call(source, prop))
         target[prop] = source[prop];
     }
   return target;
 };
-var TextInput = (0, import_react29.forwardRef)((_a, ref) => {
+var Overlay = (0, import_react37.forwardRef)((_a, ref) => {
+  var _b = _a, {
+    opacity = 0.6,
+    color = "#fff",
+    gradient,
+    zIndex = getDefaultZIndex("modal"),
+    component,
+    radius = 0,
+    sx
+  } = _b, others = __objRest15(_b, [
+    "opacity",
+    "color",
+    "gradient",
+    "zIndex",
+    "component",
+    "radius",
+    "sx"
+  ]);
+  const background = gradient ? { backgroundImage: gradient } : { backgroundColor: color };
+  return /* @__PURE__ */ import_react37.default.createElement(Box, __spreadValues26({
+    component: component || "div",
+    ref,
+    sx: [
+      (theme) => __spreadProps12(__spreadValues26({}, background), {
+        opacity,
+        position: "absolute",
+        top: 0,
+        bottom: 0,
+        left: 0,
+        right: 0,
+        borderRadius: theme.fn.size({ size: radius, sizes: theme.radius }),
+        zIndex
+      }),
+      sx
+    ]
+  }, others));
+});
+Overlay.displayName = "@mantine/core/Overlay";
+
+// node_modules/@mantine/core/esm/components/Modal/Modal.styles.js
+var sizes3 = {
+  xs: 320,
+  sm: 380,
+  md: 440,
+  lg: 620,
+  xl: 780,
+  full: "100%"
+};
+var useStyles7 = createStyles((theme, { overflow, size: size2, centered }) => ({
+  close: {},
+  root: {
+    position: "fixed",
+    top: 0,
+    left: 0,
+    right: 0,
+    bottom: 0
+  },
+  inner: {
+    position: "absolute",
+    top: 0,
+    left: 0,
+    right: 0,
+    bottom: 0,
+    zIndex: 4,
+    overflowY: "auto",
+    padding: `${theme.spacing.xl * 2}px ${theme.spacing.md}px`,
+    display: "flex",
+    justifyContent: "center",
+    alignItems: centered ? "center" : "flex-start"
+  },
+  title: {
+    marginRight: theme.spacing.md,
+    textOverflow: "ellipsis",
+    display: "block",
+    wordBreak: "break-word"
+  },
+  modal: {
+    position: "relative",
+    zIndex: 5,
+    width: theme.fn.size({ sizes: sizes3, size: size2 }),
+    outline: 0,
+    backgroundColor: theme.colorScheme === "dark" ? theme.colors.dark[7] : theme.white
+  },
+  header: {
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "space-between",
+    marginBottom: theme.spacing.md,
+    marginRight: -9
+  },
+  body: {
+    maxHeight: overflow === "inside" ? "calc(100vh - 185px)" : null,
+    overflowY: overflow === "inside" ? "auto" : null,
+    wordBreak: "break-word"
+  }
+}));
+var Modal_styles_default = useStyles7;
+
+// node_modules/@mantine/core/esm/components/Modal/Modal.js
+var import_react38 = __toModule(require_react());
+var __defProp28 = Object.defineProperty;
+var __defProps13 = Object.defineProperties;
+var __getOwnPropDescs13 = Object.getOwnPropertyDescriptors;
+var __getOwnPropSymbols28 = Object.getOwnPropertySymbols;
+var __hasOwnProp29 = Object.prototype.hasOwnProperty;
+var __propIsEnum28 = Object.prototype.propertyIsEnumerable;
+var __defNormalProp27 = (obj, key, value) => key in obj ? __defProp28(obj, key, { enumerable: true, configurable: true, writable: true, value }) : obj[key] = value;
+var __spreadValues27 = (a2, b2) => {
+  for (var prop in b2 || (b2 = {}))
+    if (__hasOwnProp29.call(b2, prop))
+      __defNormalProp27(a2, prop, b2[prop]);
+  if (__getOwnPropSymbols28)
+    for (var prop of __getOwnPropSymbols28(b2)) {
+      if (__propIsEnum28.call(b2, prop))
+        __defNormalProp27(a2, prop, b2[prop]);
+    }
+  return a2;
+};
+var __spreadProps13 = (a2, b2) => __defProps13(a2, __getOwnPropDescs13(b2));
+var __objRest16 = (source, exclude) => {
+  var target = {};
+  for (var prop in source)
+    if (__hasOwnProp29.call(source, prop) && exclude.indexOf(prop) < 0)
+      target[prop] = source[prop];
+  if (source != null && __getOwnPropSymbols28)
+    for (var prop of __getOwnPropSymbols28(source)) {
+      if (exclude.indexOf(prop) < 0 && __propIsEnum28.call(source, prop))
+        target[prop] = source[prop];
+    }
+  return target;
+};
+function MantineModal(_a) {
+  var _b = _a, {
+    className,
+    opened,
+    title,
+    onClose,
+    children,
+    hideCloseButton = false,
+    overlayOpacity,
+    size: size2 = "md",
+    transitionDuration = 300,
+    closeButtonLabel,
+    overlayColor,
+    overflow = "outside",
+    transition = "pop",
+    padding = "lg",
+    shadow = "lg",
+    radius = "sm",
+    id,
+    classNames,
+    styles: styles3,
+    closeOnClickOutside = true,
+    noFocusTrap = false,
+    closeOnEscape = true,
+    centered = false,
+    target
+  } = _b, others = __objRest16(_b, [
+    "className",
+    "opened",
+    "title",
+    "onClose",
+    "children",
+    "hideCloseButton",
+    "overlayOpacity",
+    "size",
+    "transitionDuration",
+    "closeButtonLabel",
+    "overlayColor",
+    "overflow",
+    "transition",
+    "padding",
+    "shadow",
+    "radius",
+    "id",
+    "classNames",
+    "styles",
+    "closeOnClickOutside",
+    "noFocusTrap",
+    "closeOnEscape",
+    "centered",
+    "target"
+  ]);
+  const baseId = useUuid(id);
+  const titleId = `${baseId}-title`;
+  const bodyId = `${baseId}-body`;
+  const { classes, cx, theme } = Modal_styles_default({ size: size2, overflow, centered }, { classNames, styles: styles3, name: "Modal" });
+  const focusTrapRef = useFocusTrap(!noFocusTrap && opened);
+  const _overlayOpacity = typeof overlayOpacity === "number" ? overlayOpacity : theme.colorScheme === "dark" ? 0.85 : 0.75;
+  const [, lockScroll] = useScrollLock();
+  const closeOnEscapePress = (event) => {
+    if (noFocusTrap && event.code === "Escape" && closeOnEscape) {
+      onClose();
+    }
+  };
+  (0, import_react38.useEffect)(() => {
+    if (noFocusTrap) {
+      window.addEventListener("keydown", closeOnEscapePress);
+      return () => window.removeEventListener("keydown", closeOnEscapePress);
+    }
+  }, [noFocusTrap]);
+  useFocusReturn({ opened, transitionDuration });
+  return /* @__PURE__ */ import_react38.default.createElement(GroupedTransition, {
+    onExited: () => lockScroll(false),
+    onEntered: () => lockScroll(true),
+    mounted: opened,
+    transitions: {
+      modal: { duration: transitionDuration, transition },
+      overlay: {
+        duration: transitionDuration / 2,
+        transition: "fade",
+        timingFunction: "ease"
+      }
+    }
+  }, (transitionStyles) => /* @__PURE__ */ import_react38.default.createElement(Box, __spreadValues27({
+    className: cx(classes.root, className)
+  }, others), /* @__PURE__ */ import_react38.default.createElement("div", {
+    className: classes.inner,
+    onMouseDown: () => closeOnClickOutside && onClose(),
+    onKeyDownCapture: (event) => {
+      var _a2;
+      const shouldTrigger = ((_a2 = event.target) == null ? void 0 : _a2.getAttribute("data-mantine-stop-propagation")) !== "true";
+      shouldTrigger && event.nativeEvent.code === "Escape" && closeOnEscape && onClose();
+    },
+    ref: focusTrapRef
+  }, /* @__PURE__ */ import_react38.default.createElement(Paper, {
+    onMouseDown: (event) => event.stopPropagation(),
+    className: classes.modal,
+    shadow,
+    padding,
+    radius,
+    role: "dialog",
+    "aria-labelledby": titleId,
+    "aria-describedby": bodyId,
+    "aria-modal": true,
+    tabIndex: -1,
+    style: __spreadProps13(__spreadValues27({}, transitionStyles.modal), {
+      marginLeft: "calc(var(--removed-scroll-width, 0px) * -1)",
+      zIndex: 3
+    })
+  }, (title || !hideCloseButton) && /* @__PURE__ */ import_react38.default.createElement("div", {
+    className: classes.header
+  }, /* @__PURE__ */ import_react38.default.createElement(Text, {
+    id: titleId,
+    className: classes.title
+  }, title), !hideCloseButton && /* @__PURE__ */ import_react38.default.createElement(CloseButton, {
+    iconSize: 16,
+    onClick: onClose,
+    "aria-label": closeButtonLabel,
+    className: classes.close
+  })), /* @__PURE__ */ import_react38.default.createElement("div", {
+    id: bodyId,
+    className: classes.body
+  }, children))), /* @__PURE__ */ import_react38.default.createElement("div", {
+    style: transitionStyles.overlay
+  }, /* @__PURE__ */ import_react38.default.createElement(Overlay, {
+    zIndex: 0,
+    color: overlayColor || (theme.colorScheme === "dark" ? theme.colors.dark[9] : theme.black),
+    opacity: _overlayOpacity
+  }))));
+}
+function Modal(_c) {
+  var _d = _c, {
+    zIndex = getDefaultZIndex("modal"),
+    target
+  } = _d, props = __objRest16(_d, [
+    "zIndex",
+    "target"
+  ]);
+  return /* @__PURE__ */ import_react38.default.createElement(Portal, {
+    zIndex,
+    target
+  }, /* @__PURE__ */ import_react38.default.createElement(MantineModal, __spreadValues27({}, props)));
+}
+Modal.displayName = "@mantine/core/Modal";
+
+// node_modules/@mantine/core/esm/components/NumberInput/NumberInput.js
+var import_react40 = __toModule(require_react());
+
+// node_modules/@mantine/core/esm/components/TextInput/TextInput.js
+var import_react39 = __toModule(require_react());
+var __defProp29 = Object.defineProperty;
+var __defProps14 = Object.defineProperties;
+var __getOwnPropDescs14 = Object.getOwnPropertyDescriptors;
+var __getOwnPropSymbols29 = Object.getOwnPropertySymbols;
+var __hasOwnProp30 = Object.prototype.hasOwnProperty;
+var __propIsEnum29 = Object.prototype.propertyIsEnumerable;
+var __defNormalProp28 = (obj, key, value) => key in obj ? __defProp29(obj, key, { enumerable: true, configurable: true, writable: true, value }) : obj[key] = value;
+var __spreadValues28 = (a2, b2) => {
+  for (var prop in b2 || (b2 = {}))
+    if (__hasOwnProp30.call(b2, prop))
+      __defNormalProp28(a2, prop, b2[prop]);
+  if (__getOwnPropSymbols29)
+    for (var prop of __getOwnPropSymbols29(b2)) {
+      if (__propIsEnum29.call(b2, prop))
+        __defNormalProp28(a2, prop, b2[prop]);
+    }
+  return a2;
+};
+var __spreadProps14 = (a2, b2) => __defProps14(a2, __getOwnPropDescs14(b2));
+var __objRest17 = (source, exclude) => {
+  var target = {};
+  for (var prop in source)
+    if (__hasOwnProp30.call(source, prop) && exclude.indexOf(prop) < 0)
+      target[prop] = source[prop];
+  if (source != null && __getOwnPropSymbols29)
+    for (var prop of __getOwnPropSymbols29(source)) {
+      if (exclude.indexOf(prop) < 0 && __propIsEnum29.call(source, prop))
+        target[prop] = source[prop];
+    }
+  return target;
+};
+var TextInput = (0, import_react39.forwardRef)((_a, ref) => {
   var _b = _a, {
     className,
     id,
@@ -25568,7 +26415,7 @@ var TextInput = (0, import_react29.forwardRef)((_a, ref) => {
     styles: styles3,
     __staticSelector = "TextInput",
     sx
-  } = _b, others = __objRest13(_b, [
+  } = _b, others = __objRest17(_b, [
     "className",
     "id",
     "label",
@@ -25587,7 +26434,7 @@ var TextInput = (0, import_react29.forwardRef)((_a, ref) => {
   ]);
   const uuid = useUuid(id);
   const { margins, rest } = extractMargins(others);
-  return /* @__PURE__ */ import_react29.default.createElement(InputWrapper, __spreadValues22(__spreadValues22({
+  return /* @__PURE__ */ import_react39.default.createElement(InputWrapper, __spreadValues28(__spreadValues28({
     required,
     id: uuid,
     label,
@@ -25600,7 +26447,7 @@ var TextInput = (0, import_react29.forwardRef)((_a, ref) => {
     styles: styles3,
     __staticSelector,
     sx
-  }, margins), wrapperProps), /* @__PURE__ */ import_react29.default.createElement(Input, __spreadProps11(__spreadValues22({}, rest), {
+  }, margins), wrapperProps), /* @__PURE__ */ import_react39.default.createElement(Input, __spreadProps14(__spreadValues28({}, rest), {
     required,
     ref,
     id: uuid,
@@ -25623,7 +26470,7 @@ var CONTROL_SIZES = {
   lg: 34,
   xl: 36
 };
-var useStyles6 = createStyles((theme, { radius, size: size2 }) => ({
+var useStyles8 = createStyles((theme, { radius, size: size2 }) => ({
   rightSection: {
     display: "flex",
     flexDirection: "column",
@@ -25681,41 +26528,41 @@ var useStyles6 = createStyles((theme, { radius, size: size2 }) => ({
     }
   }
 }));
-var NumberInput_styles_default = useStyles6;
+var NumberInput_styles_default = useStyles8;
 
 // node_modules/@mantine/core/esm/components/NumberInput/NumberInput.js
-var __defProp24 = Object.defineProperty;
-var __defProps12 = Object.defineProperties;
-var __getOwnPropDescs12 = Object.getOwnPropertyDescriptors;
-var __getOwnPropSymbols24 = Object.getOwnPropertySymbols;
-var __hasOwnProp25 = Object.prototype.hasOwnProperty;
-var __propIsEnum24 = Object.prototype.propertyIsEnumerable;
-var __defNormalProp23 = (obj, key, value) => key in obj ? __defProp24(obj, key, { enumerable: true, configurable: true, writable: true, value }) : obj[key] = value;
-var __spreadValues23 = (a2, b2) => {
+var __defProp30 = Object.defineProperty;
+var __defProps15 = Object.defineProperties;
+var __getOwnPropDescs15 = Object.getOwnPropertyDescriptors;
+var __getOwnPropSymbols30 = Object.getOwnPropertySymbols;
+var __hasOwnProp31 = Object.prototype.hasOwnProperty;
+var __propIsEnum30 = Object.prototype.propertyIsEnumerable;
+var __defNormalProp29 = (obj, key, value) => key in obj ? __defProp30(obj, key, { enumerable: true, configurable: true, writable: true, value }) : obj[key] = value;
+var __spreadValues29 = (a2, b2) => {
   for (var prop in b2 || (b2 = {}))
-    if (__hasOwnProp25.call(b2, prop))
-      __defNormalProp23(a2, prop, b2[prop]);
-  if (__getOwnPropSymbols24)
-    for (var prop of __getOwnPropSymbols24(b2)) {
-      if (__propIsEnum24.call(b2, prop))
-        __defNormalProp23(a2, prop, b2[prop]);
+    if (__hasOwnProp31.call(b2, prop))
+      __defNormalProp29(a2, prop, b2[prop]);
+  if (__getOwnPropSymbols30)
+    for (var prop of __getOwnPropSymbols30(b2)) {
+      if (__propIsEnum30.call(b2, prop))
+        __defNormalProp29(a2, prop, b2[prop]);
     }
   return a2;
 };
-var __spreadProps12 = (a2, b2) => __defProps12(a2, __getOwnPropDescs12(b2));
-var __objRest14 = (source, exclude) => {
+var __spreadProps15 = (a2, b2) => __defProps15(a2, __getOwnPropDescs15(b2));
+var __objRest18 = (source, exclude) => {
   var target = {};
   for (var prop in source)
-    if (__hasOwnProp25.call(source, prop) && exclude.indexOf(prop) < 0)
+    if (__hasOwnProp31.call(source, prop) && exclude.indexOf(prop) < 0)
       target[prop] = source[prop];
-  if (source != null && __getOwnPropSymbols24)
-    for (var prop of __getOwnPropSymbols24(source)) {
-      if (exclude.indexOf(prop) < 0 && __propIsEnum24.call(source, prop))
+  if (source != null && __getOwnPropSymbols30)
+    for (var prop of __getOwnPropSymbols30(source)) {
+      if (exclude.indexOf(prop) < 0 && __propIsEnum30.call(source, prop))
         target[prop] = source[prop];
     }
   return target;
 };
-var NumberInput = (0, import_react30.forwardRef)((_a, ref) => {
+var NumberInput = (0, import_react40.forwardRef)((_a, ref) => {
   var _b = _a, {
     disabled: disabled2,
     value,
@@ -25739,7 +26586,7 @@ var NumberInput = (0, import_react30.forwardRef)((_a, ref) => {
     styles: styles3,
     size: size2,
     rightSection
-  } = _b, others = __objRest14(_b, [
+  } = _b, others = __objRest18(_b, [
     "disabled",
     "value",
     "onChange",
@@ -25764,11 +26611,11 @@ var NumberInput = (0, import_react30.forwardRef)((_a, ref) => {
     "rightSection"
   ]);
   const { classes, cx, theme } = NumberInput_styles_default({ radius, size: size2 }, { classNames, styles: styles3, name: "NumberInput" });
-  const [focused, setFocused] = (0, import_react30.useState)(false);
-  const [_value, setValue] = (0, import_react30.useState)(typeof value === "number" ? value : typeof defaultValue === "number" ? defaultValue : void 0);
+  const [focused, setFocused] = (0, import_react40.useState)(false);
+  const [_value, setValue] = (0, import_react40.useState)(typeof value === "number" ? value : typeof defaultValue === "number" ? defaultValue : void 0);
   const finalValue = typeof value === "number" ? value : _value;
-  const [tempValue, setTempValue] = (0, import_react30.useState)(typeof finalValue === "number" ? finalValue.toFixed(precision) : "");
-  const inputRef = (0, import_react30.useRef)();
+  const [tempValue, setTempValue] = (0, import_react40.useState)(typeof finalValue === "number" ? finalValue.toFixed(precision) : "");
+  const inputRef = (0, import_react40.useRef)();
   const handleValueChange = (val) => {
     typeof onChange2 === "function" && onChange2(val);
     setValue(val);
@@ -25793,7 +26640,7 @@ var NumberInput = (0, import_react30.forwardRef)((_a, ref) => {
   };
   const _min = typeof min === "number" ? min : -Infinity;
   const _max = typeof max === "number" ? max : Infinity;
-  const incrementRef = (0, import_react30.useRef)();
+  const incrementRef = (0, import_react40.useRef)();
   incrementRef.current = () => {
     var _a2;
     if (_value === void 0) {
@@ -25805,7 +26652,7 @@ var NumberInput = (0, import_react30.forwardRef)((_a, ref) => {
       setTempValue(result);
     }
   };
-  const decrementRef = (0, import_react30.useRef)();
+  const decrementRef = (0, import_react40.useRef)();
   decrementRef.current = () => {
     var _a2;
     if (_value === void 0) {
@@ -25818,7 +26665,7 @@ var NumberInput = (0, import_react30.forwardRef)((_a, ref) => {
     }
   };
   assignRef(handlersRef, { increment: incrementRef.current, decrement: decrementRef.current });
-  (0, import_react30.useEffect)(() => {
+  (0, import_react40.useEffect)(() => {
     if (typeof value === "number" && !focused) {
       setValue(value);
       setTempValue(value.toFixed(precision));
@@ -25829,8 +26676,8 @@ var NumberInput = (0, import_react30.forwardRef)((_a, ref) => {
     }
   }, [value]);
   const shouldUseStepInterval = stepHoldDelay !== void 0 && stepHoldInterval !== void 0;
-  const onStepTimeoutRef = (0, import_react30.useRef)(null);
-  const stepCountRef = (0, import_react30.useRef)(0);
+  const onStepTimeoutRef = (0, import_react40.useRef)(null);
+  const stepCountRef = (0, import_react40.useRef)(0);
   const onStepDone = () => {
     if (onStepTimeoutRef.current) {
       window.clearTimeout(onStepTimeoutRef.current);
@@ -25861,13 +26708,13 @@ var NumberInput = (0, import_react30.forwardRef)((_a, ref) => {
     }
     inputRef.current.focus();
   };
-  (0, import_react30.useEffect)(() => {
+  (0, import_react40.useEffect)(() => {
     onStepDone();
     return onStepDone;
   }, []);
-  const controls = /* @__PURE__ */ import_react30.default.createElement("div", {
+  const controls = /* @__PURE__ */ import_react40.default.createElement("div", {
     className: classes.rightSection
-  }, /* @__PURE__ */ import_react30.default.createElement("button", {
+  }, /* @__PURE__ */ import_react40.default.createElement("button", {
     type: "button",
     tabIndex: -1,
     "aria-hidden": true,
@@ -25878,7 +26725,7 @@ var NumberInput = (0, import_react30.forwardRef)((_a, ref) => {
     },
     onMouseUp: onStepDone,
     onMouseLeave: onStepDone
-  }), /* @__PURE__ */ import_react30.default.createElement("button", {
+  }), /* @__PURE__ */ import_react40.default.createElement("button", {
     type: "button",
     tabIndex: -1,
     "aria-hidden": true,
@@ -25940,7 +26787,7 @@ var NumberInput = (0, import_react30.forwardRef)((_a, ref) => {
       onStepDone();
     }
   };
-  return /* @__PURE__ */ import_react30.default.createElement(TextInput, __spreadProps12(__spreadValues23({}, others), {
+  return /* @__PURE__ */ import_react40.default.createElement(TextInput, __spreadProps15(__spreadValues29({}, others), {
     variant,
     value: formatNum(tempValue),
     disabled: disabled2,
@@ -25966,10 +26813,10 @@ var NumberInput = (0, import_react30.forwardRef)((_a, ref) => {
 NumberInput.displayName = "@mantine/core/NumberInput";
 
 // node_modules/@mantine/core/esm/components/RingProgress/RingProgress.js
-var import_react32 = __toModule(require_react());
+var import_react42 = __toModule(require_react());
 
 // node_modules/@mantine/core/esm/components/RingProgress/Curve/Curve.js
-var import_react31 = __toModule(require_react());
+var import_react41 = __toModule(require_react());
 
 // node_modules/@mantine/core/esm/components/RingProgress/Curve/get-curve-props.js
 function getCurveProps({ size: size2, thickness, sum, value, root, offset }) {
@@ -25988,19 +26835,19 @@ function getCurveProps({ size: size2, thickness, sum, value, root, offset }) {
 }
 
 // node_modules/@mantine/core/esm/components/RingProgress/Curve/Curve.js
-var __defProp25 = Object.defineProperty;
-var __getOwnPropSymbols25 = Object.getOwnPropertySymbols;
-var __hasOwnProp26 = Object.prototype.hasOwnProperty;
-var __propIsEnum25 = Object.prototype.propertyIsEnumerable;
-var __defNormalProp24 = (obj, key, value) => key in obj ? __defProp25(obj, key, { enumerable: true, configurable: true, writable: true, value }) : obj[key] = value;
-var __spreadValues24 = (a2, b2) => {
+var __defProp31 = Object.defineProperty;
+var __getOwnPropSymbols31 = Object.getOwnPropertySymbols;
+var __hasOwnProp32 = Object.prototype.hasOwnProperty;
+var __propIsEnum31 = Object.prototype.propertyIsEnumerable;
+var __defNormalProp30 = (obj, key, value) => key in obj ? __defProp31(obj, key, { enumerable: true, configurable: true, writable: true, value }) : obj[key] = value;
+var __spreadValues30 = (a2, b2) => {
   for (var prop in b2 || (b2 = {}))
-    if (__hasOwnProp26.call(b2, prop))
-      __defNormalProp24(a2, prop, b2[prop]);
-  if (__getOwnPropSymbols25)
-    for (var prop of __getOwnPropSymbols25(b2)) {
-      if (__propIsEnum25.call(b2, prop))
-        __defNormalProp24(a2, prop, b2[prop]);
+    if (__hasOwnProp32.call(b2, prop))
+      __defNormalProp30(a2, prop, b2[prop]);
+  if (__getOwnPropSymbols31)
+    for (var prop of __getOwnPropSymbols31(b2)) {
+      if (__propIsEnum31.call(b2, prop))
+        __defNormalProp30(a2, prop, b2[prop]);
     }
   return a2;
 };
@@ -26016,7 +26863,7 @@ function Curve({
 }) {
   const theme = useMantineTheme();
   const stroke = theme.fn.themeColor(color || (theme.colorScheme === "dark" ? "dark" : "gray"), color ? 6 : theme.colorScheme === "dark" ? 4 : 1, false);
-  return /* @__PURE__ */ import_react31.default.createElement("circle", __spreadValues24({
+  return /* @__PURE__ */ import_react41.default.createElement("circle", __spreadValues30({
     fill: "none",
     strokeLinecap: lineRoundCaps ? "round" : "butt",
     stroke
@@ -26025,25 +26872,25 @@ function Curve({
 Curve.displayName = "@mantine/core/Curve";
 
 // node_modules/@mantine/core/esm/components/RingProgress/get-curves/get-curves.js
-var __defProp26 = Object.defineProperty;
-var __defProps13 = Object.defineProperties;
-var __getOwnPropDescs13 = Object.getOwnPropertyDescriptors;
-var __getOwnPropSymbols26 = Object.getOwnPropertySymbols;
-var __hasOwnProp27 = Object.prototype.hasOwnProperty;
-var __propIsEnum26 = Object.prototype.propertyIsEnumerable;
-var __defNormalProp25 = (obj, key, value) => key in obj ? __defProp26(obj, key, { enumerable: true, configurable: true, writable: true, value }) : obj[key] = value;
-var __spreadValues25 = (a2, b2) => {
+var __defProp32 = Object.defineProperty;
+var __defProps16 = Object.defineProperties;
+var __getOwnPropDescs16 = Object.getOwnPropertyDescriptors;
+var __getOwnPropSymbols32 = Object.getOwnPropertySymbols;
+var __hasOwnProp33 = Object.prototype.hasOwnProperty;
+var __propIsEnum32 = Object.prototype.propertyIsEnumerable;
+var __defNormalProp31 = (obj, key, value) => key in obj ? __defProp32(obj, key, { enumerable: true, configurable: true, writable: true, value }) : obj[key] = value;
+var __spreadValues31 = (a2, b2) => {
   for (var prop in b2 || (b2 = {}))
-    if (__hasOwnProp27.call(b2, prop))
-      __defNormalProp25(a2, prop, b2[prop]);
-  if (__getOwnPropSymbols26)
-    for (var prop of __getOwnPropSymbols26(b2)) {
-      if (__propIsEnum26.call(b2, prop))
-        __defNormalProp25(a2, prop, b2[prop]);
+    if (__hasOwnProp33.call(b2, prop))
+      __defNormalProp31(a2, prop, b2[prop]);
+  if (__getOwnPropSymbols32)
+    for (var prop of __getOwnPropSymbols32(b2)) {
+      if (__propIsEnum32.call(b2, prop))
+        __defNormalProp31(a2, prop, b2[prop]);
     }
   return a2;
 };
-var __spreadProps13 = (a2, b2) => __defProps13(a2, __getOwnPropDescs13(b2));
+var __spreadProps16 = (a2, b2) => __defProps16(a2, __getOwnPropDescs16(b2));
 function getCurves({ size: size2, thickness, sections, renderRoundedLineCaps }) {
   const sum = sections.reduce((acc, current) => acc + current.value, 0);
   const accumulated = Math.PI * ((size2 * 0.9 - thickness * 2) / 2) * 2;
@@ -26055,21 +26902,21 @@ function getCurves({ size: size2, thickness, sections, renderRoundedLineCaps }) 
     offset -= sections[i2].value / 100 * accumulated;
   }
   curves.push({ sum, offset, data: null, root: true });
-  curvesInOrder.push(__spreadProps13(__spreadValues25({}, curves[curves.length - 1]), { lineRoundCaps: false }));
+  curvesInOrder.push(__spreadProps16(__spreadValues31({}, curves[curves.length - 1]), { lineRoundCaps: false }));
   if (curves.length > 2) {
-    curvesInOrder.push(__spreadProps13(__spreadValues25({}, curves[0]), { lineRoundCaps: renderRoundedLineCaps }));
-    curvesInOrder.push(__spreadProps13(__spreadValues25({}, curves[curves.length - 2]), { lineRoundCaps: renderRoundedLineCaps }));
+    curvesInOrder.push(__spreadProps16(__spreadValues31({}, curves[0]), { lineRoundCaps: renderRoundedLineCaps }));
+    curvesInOrder.push(__spreadProps16(__spreadValues31({}, curves[curves.length - 2]), { lineRoundCaps: renderRoundedLineCaps }));
     for (let i2 = 1; i2 <= curves.length - 3; i2 += 1) {
-      curvesInOrder.push(__spreadProps13(__spreadValues25({}, curves[i2]), { lineRoundCaps: false }));
+      curvesInOrder.push(__spreadProps16(__spreadValues31({}, curves[i2]), { lineRoundCaps: false }));
     }
   } else {
-    curvesInOrder.push(__spreadProps13(__spreadValues25({}, curves[0]), { lineRoundCaps: renderRoundedLineCaps }));
+    curvesInOrder.push(__spreadProps16(__spreadValues31({}, curves[0]), { lineRoundCaps: renderRoundedLineCaps }));
   }
   return curvesInOrder;
 }
 
 // node_modules/@mantine/core/esm/components/RingProgress/RingProgress.styles.js
-var useStyles7 = createStyles({
+var useStyles9 = createStyles({
   root: {
     position: "relative"
   },
@@ -26079,38 +26926,38 @@ var useStyles7 = createStyles({
     transform: "translateY(-50%)"
   }
 });
-var RingProgress_styles_default = useStyles7;
+var RingProgress_styles_default = useStyles9;
 
 // node_modules/@mantine/core/esm/components/RingProgress/RingProgress.js
-var __defProp27 = Object.defineProperty;
-var __getOwnPropSymbols27 = Object.getOwnPropertySymbols;
-var __hasOwnProp28 = Object.prototype.hasOwnProperty;
-var __propIsEnum27 = Object.prototype.propertyIsEnumerable;
-var __defNormalProp26 = (obj, key, value) => key in obj ? __defProp27(obj, key, { enumerable: true, configurable: true, writable: true, value }) : obj[key] = value;
-var __spreadValues26 = (a2, b2) => {
+var __defProp33 = Object.defineProperty;
+var __getOwnPropSymbols33 = Object.getOwnPropertySymbols;
+var __hasOwnProp34 = Object.prototype.hasOwnProperty;
+var __propIsEnum33 = Object.prototype.propertyIsEnumerable;
+var __defNormalProp32 = (obj, key, value) => key in obj ? __defProp33(obj, key, { enumerable: true, configurable: true, writable: true, value }) : obj[key] = value;
+var __spreadValues32 = (a2, b2) => {
   for (var prop in b2 || (b2 = {}))
-    if (__hasOwnProp28.call(b2, prop))
-      __defNormalProp26(a2, prop, b2[prop]);
-  if (__getOwnPropSymbols27)
-    for (var prop of __getOwnPropSymbols27(b2)) {
-      if (__propIsEnum27.call(b2, prop))
-        __defNormalProp26(a2, prop, b2[prop]);
+    if (__hasOwnProp34.call(b2, prop))
+      __defNormalProp32(a2, prop, b2[prop]);
+  if (__getOwnPropSymbols33)
+    for (var prop of __getOwnPropSymbols33(b2)) {
+      if (__propIsEnum33.call(b2, prop))
+        __defNormalProp32(a2, prop, b2[prop]);
     }
   return a2;
 };
-var __objRest15 = (source, exclude) => {
+var __objRest19 = (source, exclude) => {
   var target = {};
   for (var prop in source)
-    if (__hasOwnProp28.call(source, prop) && exclude.indexOf(prop) < 0)
+    if (__hasOwnProp34.call(source, prop) && exclude.indexOf(prop) < 0)
       target[prop] = source[prop];
-  if (source != null && __getOwnPropSymbols27)
-    for (var prop of __getOwnPropSymbols27(source)) {
-      if (exclude.indexOf(prop) < 0 && __propIsEnum27.call(source, prop))
+  if (source != null && __getOwnPropSymbols33)
+    for (var prop of __getOwnPropSymbols33(source)) {
+      if (exclude.indexOf(prop) < 0 && __propIsEnum33.call(source, prop))
         target[prop] = source[prop];
     }
   return target;
 };
-var RingProgress = (0, import_react32.forwardRef)((_a, ref) => {
+var RingProgress = (0, import_react42.forwardRef)((_a, ref) => {
   var _b = _a, {
     className,
     style,
@@ -26121,7 +26968,7 @@ var RingProgress = (0, import_react32.forwardRef)((_a, ref) => {
     classNames,
     styles: styles3,
     roundCaps
-  } = _b, others = __objRest15(_b, [
+  } = _b, others = __objRest19(_b, [
     "className",
     "style",
     "label",
@@ -26140,7 +26987,7 @@ var RingProgress = (0, import_react32.forwardRef)((_a, ref) => {
     renderRoundedLineCaps: roundCaps
   }).map((curve, index2) => {
     var _a2, _b2;
-    return /* @__PURE__ */ import_react32.default.createElement(Curve, {
+    return /* @__PURE__ */ import_react42.default.createElement(Curve, {
       key: index2,
       value: (_a2 = curve.data) == null ? void 0 : _a2.value,
       size: size2,
@@ -26152,15 +26999,15 @@ var RingProgress = (0, import_react32.forwardRef)((_a, ref) => {
       lineRoundCaps: curve.lineRoundCaps
     });
   });
-  return /* @__PURE__ */ import_react32.default.createElement(Box, __spreadValues26({
-    style: __spreadValues26({ width: size2, height: size2 }, style),
+  return /* @__PURE__ */ import_react42.default.createElement(Box, __spreadValues32({
+    style: __spreadValues32({ width: size2, height: size2 }, style),
     className: cx(classes.root, className),
     ref
-  }, others), /* @__PURE__ */ import_react32.default.createElement("svg", {
+  }, others), /* @__PURE__ */ import_react42.default.createElement("svg", {
     width: size2,
     height: size2,
     style: { transform: "rotate(-90deg)" }
-  }, curves), label && /* @__PURE__ */ import_react32.default.createElement("div", {
+  }, curves), label && /* @__PURE__ */ import_react42.default.createElement("div", {
     className: classes.label,
     style: { right: thickness * 2, left: thickness * 2 }
   }, label));
@@ -26168,7 +27015,7 @@ var RingProgress = (0, import_react32.forwardRef)((_a, ref) => {
 RingProgress.displayName = "@mantine/core/RingProgress";
 
 // node_modules/@mantine/core/esm/components/Slider/Slider/Slider.js
-var import_react37 = __toModule(require_react());
+var import_react47 = __toModule(require_react());
 
 // node_modules/@mantine/core/esm/components/Slider/utils/get-position/get-position.js
 function getPosition({ value, min, max }) {
@@ -26184,68 +27031,68 @@ function getChangeValue({ value, containerWidth, min, max, step }) {
 }
 
 // node_modules/@mantine/core/esm/components/Slider/Thumb/Thumb.js
-var import_react33 = __toModule(require_react());
+var import_react43 = __toModule(require_react());
 
 // node_modules/@mantine/core/esm/components/Slider/SliderRoot/SliderRoot.styles.js
-var __defProp28 = Object.defineProperty;
-var __defProps14 = Object.defineProperties;
-var __getOwnPropDescs14 = Object.getOwnPropertyDescriptors;
-var __getOwnPropSymbols28 = Object.getOwnPropertySymbols;
-var __hasOwnProp29 = Object.prototype.hasOwnProperty;
-var __propIsEnum28 = Object.prototype.propertyIsEnumerable;
-var __defNormalProp27 = (obj, key, value) => key in obj ? __defProp28(obj, key, { enumerable: true, configurable: true, writable: true, value }) : obj[key] = value;
-var __spreadValues27 = (a2, b2) => {
+var __defProp34 = Object.defineProperty;
+var __defProps17 = Object.defineProperties;
+var __getOwnPropDescs17 = Object.getOwnPropertyDescriptors;
+var __getOwnPropSymbols34 = Object.getOwnPropertySymbols;
+var __hasOwnProp35 = Object.prototype.hasOwnProperty;
+var __propIsEnum34 = Object.prototype.propertyIsEnumerable;
+var __defNormalProp33 = (obj, key, value) => key in obj ? __defProp34(obj, key, { enumerable: true, configurable: true, writable: true, value }) : obj[key] = value;
+var __spreadValues33 = (a2, b2) => {
   for (var prop in b2 || (b2 = {}))
-    if (__hasOwnProp29.call(b2, prop))
-      __defNormalProp27(a2, prop, b2[prop]);
-  if (__getOwnPropSymbols28)
-    for (var prop of __getOwnPropSymbols28(b2)) {
-      if (__propIsEnum28.call(b2, prop))
-        __defNormalProp27(a2, prop, b2[prop]);
+    if (__hasOwnProp35.call(b2, prop))
+      __defNormalProp33(a2, prop, b2[prop]);
+  if (__getOwnPropSymbols34)
+    for (var prop of __getOwnPropSymbols34(b2)) {
+      if (__propIsEnum34.call(b2, prop))
+        __defNormalProp33(a2, prop, b2[prop]);
     }
   return a2;
 };
-var __spreadProps14 = (a2, b2) => __defProps14(a2, __getOwnPropDescs14(b2));
-var sizes3 = {
+var __spreadProps17 = (a2, b2) => __defProps17(a2, __getOwnPropDescs17(b2));
+var sizes4 = {
   xs: 4,
   sm: 6,
   md: 8,
   lg: 10,
   xl: 12
 };
-var useStyles8 = createStyles((theme, { size: size2 }) => ({
-  root: __spreadProps14(__spreadValues27({}, theme.fn.fontStyles()), {
+var useStyles10 = createStyles((theme, { size: size2 }) => ({
+  root: __spreadProps17(__spreadValues33({}, theme.fn.fontStyles()), {
     WebkitTapHighlightColor: "transparent",
     outline: 0,
-    height: theme.fn.size({ sizes: sizes3, size: size2 }) * 2,
+    height: theme.fn.size({ sizes: sizes4, size: size2 }) * 2,
     display: "flex",
     alignItems: "center",
     cursor: "pointer"
   })
 }));
-var SliderRoot_styles_default = useStyles8;
+var SliderRoot_styles_default = useStyles10;
 
 // node_modules/@mantine/core/esm/components/Slider/Thumb/Thumb.styles.js
-var __defProp29 = Object.defineProperty;
-var __defProps15 = Object.defineProperties;
-var __getOwnPropDescs15 = Object.getOwnPropertyDescriptors;
-var __getOwnPropSymbols29 = Object.getOwnPropertySymbols;
-var __hasOwnProp30 = Object.prototype.hasOwnProperty;
-var __propIsEnum29 = Object.prototype.propertyIsEnumerable;
-var __defNormalProp28 = (obj, key, value) => key in obj ? __defProp29(obj, key, { enumerable: true, configurable: true, writable: true, value }) : obj[key] = value;
-var __spreadValues28 = (a2, b2) => {
+var __defProp35 = Object.defineProperty;
+var __defProps18 = Object.defineProperties;
+var __getOwnPropDescs18 = Object.getOwnPropertyDescriptors;
+var __getOwnPropSymbols35 = Object.getOwnPropertySymbols;
+var __hasOwnProp36 = Object.prototype.hasOwnProperty;
+var __propIsEnum35 = Object.prototype.propertyIsEnumerable;
+var __defNormalProp34 = (obj, key, value) => key in obj ? __defProp35(obj, key, { enumerable: true, configurable: true, writable: true, value }) : obj[key] = value;
+var __spreadValues34 = (a2, b2) => {
   for (var prop in b2 || (b2 = {}))
-    if (__hasOwnProp30.call(b2, prop))
-      __defNormalProp28(a2, prop, b2[prop]);
-  if (__getOwnPropSymbols29)
-    for (var prop of __getOwnPropSymbols29(b2)) {
-      if (__propIsEnum29.call(b2, prop))
-        __defNormalProp28(a2, prop, b2[prop]);
+    if (__hasOwnProp36.call(b2, prop))
+      __defNormalProp34(a2, prop, b2[prop]);
+  if (__getOwnPropSymbols35)
+    for (var prop of __getOwnPropSymbols35(b2)) {
+      if (__propIsEnum35.call(b2, prop))
+        __defNormalProp34(a2, prop, b2[prop]);
     }
   return a2;
 };
-var __spreadProps15 = (a2, b2) => __defProps15(a2, __getOwnPropDescs15(b2));
-var useStyles9 = createStyles((theme, { color, size: size2 }) => ({
+var __spreadProps18 = (a2, b2) => __defProps18(a2, __getOwnPropDescs18(b2));
+var useStyles11 = createStyles((theme, { color, size: size2 }) => ({
   label: {
     position: "absolute",
     top: -36,
@@ -26257,11 +27104,11 @@ var useStyles9 = createStyles((theme, { color, size: size2 }) => ({
     whiteSpace: "nowrap",
     pointerEvents: "none"
   },
-  thumb: __spreadProps15(__spreadValues28({}, theme.fn.focusStyles()), {
+  thumb: __spreadProps18(__spreadValues34({}, theme.fn.focusStyles()), {
     boxSizing: "border-box",
     position: "absolute",
-    height: theme.fn.size({ sizes: sizes3, size: size2 }) * 2,
-    width: theme.fn.size({ sizes: sizes3, size: size2 }) * 2,
+    height: theme.fn.size({ sizes: sizes4, size: size2 }) * 2,
+    width: theme.fn.size({ sizes: sizes4, size: size2 }) * 2,
     backgroundColor: theme.colorScheme === "dark" ? theme.fn.themeColor(color, 6) : theme.white,
     border: `4px solid ${theme.colorScheme === "dark" ? theme.white : theme.fn.themeColor(color, 6)}`,
     color: theme.colorScheme === "dark" ? theme.white : theme.fn.themeColor(color, 6),
@@ -26282,10 +27129,10 @@ var useStyles9 = createStyles((theme, { color, size: size2 }) => ({
     boxShadow: theme.shadows.sm
   }
 }));
-var Thumb_styles_default = useStyles9;
+var Thumb_styles_default = useStyles11;
 
 // node_modules/@mantine/core/esm/components/Slider/Thumb/Thumb.js
-var Thumb = (0, import_react33.forwardRef)(({
+var Thumb = (0, import_react43.forwardRef)(({
   max,
   min,
   value,
@@ -26308,9 +27155,9 @@ var Thumb = (0, import_react33.forwardRef)(({
   children = null
 }, ref) => {
   const { classes, cx, theme } = Thumb_styles_default({ color, size: size2 }, { classNames, styles: styles3, name: "Slider" });
-  const [focused, setFocused] = (0, import_react33.useState)(false);
+  const [focused, setFocused] = (0, import_react43.useState)(false);
   const isVisible = labelAlwaysOn || dragging || focused || showLabelOnHover;
-  return /* @__PURE__ */ import_react33.default.createElement(Box, {
+  return /* @__PURE__ */ import_react43.default.createElement(Box, {
     tabIndex: 0,
     role: "slider",
     "aria-label": thumbLabel,
@@ -26331,12 +27178,12 @@ var Thumb = (0, import_react33.forwardRef)(({
     onMouseDown,
     onClick: (event) => event.stopPropagation(),
     sx: { left: `${position2}%` }
-  }, children, /* @__PURE__ */ import_react33.default.createElement(Transition, {
+  }, children, /* @__PURE__ */ import_react43.default.createElement(Transition, {
     mounted: label != null && isVisible,
     duration: labelTransitionDuration,
     transition: labelTransition,
     timingFunction: labelTransitionTimingFunction || theme.transitionTimingFunction
-  }, (transitionStyles) => /* @__PURE__ */ import_react33.default.createElement("div", {
+  }, (transitionStyles) => /* @__PURE__ */ import_react43.default.createElement("div", {
     style: transitionStyles,
     className: classes.label
   }, label)));
@@ -26344,10 +27191,10 @@ var Thumb = (0, import_react33.forwardRef)(({
 Thumb.displayName = "@mantine/core/SliderThumb";
 
 // node_modules/@mantine/core/esm/components/Slider/Track/Track.js
-var import_react35 = __toModule(require_react());
+var import_react45 = __toModule(require_react());
 
 // node_modules/@mantine/core/esm/components/Slider/Marks/Marks.js
-var import_react34 = __toModule(require_react());
+var import_react44 = __toModule(require_react());
 
 // node_modules/@mantine/core/esm/components/Slider/Marks/is-mark-filled.js
 function isMarkFilled({ mark, offset, value }) {
@@ -26355,7 +27202,7 @@ function isMarkFilled({ mark, offset, value }) {
 }
 
 // node_modules/@mantine/core/esm/components/Slider/Marks/Marks.styles.js
-var useStyles10 = createStyles((theme, { size: size2, color }) => ({
+var useStyles12 = createStyles((theme, { size: size2, color }) => ({
   markWrapper: {
     position: "absolute",
     top: 0,
@@ -26363,11 +27210,11 @@ var useStyles10 = createStyles((theme, { size: size2, color }) => ({
   },
   mark: {
     boxSizing: "border-box",
-    border: `${theme.fn.size({ size: size2, sizes: sizes3 }) >= 8 ? "2px" : "1px"} solid ${theme.colorScheme === "dark" ? theme.colors.dark[4] : theme.colors.gray[2]}`,
-    height: theme.fn.size({ sizes: sizes3, size: size2 }),
-    width: theme.fn.size({ sizes: sizes3, size: size2 }),
+    border: `${theme.fn.size({ size: size2, sizes: sizes4 }) >= 8 ? "2px" : "1px"} solid ${theme.colorScheme === "dark" ? theme.colors.dark[4] : theme.colors.gray[2]}`,
+    height: theme.fn.size({ sizes: sizes4, size: size2 }),
+    width: theme.fn.size({ sizes: sizes4, size: size2 }),
     borderRadius: 1e3,
-    transform: `translateX(-${theme.fn.size({ sizes: sizes3, size: size2 }) / 2}px)`,
+    transform: `translateX(-${theme.fn.size({ sizes: sizes4, size: size2 }) / 2}px)`,
     backgroundColor: theme.colorScheme === "dark" ? theme.colors.dark[0] : theme.white
   },
   markFilled: {
@@ -26380,7 +27227,7 @@ var useStyles10 = createStyles((theme, { size: size2, color }) => ({
     marginTop: theme.spacing.xs / 2
   }
 }));
-var Marks_styles_default = useStyles10;
+var Marks_styles_default = useStyles12;
 
 // node_modules/@mantine/core/esm/components/Slider/Marks/Marks.js
 function Marks({
@@ -26396,15 +27243,15 @@ function Marks({
   onChange: onChange2
 }) {
   const { classes, cx } = Marks_styles_default({ size: size2, color }, { classNames, styles: styles3, name: "Slider" });
-  const items = marks.map((mark, index2) => /* @__PURE__ */ import_react34.default.createElement(Box, {
+  const items = marks.map((mark, index2) => /* @__PURE__ */ import_react44.default.createElement(Box, {
     className: classes.markWrapper,
     sx: { left: `${getPosition({ value: mark.value, min, max })}%` },
     key: index2
-  }, /* @__PURE__ */ import_react34.default.createElement("div", {
+  }, /* @__PURE__ */ import_react44.default.createElement("div", {
     className: cx(classes.mark, {
       [classes.markFilled]: isMarkFilled({ mark, value, offset })
     })
-  }), mark.label && /* @__PURE__ */ import_react34.default.createElement("div", {
+  }), mark.label && /* @__PURE__ */ import_react44.default.createElement("div", {
     className: classes.markLabel,
     onMouseDown: (event) => {
       event.stopPropagation();
@@ -26415,26 +27262,26 @@ function Marks({
       onChange2(mark.value);
     }
   }, mark.label)));
-  return /* @__PURE__ */ import_react34.default.createElement("div", null, items);
+  return /* @__PURE__ */ import_react44.default.createElement("div", null, items);
 }
 Marks.displayName = "@mantine/core/SliderMarks";
 
 // node_modules/@mantine/core/esm/components/Slider/Track/Track.styles.js
-var useStyles11 = createStyles((theme, { radius, size: size2, color }) => ({
+var useStyles13 = createStyles((theme, { radius, size: size2, color }) => ({
   track: {
     position: "relative",
-    height: theme.fn.size({ sizes: sizes3, size: size2 }),
+    height: theme.fn.size({ sizes: sizes4, size: size2 }),
     width: "100%",
-    marginRight: theme.fn.size({ size: size2, sizes: sizes3 }),
-    marginLeft: theme.fn.size({ size: size2, sizes: sizes3 }),
+    marginRight: theme.fn.size({ size: size2, sizes: sizes4 }),
+    marginLeft: theme.fn.size({ size: size2, sizes: sizes4 }),
     "&::before": {
       content: '""',
       position: "absolute",
       top: 0,
       bottom: 0,
       borderRadius: theme.fn.size({ size: radius, sizes: theme.radius }),
-      right: -theme.fn.size({ size: size2, sizes: sizes3 }),
-      left: -theme.fn.size({ size: size2, sizes: sizes3 }),
+      right: -theme.fn.size({ size: size2, sizes: sizes4 }),
+      left: -theme.fn.size({ size: size2, sizes: sizes4 }),
       backgroundColor: theme.colorScheme === "dark" ? theme.colors.dark[4] : theme.colors.gray[2],
       zIndex: 0
     }
@@ -26448,36 +27295,36 @@ var useStyles11 = createStyles((theme, { radius, size: size2, color }) => ({
     borderRadius: theme.fn.size({ size: radius, sizes: theme.radius })
   }
 }));
-var Track_styles_default = useStyles11;
+var Track_styles_default = useStyles13;
 
 // node_modules/@mantine/core/esm/components/Slider/Track/Track.js
-var __defProp30 = Object.defineProperty;
-var __defProps16 = Object.defineProperties;
-var __getOwnPropDescs16 = Object.getOwnPropertyDescriptors;
-var __getOwnPropSymbols30 = Object.getOwnPropertySymbols;
-var __hasOwnProp31 = Object.prototype.hasOwnProperty;
-var __propIsEnum30 = Object.prototype.propertyIsEnumerable;
-var __defNormalProp29 = (obj, key, value) => key in obj ? __defProp30(obj, key, { enumerable: true, configurable: true, writable: true, value }) : obj[key] = value;
-var __spreadValues29 = (a2, b2) => {
+var __defProp36 = Object.defineProperty;
+var __defProps19 = Object.defineProperties;
+var __getOwnPropDescs19 = Object.getOwnPropertyDescriptors;
+var __getOwnPropSymbols36 = Object.getOwnPropertySymbols;
+var __hasOwnProp37 = Object.prototype.hasOwnProperty;
+var __propIsEnum36 = Object.prototype.propertyIsEnumerable;
+var __defNormalProp35 = (obj, key, value) => key in obj ? __defProp36(obj, key, { enumerable: true, configurable: true, writable: true, value }) : obj[key] = value;
+var __spreadValues35 = (a2, b2) => {
   for (var prop in b2 || (b2 = {}))
-    if (__hasOwnProp31.call(b2, prop))
-      __defNormalProp29(a2, prop, b2[prop]);
-  if (__getOwnPropSymbols30)
-    for (var prop of __getOwnPropSymbols30(b2)) {
-      if (__propIsEnum30.call(b2, prop))
-        __defNormalProp29(a2, prop, b2[prop]);
+    if (__hasOwnProp37.call(b2, prop))
+      __defNormalProp35(a2, prop, b2[prop]);
+  if (__getOwnPropSymbols36)
+    for (var prop of __getOwnPropSymbols36(b2)) {
+      if (__propIsEnum36.call(b2, prop))
+        __defNormalProp35(a2, prop, b2[prop]);
     }
   return a2;
 };
-var __spreadProps16 = (a2, b2) => __defProps16(a2, __getOwnPropDescs16(b2));
-var __objRest16 = (source, exclude) => {
+var __spreadProps19 = (a2, b2) => __defProps19(a2, __getOwnPropDescs19(b2));
+var __objRest20 = (source, exclude) => {
   var target = {};
   for (var prop in source)
-    if (__hasOwnProp31.call(source, prop) && exclude.indexOf(prop) < 0)
+    if (__hasOwnProp37.call(source, prop) && exclude.indexOf(prop) < 0)
       target[prop] = source[prop];
-  if (source != null && __getOwnPropSymbols30)
-    for (var prop of __getOwnPropSymbols30(source)) {
-      if (exclude.indexOf(prop) < 0 && __propIsEnum30.call(source, prop))
+  if (source != null && __getOwnPropSymbols36)
+    for (var prop of __getOwnPropSymbols36(source)) {
+      if (exclude.indexOf(prop) < 0 && __propIsEnum36.call(source, prop))
         target[prop] = source[prop];
     }
   return target;
@@ -26494,7 +27341,7 @@ function Track(_a) {
     offset,
     onMouseLeave,
     onMouseEnter
-  } = _b, others = __objRest16(_b, [
+  } = _b, others = __objRest20(_b, [
     "filled",
     "size",
     "color",
@@ -26507,17 +27354,17 @@ function Track(_a) {
     "onMouseEnter"
   ]);
   const { classes } = Track_styles_default({ color, size: size2, radius }, { classNames, styles: styles3, name: "Slider" });
-  return /* @__PURE__ */ import_react35.default.createElement("div", {
+  return /* @__PURE__ */ import_react45.default.createElement("div", {
     className: classes.track,
     onMouseLeave,
     onMouseEnter
-  }, /* @__PURE__ */ import_react35.default.createElement(Box, {
+  }, /* @__PURE__ */ import_react45.default.createElement(Box, {
     className: classes.bar,
     sx: (theme) => ({
-      left: `calc(${offset}% - ${theme.fn.size({ size: size2, sizes: sizes3 })}px)`,
-      width: `calc(${filled}% + ${theme.fn.size({ size: size2, sizes: sizes3 })}px)`
+      left: `calc(${offset}% - ${theme.fn.size({ size: size2, sizes: sizes4 })}px)`,
+      width: `calc(${filled}% + ${theme.fn.size({ size: size2, sizes: sizes4 })}px)`
     })
-  }), children, /* @__PURE__ */ import_react35.default.createElement(Marks, __spreadProps16(__spreadValues29({}, others), {
+  }), children, /* @__PURE__ */ import_react45.default.createElement(Marks, __spreadProps19(__spreadValues35({}, others), {
     size: size2,
     color,
     offset,
@@ -26528,42 +27375,42 @@ function Track(_a) {
 Track.displayName = "@mantine/core/SliderTrack";
 
 // node_modules/@mantine/core/esm/components/Slider/SliderRoot/SliderRoot.js
-var import_react36 = __toModule(require_react());
-var __defProp31 = Object.defineProperty;
-var __defProps17 = Object.defineProperties;
-var __getOwnPropDescs17 = Object.getOwnPropertyDescriptors;
-var __getOwnPropSymbols31 = Object.getOwnPropertySymbols;
-var __hasOwnProp32 = Object.prototype.hasOwnProperty;
-var __propIsEnum31 = Object.prototype.propertyIsEnumerable;
-var __defNormalProp30 = (obj, key, value) => key in obj ? __defProp31(obj, key, { enumerable: true, configurable: true, writable: true, value }) : obj[key] = value;
-var __spreadValues30 = (a2, b2) => {
+var import_react46 = __toModule(require_react());
+var __defProp37 = Object.defineProperty;
+var __defProps20 = Object.defineProperties;
+var __getOwnPropDescs20 = Object.getOwnPropertyDescriptors;
+var __getOwnPropSymbols37 = Object.getOwnPropertySymbols;
+var __hasOwnProp38 = Object.prototype.hasOwnProperty;
+var __propIsEnum37 = Object.prototype.propertyIsEnumerable;
+var __defNormalProp36 = (obj, key, value) => key in obj ? __defProp37(obj, key, { enumerable: true, configurable: true, writable: true, value }) : obj[key] = value;
+var __spreadValues36 = (a2, b2) => {
   for (var prop in b2 || (b2 = {}))
-    if (__hasOwnProp32.call(b2, prop))
-      __defNormalProp30(a2, prop, b2[prop]);
-  if (__getOwnPropSymbols31)
-    for (var prop of __getOwnPropSymbols31(b2)) {
-      if (__propIsEnum31.call(b2, prop))
-        __defNormalProp30(a2, prop, b2[prop]);
+    if (__hasOwnProp38.call(b2, prop))
+      __defNormalProp36(a2, prop, b2[prop]);
+  if (__getOwnPropSymbols37)
+    for (var prop of __getOwnPropSymbols37(b2)) {
+      if (__propIsEnum37.call(b2, prop))
+        __defNormalProp36(a2, prop, b2[prop]);
     }
   return a2;
 };
-var __spreadProps17 = (a2, b2) => __defProps17(a2, __getOwnPropDescs17(b2));
-var __objRest17 = (source, exclude) => {
+var __spreadProps20 = (a2, b2) => __defProps20(a2, __getOwnPropDescs20(b2));
+var __objRest21 = (source, exclude) => {
   var target = {};
   for (var prop in source)
-    if (__hasOwnProp32.call(source, prop) && exclude.indexOf(prop) < 0)
+    if (__hasOwnProp38.call(source, prop) && exclude.indexOf(prop) < 0)
       target[prop] = source[prop];
-  if (source != null && __getOwnPropSymbols31)
-    for (var prop of __getOwnPropSymbols31(source)) {
-      if (exclude.indexOf(prop) < 0 && __propIsEnum31.call(source, prop))
+  if (source != null && __getOwnPropSymbols37)
+    for (var prop of __getOwnPropSymbols37(source)) {
+      if (exclude.indexOf(prop) < 0 && __propIsEnum37.call(source, prop))
         target[prop] = source[prop];
     }
   return target;
 };
-var SliderRoot = (0, import_react36.forwardRef)((_a, ref) => {
-  var _b = _a, { className, size: size2, classNames, styles: styles3 } = _b, others = __objRest17(_b, ["className", "size", "classNames", "styles"]);
+var SliderRoot = (0, import_react46.forwardRef)((_a, ref) => {
+  var _b = _a, { className, size: size2, classNames, styles: styles3 } = _b, others = __objRest21(_b, ["className", "size", "classNames", "styles"]);
   const { classes, cx } = SliderRoot_styles_default({ size: size2 }, { classNames, styles: styles3, name: "Slider" });
-  return /* @__PURE__ */ import_react36.default.createElement(Box, __spreadProps17(__spreadValues30({}, others), {
+  return /* @__PURE__ */ import_react46.default.createElement(Box, __spreadProps20(__spreadValues36({}, others), {
     tabIndex: -1,
     className: cx(classes.root, className),
     ref
@@ -26572,38 +27419,38 @@ var SliderRoot = (0, import_react36.forwardRef)((_a, ref) => {
 SliderRoot.displayName = "@mantine/core/SliderRoot";
 
 // node_modules/@mantine/core/esm/components/Slider/Slider/Slider.js
-var __defProp32 = Object.defineProperty;
-var __defProps18 = Object.defineProperties;
-var __getOwnPropDescs18 = Object.getOwnPropertyDescriptors;
-var __getOwnPropSymbols32 = Object.getOwnPropertySymbols;
-var __hasOwnProp33 = Object.prototype.hasOwnProperty;
-var __propIsEnum32 = Object.prototype.propertyIsEnumerable;
-var __defNormalProp31 = (obj, key, value) => key in obj ? __defProp32(obj, key, { enumerable: true, configurable: true, writable: true, value }) : obj[key] = value;
-var __spreadValues31 = (a2, b2) => {
+var __defProp38 = Object.defineProperty;
+var __defProps21 = Object.defineProperties;
+var __getOwnPropDescs21 = Object.getOwnPropertyDescriptors;
+var __getOwnPropSymbols38 = Object.getOwnPropertySymbols;
+var __hasOwnProp39 = Object.prototype.hasOwnProperty;
+var __propIsEnum38 = Object.prototype.propertyIsEnumerable;
+var __defNormalProp37 = (obj, key, value) => key in obj ? __defProp38(obj, key, { enumerable: true, configurable: true, writable: true, value }) : obj[key] = value;
+var __spreadValues37 = (a2, b2) => {
   for (var prop in b2 || (b2 = {}))
-    if (__hasOwnProp33.call(b2, prop))
-      __defNormalProp31(a2, prop, b2[prop]);
-  if (__getOwnPropSymbols32)
-    for (var prop of __getOwnPropSymbols32(b2)) {
-      if (__propIsEnum32.call(b2, prop))
-        __defNormalProp31(a2, prop, b2[prop]);
+    if (__hasOwnProp39.call(b2, prop))
+      __defNormalProp37(a2, prop, b2[prop]);
+  if (__getOwnPropSymbols38)
+    for (var prop of __getOwnPropSymbols38(b2)) {
+      if (__propIsEnum38.call(b2, prop))
+        __defNormalProp37(a2, prop, b2[prop]);
     }
   return a2;
 };
-var __spreadProps18 = (a2, b2) => __defProps18(a2, __getOwnPropDescs18(b2));
-var __objRest18 = (source, exclude) => {
+var __spreadProps21 = (a2, b2) => __defProps21(a2, __getOwnPropDescs21(b2));
+var __objRest22 = (source, exclude) => {
   var target = {};
   for (var prop in source)
-    if (__hasOwnProp33.call(source, prop) && exclude.indexOf(prop) < 0)
+    if (__hasOwnProp39.call(source, prop) && exclude.indexOf(prop) < 0)
       target[prop] = source[prop];
-  if (source != null && __getOwnPropSymbols32)
-    for (var prop of __getOwnPropSymbols32(source)) {
-      if (exclude.indexOf(prop) < 0 && __propIsEnum32.call(source, prop))
+  if (source != null && __getOwnPropSymbols38)
+    for (var prop of __getOwnPropSymbols38(source)) {
+      if (exclude.indexOf(prop) < 0 && __propIsEnum38.call(source, prop))
         target[prop] = source[prop];
     }
   return target;
 };
-var Slider = (0, import_react37.forwardRef)((_a, ref) => {
+var Slider = (0, import_react47.forwardRef)((_a, ref) => {
   var _b = _a, {
     classNames,
     styles: styles3,
@@ -26626,7 +27473,7 @@ var Slider = (0, import_react37.forwardRef)((_a, ref) => {
     thumbLabel = "",
     showLabelOnHover = true,
     thumbChildren
-  } = _b, others = __objRest18(_b, [
+  } = _b, others = __objRest22(_b, [
     "classNames",
     "styles",
     "color",
@@ -26650,7 +27497,7 @@ var Slider = (0, import_react37.forwardRef)((_a, ref) => {
     "thumbChildren"
   ]);
   const theme = useMantineTheme();
-  const [hovered, setHovered] = (0, import_react37.useState)(false);
+  const [hovered, setHovered] = (0, import_react47.useState)(false);
   const [_value, setValue] = useUncontrolled({
     value: typeof value === "number" ? clamp({ value, min, max }) : value,
     defaultValue: typeof defaultValue === "number" ? clamp({ value: defaultValue, min, max }) : defaultValue,
@@ -26658,7 +27505,7 @@ var Slider = (0, import_react37.forwardRef)((_a, ref) => {
     rule: (val) => typeof val === "number",
     onChange: onChange2
   });
-  const thumb = (0, import_react37.useRef)();
+  const thumb = (0, import_react47.useRef)();
   const position2 = getPosition({ value: _value, min, max });
   const _label = typeof label === "function" ? label(_value) : label;
   const handleChange = (val) => {
@@ -26690,7 +27537,7 @@ var Slider = (0, import_react37.forwardRef)((_a, ref) => {
       }
     }
   };
-  return /* @__PURE__ */ import_react37.default.createElement(SliderRoot, __spreadProps18(__spreadValues31({}, others), {
+  return /* @__PURE__ */ import_react47.default.createElement(SliderRoot, __spreadProps21(__spreadValues37({}, others), {
     size: size2,
     ref: useMergedRef(container, ref),
     onKeyDownCapture: handleTrackKeydownCapture,
@@ -26700,7 +27547,7 @@ var Slider = (0, import_react37.forwardRef)((_a, ref) => {
     },
     classNames,
     styles: styles3
-  }), /* @__PURE__ */ import_react37.default.createElement(Track, {
+  }), /* @__PURE__ */ import_react47.default.createElement(Track, {
     offset: 0,
     filled: position2,
     marks,
@@ -26715,7 +27562,7 @@ var Slider = (0, import_react37.forwardRef)((_a, ref) => {
     onMouseLeave: showLabelOnHover ? () => setHovered(false) : void 0,
     classNames,
     styles: styles3
-  }, /* @__PURE__ */ import_react37.default.createElement(Thumb, {
+  }, /* @__PURE__ */ import_react47.default.createElement(Thumb, {
     max,
     min,
     value: _value,
@@ -26734,7 +27581,7 @@ var Slider = (0, import_react37.forwardRef)((_a, ref) => {
     styles: styles3,
     thumbLabel,
     showLabelOnHover: showLabelOnHover && hovered
-  }, thumbChildren)), /* @__PURE__ */ import_react37.default.createElement("input", {
+  }, thumbChildren)), /* @__PURE__ */ import_react47.default.createElement("input", {
     type: "hidden",
     name,
     value: _value
@@ -26743,28 +27590,28 @@ var Slider = (0, import_react37.forwardRef)((_a, ref) => {
 Slider.displayName = "@mantine/core/Slider";
 
 // node_modules/@mantine/core/esm/components/Switch/Switch.js
-var import_react38 = __toModule(require_react());
+var import_react48 = __toModule(require_react());
 
 // node_modules/@mantine/core/esm/components/Switch/Switch.styles.js
-var __defProp33 = Object.defineProperty;
-var __defProps19 = Object.defineProperties;
-var __getOwnPropDescs19 = Object.getOwnPropertyDescriptors;
-var __getOwnPropSymbols33 = Object.getOwnPropertySymbols;
-var __hasOwnProp34 = Object.prototype.hasOwnProperty;
-var __propIsEnum33 = Object.prototype.propertyIsEnumerable;
-var __defNormalProp32 = (obj, key, value) => key in obj ? __defProp33(obj, key, { enumerable: true, configurable: true, writable: true, value }) : obj[key] = value;
-var __spreadValues32 = (a2, b2) => {
+var __defProp39 = Object.defineProperty;
+var __defProps22 = Object.defineProperties;
+var __getOwnPropDescs22 = Object.getOwnPropertyDescriptors;
+var __getOwnPropSymbols39 = Object.getOwnPropertySymbols;
+var __hasOwnProp40 = Object.prototype.hasOwnProperty;
+var __propIsEnum39 = Object.prototype.propertyIsEnumerable;
+var __defNormalProp38 = (obj, key, value) => key in obj ? __defProp39(obj, key, { enumerable: true, configurable: true, writable: true, value }) : obj[key] = value;
+var __spreadValues38 = (a2, b2) => {
   for (var prop in b2 || (b2 = {}))
-    if (__hasOwnProp34.call(b2, prop))
-      __defNormalProp32(a2, prop, b2[prop]);
-  if (__getOwnPropSymbols33)
-    for (var prop of __getOwnPropSymbols33(b2)) {
-      if (__propIsEnum33.call(b2, prop))
-        __defNormalProp32(a2, prop, b2[prop]);
+    if (__hasOwnProp40.call(b2, prop))
+      __defNormalProp38(a2, prop, b2[prop]);
+  if (__getOwnPropSymbols39)
+    for (var prop of __getOwnPropSymbols39(b2)) {
+      if (__propIsEnum39.call(b2, prop))
+        __defNormalProp38(a2, prop, b2[prop]);
     }
   return a2;
 };
-var __spreadProps19 = (a2, b2) => __defProps19(a2, __getOwnPropDescs19(b2));
+var __spreadProps22 = (a2, b2) => __defProps22(a2, __getOwnPropDescs22(b2));
 var switchHeight = {
   xs: 16,
   sm: 20,
@@ -26793,11 +27640,11 @@ var labelFontSizes = {
   lg: 9,
   xl: 11
 };
-var sizes4 = Object.keys(switchHeight).reduce((acc, size2) => {
+var sizes5 = Object.keys(switchHeight).reduce((acc, size2) => {
   acc[size2] = { width: switchWidth[size2], height: switchHeight[size2] };
   return acc;
 }, {});
-var useStyles12 = createStyles((theme, { size: size2, radius, color, offLabel, onLabel }) => {
+var useStyles14 = createStyles((theme, { size: size2, radius, color, offLabel, onLabel }) => {
   const handleSize = theme.fn.size({ size: size2, sizes: handleSizes });
   const borderRadius = theme.fn.size({ size: radius, sizes: theme.radius });
   return {
@@ -26805,7 +27652,7 @@ var useStyles12 = createStyles((theme, { size: size2, radius, color, offLabel, o
       display: "flex",
       alignItems: "center"
     },
-    input: __spreadProps19(__spreadValues32({}, theme.fn.focusStyles()), {
+    input: __spreadProps22(__spreadValues38({}, theme.fn.focusStyles()), {
       overflow: "hidden",
       WebkitTapHighlightColor: "transparent",
       position: "relative",
@@ -26877,7 +27724,7 @@ var useStyles12 = createStyles((theme, { size: size2, radius, color, offLabel, o
         }
       }
     }),
-    label: __spreadProps19(__spreadValues32({}, theme.fn.fontStyles()), {
+    label: __spreadProps22(__spreadValues38({}, theme.fn.fontStyles()), {
       WebkitTapHighlightColor: "transparent",
       fontSize: theme.fn.size({ size: size2, sizes: theme.fontSizes }),
       fontFamily: theme.fontFamily,
@@ -26886,41 +27733,41 @@ var useStyles12 = createStyles((theme, { size: size2, radius, color, offLabel, o
     })
   };
 });
-var Switch_styles_default = useStyles12;
+var Switch_styles_default = useStyles14;
 
 // node_modules/@mantine/core/esm/components/Switch/Switch.js
-var __defProp34 = Object.defineProperty;
-var __defProps20 = Object.defineProperties;
-var __getOwnPropDescs20 = Object.getOwnPropertyDescriptors;
-var __getOwnPropSymbols34 = Object.getOwnPropertySymbols;
-var __hasOwnProp35 = Object.prototype.hasOwnProperty;
-var __propIsEnum34 = Object.prototype.propertyIsEnumerable;
-var __defNormalProp33 = (obj, key, value) => key in obj ? __defProp34(obj, key, { enumerable: true, configurable: true, writable: true, value }) : obj[key] = value;
-var __spreadValues33 = (a2, b2) => {
+var __defProp40 = Object.defineProperty;
+var __defProps23 = Object.defineProperties;
+var __getOwnPropDescs23 = Object.getOwnPropertyDescriptors;
+var __getOwnPropSymbols40 = Object.getOwnPropertySymbols;
+var __hasOwnProp41 = Object.prototype.hasOwnProperty;
+var __propIsEnum40 = Object.prototype.propertyIsEnumerable;
+var __defNormalProp39 = (obj, key, value) => key in obj ? __defProp40(obj, key, { enumerable: true, configurable: true, writable: true, value }) : obj[key] = value;
+var __spreadValues39 = (a2, b2) => {
   for (var prop in b2 || (b2 = {}))
-    if (__hasOwnProp35.call(b2, prop))
-      __defNormalProp33(a2, prop, b2[prop]);
-  if (__getOwnPropSymbols34)
-    for (var prop of __getOwnPropSymbols34(b2)) {
-      if (__propIsEnum34.call(b2, prop))
-        __defNormalProp33(a2, prop, b2[prop]);
+    if (__hasOwnProp41.call(b2, prop))
+      __defNormalProp39(a2, prop, b2[prop]);
+  if (__getOwnPropSymbols40)
+    for (var prop of __getOwnPropSymbols40(b2)) {
+      if (__propIsEnum40.call(b2, prop))
+        __defNormalProp39(a2, prop, b2[prop]);
     }
   return a2;
 };
-var __spreadProps20 = (a2, b2) => __defProps20(a2, __getOwnPropDescs20(b2));
-var __objRest19 = (source, exclude) => {
+var __spreadProps23 = (a2, b2) => __defProps23(a2, __getOwnPropDescs23(b2));
+var __objRest23 = (source, exclude) => {
   var target = {};
   for (var prop in source)
-    if (__hasOwnProp35.call(source, prop) && exclude.indexOf(prop) < 0)
+    if (__hasOwnProp41.call(source, prop) && exclude.indexOf(prop) < 0)
       target[prop] = source[prop];
-  if (source != null && __getOwnPropSymbols34)
-    for (var prop of __getOwnPropSymbols34(source)) {
-      if (exclude.indexOf(prop) < 0 && __propIsEnum34.call(source, prop))
+  if (source != null && __getOwnPropSymbols40)
+    for (var prop of __getOwnPropSymbols40(source)) {
+      if (exclude.indexOf(prop) < 0 && __propIsEnum40.call(source, prop))
         target[prop] = source[prop];
     }
   return target;
 };
-var Switch = (0, import_react38.forwardRef)((_a, ref) => {
+var Switch = (0, import_react48.forwardRef)((_a, ref) => {
   var _b = _a, {
     className,
     color,
@@ -26936,7 +27783,7 @@ var Switch = (0, import_react38.forwardRef)((_a, ref) => {
     classNames,
     styles: styles3,
     sx
-  } = _b, others = __objRest19(_b, [
+  } = _b, others = __objRest23(_b, [
     "className",
     "color",
     "label",
@@ -26955,16 +27802,16 @@ var Switch = (0, import_react38.forwardRef)((_a, ref) => {
   const { classes, cx } = Switch_styles_default({ size: size2, color, radius, offLabel, onLabel }, { classNames, styles: styles3, name: "Switch" });
   const { margins, rest } = extractMargins(others);
   const uuid = useUuid(id);
-  return /* @__PURE__ */ import_react38.default.createElement(Box, __spreadValues33(__spreadValues33({
+  return /* @__PURE__ */ import_react48.default.createElement(Box, __spreadValues39(__spreadValues39({
     className: cx(classes.root, className),
     style,
     sx
-  }, margins), wrapperProps), /* @__PURE__ */ import_react38.default.createElement("input", __spreadProps20(__spreadValues33({}, rest), {
+  }, margins), wrapperProps), /* @__PURE__ */ import_react48.default.createElement("input", __spreadProps23(__spreadValues39({}, rest), {
     id: uuid,
     ref,
     type: "checkbox",
     className: classes.input
-  })), label && /* @__PURE__ */ import_react38.default.createElement("label", {
+  })), label && /* @__PURE__ */ import_react48.default.createElement("label", {
     className: classes.label,
     htmlFor: uuid
   }, label));
@@ -26972,45 +27819,45 @@ var Switch = (0, import_react38.forwardRef)((_a, ref) => {
 Switch.displayName = "@mantine/core/Switch";
 
 // node_modules/@mantine/core/esm/components/ThemeIcon/ThemeIcon.js
-var import_react39 = __toModule(require_react());
+var import_react49 = __toModule(require_react());
 
 // node_modules/@mantine/core/esm/components/ThemeIcon/ThemeIcon.styles.js
-var __defProp35 = Object.defineProperty;
-var __defProps21 = Object.defineProperties;
-var __getOwnPropDescs21 = Object.getOwnPropertyDescriptors;
-var __getOwnPropSymbols35 = Object.getOwnPropertySymbols;
-var __hasOwnProp36 = Object.prototype.hasOwnProperty;
-var __propIsEnum35 = Object.prototype.propertyIsEnumerable;
-var __defNormalProp34 = (obj, key, value) => key in obj ? __defProp35(obj, key, { enumerable: true, configurable: true, writable: true, value }) : obj[key] = value;
-var __spreadValues34 = (a2, b2) => {
+var __defProp41 = Object.defineProperty;
+var __defProps24 = Object.defineProperties;
+var __getOwnPropDescs24 = Object.getOwnPropertyDescriptors;
+var __getOwnPropSymbols41 = Object.getOwnPropertySymbols;
+var __hasOwnProp42 = Object.prototype.hasOwnProperty;
+var __propIsEnum41 = Object.prototype.propertyIsEnumerable;
+var __defNormalProp40 = (obj, key, value) => key in obj ? __defProp41(obj, key, { enumerable: true, configurable: true, writable: true, value }) : obj[key] = value;
+var __spreadValues40 = (a2, b2) => {
   for (var prop in b2 || (b2 = {}))
-    if (__hasOwnProp36.call(b2, prop))
-      __defNormalProp34(a2, prop, b2[prop]);
-  if (__getOwnPropSymbols35)
-    for (var prop of __getOwnPropSymbols35(b2)) {
-      if (__propIsEnum35.call(b2, prop))
-        __defNormalProp34(a2, prop, b2[prop]);
+    if (__hasOwnProp42.call(b2, prop))
+      __defNormalProp40(a2, prop, b2[prop]);
+  if (__getOwnPropSymbols41)
+    for (var prop of __getOwnPropSymbols41(b2)) {
+      if (__propIsEnum41.call(b2, prop))
+        __defNormalProp40(a2, prop, b2[prop]);
     }
   return a2;
 };
-var __spreadProps21 = (a2, b2) => __defProps21(a2, __getOwnPropDescs21(b2));
-var sizes5 = {
+var __spreadProps24 = (a2, b2) => __defProps24(a2, __getOwnPropDescs24(b2));
+var sizes6 = {
   xs: 16,
   sm: 20,
   md: 26,
   lg: 32,
   xl: 40
 };
-var useStyles13 = createStyles((theme, { color, size: size2, radius, gradientFrom, gradientTo, gradientDeg, variant }) => {
+var useStyles15 = createStyles((theme, { color, size: size2, radius, gradientFrom, gradientTo, gradientDeg, variant }) => {
   const colors = getSharedColorScheme({
     theme,
     color,
     variant,
     gradient: { from: gradientFrom, to: gradientTo, deg: gradientDeg }
   });
-  const iconSize = theme.fn.size({ size: size2, sizes: sizes5 });
+  const iconSize = theme.fn.size({ size: size2, sizes: sizes6 });
   return {
-    root: __spreadProps21(__spreadValues34({}, theme.fn.fontStyles()), {
+    root: __spreadProps24(__spreadValues40({}, theme.fn.fontStyles()), {
       display: "inline-flex",
       alignItems: "center",
       justifyContent: "center",
@@ -27026,38 +27873,38 @@ var useStyles13 = createStyles((theme, { color, size: size2, radius, gradientFro
     })
   };
 });
-var ThemeIcon_styles_default = useStyles13;
+var ThemeIcon_styles_default = useStyles15;
 
 // node_modules/@mantine/core/esm/components/ThemeIcon/ThemeIcon.js
-var __defProp36 = Object.defineProperty;
-var __getOwnPropSymbols36 = Object.getOwnPropertySymbols;
-var __hasOwnProp37 = Object.prototype.hasOwnProperty;
-var __propIsEnum36 = Object.prototype.propertyIsEnumerable;
-var __defNormalProp35 = (obj, key, value) => key in obj ? __defProp36(obj, key, { enumerable: true, configurable: true, writable: true, value }) : obj[key] = value;
-var __spreadValues35 = (a2, b2) => {
+var __defProp42 = Object.defineProperty;
+var __getOwnPropSymbols42 = Object.getOwnPropertySymbols;
+var __hasOwnProp43 = Object.prototype.hasOwnProperty;
+var __propIsEnum42 = Object.prototype.propertyIsEnumerable;
+var __defNormalProp41 = (obj, key, value) => key in obj ? __defProp42(obj, key, { enumerable: true, configurable: true, writable: true, value }) : obj[key] = value;
+var __spreadValues41 = (a2, b2) => {
   for (var prop in b2 || (b2 = {}))
-    if (__hasOwnProp37.call(b2, prop))
-      __defNormalProp35(a2, prop, b2[prop]);
-  if (__getOwnPropSymbols36)
-    for (var prop of __getOwnPropSymbols36(b2)) {
-      if (__propIsEnum36.call(b2, prop))
-        __defNormalProp35(a2, prop, b2[prop]);
+    if (__hasOwnProp43.call(b2, prop))
+      __defNormalProp41(a2, prop, b2[prop]);
+  if (__getOwnPropSymbols42)
+    for (var prop of __getOwnPropSymbols42(b2)) {
+      if (__propIsEnum42.call(b2, prop))
+        __defNormalProp41(a2, prop, b2[prop]);
     }
   return a2;
 };
-var __objRest20 = (source, exclude) => {
+var __objRest24 = (source, exclude) => {
   var target = {};
   for (var prop in source)
-    if (__hasOwnProp37.call(source, prop) && exclude.indexOf(prop) < 0)
+    if (__hasOwnProp43.call(source, prop) && exclude.indexOf(prop) < 0)
       target[prop] = source[prop];
-  if (source != null && __getOwnPropSymbols36)
-    for (var prop of __getOwnPropSymbols36(source)) {
-      if (exclude.indexOf(prop) < 0 && __propIsEnum36.call(source, prop))
+  if (source != null && __getOwnPropSymbols42)
+    for (var prop of __getOwnPropSymbols42(source)) {
+      if (exclude.indexOf(prop) < 0 && __propIsEnum42.call(source, prop))
         target[prop] = source[prop];
     }
   return target;
 };
-var ThemeIcon = (0, import_react39.forwardRef)((_a, ref) => {
+var ThemeIcon = (0, import_react49.forwardRef)((_a, ref) => {
   var _b = _a, {
     className,
     size: size2 = "md",
@@ -27066,7 +27913,7 @@ var ThemeIcon = (0, import_react39.forwardRef)((_a, ref) => {
     color,
     children,
     gradient = { from: "blue", to: "cyan", deg: 45 }
-  } = _b, others = __objRest20(_b, [
+  } = _b, others = __objRest24(_b, [
     "className",
     "size",
     "radius",
@@ -27084,7 +27931,7 @@ var ThemeIcon = (0, import_react39.forwardRef)((_a, ref) => {
     gradientTo: gradient.to,
     gradientDeg: gradient.deg
   }, { name: "ThemeIcon" });
-  return /* @__PURE__ */ import_react39.default.createElement(Box, __spreadValues35({
+  return /* @__PURE__ */ import_react49.default.createElement(Box, __spreadValues41({
     className: cx(classes.root, className),
     ref
   }, others), children);
@@ -27093,7 +27940,7 @@ ThemeIcon.displayName = "@mantine/core/ThemeIcon";
 
 // node_modules/styled-components/dist/styled-components.browser.esm.js
 var import_react_is = __toModule(require_react_is());
-var import_react40 = __toModule(require_react());
+var import_react50 = __toModule(require_react());
 var import_shallowequal = __toModule(require_shallowequal());
 
 // node_modules/@emotion/stylis/dist/stylis.browser.esm.js
@@ -27972,27 +28819,27 @@ function ce(e2) {
     return t3.name || j(15), te(e3, t3.name);
   }, 5381).toString() : "", m;
 }
-var ue = import_react40.default.createContext();
+var ue = import_react50.default.createContext();
 var le = ue.Consumer;
-var de = import_react40.default.createContext();
+var de = import_react50.default.createContext();
 var he = (de.Consumer, new Z());
 var pe = ce();
 function fe() {
-  return (0, import_react40.useContext)(ue) || he;
+  return (0, import_react50.useContext)(ue) || he;
 }
 function me() {
-  return (0, import_react40.useContext)(de) || pe;
+  return (0, import_react50.useContext)(de) || pe;
 }
 function ye(e2) {
-  var t2 = (0, import_react40.useState)(e2.stylisPlugins), n2 = t2[0], s2 = t2[1], c2 = fe(), u2 = (0, import_react40.useMemo)(function() {
+  var t2 = (0, import_react50.useState)(e2.stylisPlugins), n2 = t2[0], s2 = t2[1], c2 = fe(), u2 = (0, import_react50.useMemo)(function() {
     var t3 = c2;
     return e2.sheet ? t3 = e2.sheet : e2.target && (t3 = t3.reconstructWithOptions({ target: e2.target }, false)), e2.disableCSSOMInjection && (t3 = t3.reconstructWithOptions({ useCSSOMInjection: false })), t3;
-  }, [e2.disableCSSOMInjection, e2.sheet, e2.target]), l2 = (0, import_react40.useMemo)(function() {
+  }, [e2.disableCSSOMInjection, e2.sheet, e2.target]), l2 = (0, import_react50.useMemo)(function() {
     return ce({ options: { prefix: !e2.disableVendorPrefixes }, plugins: n2 });
   }, [e2.disableVendorPrefixes, n2]);
-  return (0, import_react40.useEffect)(function() {
+  return (0, import_react50.useEffect)(function() {
     (0, import_shallowequal.default)(n2, e2.stylisPlugins) || s2(e2.stylisPlugins);
-  }, [e2.stylisPlugins]), import_react40.default.createElement(ue.Provider, { value: u2 }, import_react40.default.createElement(de.Provider, { value: l2 }, true ? import_react40.default.Children.only(e2.children) : e2.children));
+  }, [e2.stylisPlugins]), import_react50.default.createElement(ue.Provider, { value: u2 }, import_react50.default.createElement(de.Provider, { value: l2 }, true ? import_react50.default.Children.only(e2.children) : e2.children));
 }
 var ve = function() {
   function e2(e3, t2) {
@@ -28068,7 +28915,7 @@ var Oe = function(e2, t2) {
             s2[i2 - 1] = arguments[i2];
           r2.apply(void 0, [e3].concat(s2));
         }
-      }, (0, import_react40.useRef)(), o2 && !Pe.has(n2) && (console.warn(n2), Pe.add(n2));
+      }, (0, import_react50.useRef)(), o2 && !Pe.has(n2) && (console.warn(n2), Pe.add(n2));
     } catch (e3) {
       Ie.test(e3.message) && Pe.delete(n2);
     } finally {
@@ -28111,7 +28958,7 @@ function Me(e2) {
   }
   return e2;
 }
-var Ge = import_react40.default.createContext();
+var Ge = import_react50.default.createContext();
 var Le = Ge.Consumer;
 var Ye = {};
 function qe(e2, t2, n2) {
@@ -28129,7 +28976,7 @@ function qe(e2, t2, n2) {
   var C, I2 = new se(n2, g2, o2 ? e2.componentStyle : void 0), P2 = I2.isStatic && c2.length === 0, O = function(e3, t3) {
     return function(e4, t4, n3, r2) {
       var o3 = e4.attrs, i3 = e4.componentStyle, a3 = e4.defaultProps, c3 = e4.foldedComponentIds, d4 = e4.shouldForwardProp, h3 = e4.styledComponentId, p3 = e4.target;
-      (0, import_react40.useDebugValue)(h3);
+      (0, import_react50.useDebugValue)(h3);
       var f2 = function(e5, t5, n4) {
         e5 === void 0 && (e5 = E);
         var r3 = v({}, t5, { theme: e5 }), o4 = {};
@@ -28138,16 +28985,16 @@ function qe(e2, t2, n2) {
           for (t6 in b(i4) && (i4 = i4(r3)), i4)
             r3[t6] = o4[t6] = t6 === "className" ? (n5 = o4[t6], s2 = i4[t6], n5 && s2 ? n5 + " " + s2 : n5 || s2) : i4[t6];
         }), [r3, o4];
-      }(Re(t4, (0, import_react40.useContext)(Ge), a3) || E, t4, o3), y2 = f2[0], g3 = f2[1], S3 = function(e5, t5, n4, r3) {
+      }(Re(t4, (0, import_react50.useContext)(Ge), a3) || E, t4, o3), y2 = f2[0], g3 = f2[1], S3 = function(e5, t5, n4, r3) {
         var o4 = fe(), s2 = me(), i4 = t5 ? e5.generateAndInjectStyles(E, o4, s2) : e5.generateAndInjectStyles(n4, o4, s2);
-        return (0, import_react40.useDebugValue)(i4), !t5 && r3 && r3(i4), i4;
+        return (0, import_react50.useDebugValue)(i4), !t5 && r3 && r3(i4), i4;
       }(i3, r2, y2, true ? e4.warnTooManyClasses : void 0), w3 = n3, _2 = g3.$as || t4.$as || g3.as || t4.as || p3, N2 = ke(_2), A3 = g3 !== t4 ? v({}, t4, {}, g3) : t4, C2 = {};
       for (var I3 in A3)
         I3[0] !== "$" && I3 !== "as" && (I3 === "forwardedAs" ? C2.as = A3[I3] : (d4 ? d4(I3, is_prop_valid_browser_esm_default, _2) : !N2 || is_prop_valid_browser_esm_default(I3)) && (C2[I3] = A3[I3]));
-      return t4.style && g3.style !== t4.style && (C2.style = v({}, t4.style, {}, g3.style)), C2.className = Array.prototype.concat(c3, h3, S3 !== h3 ? S3 : null, t4.className, g3.className).filter(Boolean).join(" "), C2.ref = w3, (0, import_react40.createElement)(_2, C2);
+      return t4.style && g3.style !== t4.style && (C2.style = v({}, t4.style, {}, g3.style)), C2.className = Array.prototype.concat(c3, h3, S3 !== h3 ? S3 : null, t4.className, g3.className).filter(Boolean).join(" "), C2.ref = w3, (0, import_react50.createElement)(_2, C2);
     }(C, e3, t3, P2);
   };
-  return O.displayName = f, (C = import_react40.default.forwardRef(O)).attrs = S2, C.componentStyle = I2, C.displayName = f, C.shouldForwardProp = A2, C.foldedComponentIds = o2 ? Array.prototype.concat(e2.foldedComponentIds, e2.styledComponentId) : w, C.styledComponentId = g2, C.target = o2 ? e2.target : e2, C.withComponent = function(e3) {
+  return O.displayName = f, (C = import_react50.default.forwardRef(O)).attrs = S2, C.componentStyle = I2, C.displayName = f, C.shouldForwardProp = A2, C.foldedComponentIds = o2 ? Array.prototype.concat(e2.foldedComponentIds, e2.styledComponentId) : w, C.styledComponentId = g2, C.target = o2 ? e2.target : e2, C.withComponent = function(e3) {
     var r2 = t2.componentId, o3 = function(e4, t3) {
       if (e4 == null)
         return {};
@@ -28220,14 +29067,14 @@ var Je = function() {
       if (e3.sealed)
         return j(2);
       var n2 = ((t3 = {})[A] = "", t3["data-styled-version"] = "5.3.3", t3.dangerouslySetInnerHTML = { __html: e3.instance.toString() }, t3), o2 = q();
-      return o2 && (n2.nonce = o2), [import_react40.default.createElement("style", v({}, n2, { key: "sc-0-0" }))];
+      return o2 && (n2.nonce = o2), [import_react50.default.createElement("style", v({}, n2, { key: "sc-0-0" }))];
     }, this.seal = function() {
       e3.sealed = true;
     }, this.instance = new Z({ isServer: true }), this.sealed = false;
   }
   var t2 = e2.prototype;
   return t2.collectStyles = function(e3) {
-    return this.sealed ? j(2) : import_react40.default.createElement(ye, { sheet: this.instance }, e3);
+    return this.sealed ? j(2) : import_react50.default.createElement(ye, { sheet: this.instance }, e3);
   }, t2.interleaveWithNodeStream = function(e3) {
     return j(3);
   }, e2;
@@ -28236,31 +29083,31 @@ typeof navigator != "undefined" && navigator.product === "ReactNative" && consol
 var styled_components_browser_esm_default = He;
 
 // src/App.jsx
-var import_react47 = __toModule(require_react());
+var import_react58 = __toModule(require_react());
 
 // src/components/HelloWorld.jsx
-var import_react46 = __toModule(require_react());
+var import_react57 = __toModule(require_react());
 
 // src/components/Counter.js
-var import_react43 = __toModule(require_react());
-var import_react44 = __toModule(require_react());
-var import_react45 = __toModule(require_react_development());
+var import_react54 = __toModule(require_react());
+var import_react55 = __toModule(require_react());
+var import_react56 = __toModule(require_react_development());
 
 // src/components/NumberComponent.js
-var import_react41 = __toModule(require_react());
+var import_react51 = __toModule(require_react());
 var BillQuantityText = styled_components_browser_esm_default.span`
   color: 'teal',
   backgroundColor: 'slateGray'
 `;
 function NumberComponent(props) {
   let { range, idx, denom, onChange: onChange2 } = props;
-  const [quantity, setQuantity] = (0, import_react41.useState)(0);
-  const [sum, setSum] = (0, import_react41.useState)(0);
-  const [isLocked, setIsLocked] = (0, import_react41.useState)(false);
-  (0, import_react41.useEffect)(() => {
+  const [quantity, setQuantity] = (0, import_react51.useState)(0);
+  const [sum, setSum] = (0, import_react51.useState)(0);
+  const [isLocked, setIsLocked] = (0, import_react51.useState)(false);
+  (0, import_react51.useEffect)(() => {
     denomCalculator();
   }, [quantity]);
-  (0, import_react41.useEffect)(() => {
+  (0, import_react51.useEffect)(() => {
     onChange2(sum, denom, idx);
   }, [sum]);
   const denomCalculator = () => {
@@ -28278,22 +29125,22 @@ function NumberComponent(props) {
     setIsLocked(!isLocked);
     console.log(e2.target.checked);
   };
-  return /* @__PURE__ */ import_react41.default.createElement(import_react41.default.Fragment, null, /* @__PURE__ */ import_react41.default.createElement(Slider, {
+  return /* @__PURE__ */ import_react51.default.createElement(import_react51.default.Fragment, null, /* @__PURE__ */ import_react51.default.createElement(Slider, {
     labelTransition: "skew-down",
     labelTransitionDuration: 150,
     labelTransitionTimingFunction: "ease",
     onChange: (quant) => setQuantity(quant),
     value: quantity,
     size: "xl"
-  }), /* @__PURE__ */ import_react41.default.createElement(Group, {
+  }), /* @__PURE__ */ import_react51.default.createElement(Group, {
     spacing: 5,
     style: { "marginBottom": "1em" }
-  }, /* @__PURE__ */ import_react41.default.createElement(Switch, {
+  }, /* @__PURE__ */ import_react51.default.createElement(Switch, {
     label: isLocked ? "Locked" : "Unlocked",
     color: "cyan",
     checked: isLocked,
     onChange: handleChangeSwitch
-  }), /* @__PURE__ */ import_react41.default.createElement(NumberInput, {
+  }), /* @__PURE__ */ import_react51.default.createElement(NumberInput, {
     hideControls: true,
     value: quantity,
     onChange: () => console.log("value"),
@@ -28301,7 +29148,7 @@ function NumberComponent(props) {
     min: 0,
     step: 2,
     styles: { input: { width: 54, textAlign: "center" } }
-  }), /* @__PURE__ */ import_react41.default.createElement(NumberInput, {
+  }), /* @__PURE__ */ import_react51.default.createElement(NumberInput, {
     hideControls: true,
     value: sum,
     disabled: true,
@@ -28310,11 +29157,11 @@ function NumberComponent(props) {
       label: { color: "red" },
       wrapper: { color: "red" }
     }
-  }), /* @__PURE__ */ import_react41.default.createElement(ActionIcon, {
+  }), /* @__PURE__ */ import_react51.default.createElement(ActionIcon, {
     size: 35,
     variant: "default",
     onClick: handleClick
-  }, "-"), /* @__PURE__ */ import_react41.default.createElement(ActionIcon, {
+  }, "-"), /* @__PURE__ */ import_react51.default.createElement(ActionIcon, {
     size: 35,
     variant: "default",
     onClick: handleClick
@@ -30692,7 +31539,7 @@ var counter = api.counter;
 
 // node_modules/@fortawesome/react-fontawesome/index.es.js
 var import_prop_types = __toModule(require_prop_types());
-var import_react42 = __toModule(require_react());
+var import_react52 = __toModule(require_react());
 function ownKeys2(object, enumerableOnly) {
   var keys = Object.keys(object);
   if (Object.getOwnPropertySymbols) {
@@ -31000,7 +31847,7 @@ FontAwesomeIcon.defaultProps = {
   transform: null,
   swapOpacity: false
 };
-var convertCurry = convert.bind(null, import_react42.default.createElement);
+var convertCurry = convert.bind(null, import_react52.default.createElement);
 
 // node_modules/@fortawesome/free-solid-svg-icons/index.es.js
 var faCheck = {
@@ -31018,6 +31865,22 @@ var faMoneyBill1Wave = {
   iconName: "money-bill-1-wave",
   icon: [576, 512, ["money-bill-wave-alt"], "f53b", "M251.1 207.1C251.1 196.1 260.1 187.1 271.1 187.1H287.1C299 187.1 308 196.1 308 207.1V275.1H312C323 275.1 332 284.1 332 295.1C332 307 323 315.1 312 315.1H263.1C252.1 315.1 243.1 307 243.1 295.1C243.1 284.1 252.1 275.1 263.1 275.1H267.1V227.6C258.9 225.7 251.1 217.7 251.1 207.1zM48.66 79.13C128.4 100.9 208.2 80.59 288 60.25C375 38.08 462 15.9 549 48.38C565.9 54.69 576 71.62 576 89.66V399.5C576 423.4 550.4 439.2 527.3 432.9C447.6 411.1 367.8 431.4 288 451.7C200.1 473.9 113.1 496.1 26.97 463.6C10.06 457.3 0 440.4 0 422.3V112.5C0 88.59 25.61 72.83 48.66 79.13L48.66 79.13zM127.1 416C127.1 380.7 99.35 352 63.1 352V416H127.1zM63.1 223.1C99.35 223.1 127.1 195.3 127.1 159.1H63.1V223.1zM512 352V287.1C476.7 287.1 448 316.7 448 352H512zM512 95.1H448C448 131.3 476.7 159.1 512 159.1V95.1zM287.1 143.1C234.1 143.1 191.1 194.1 191.1 255.1C191.1 317.9 234.1 368 287.1 368C341 368 384 317.9 384 255.1C384 194.1 341 143.1 287.1 143.1z"]
 };
+
+// src/components/ModalMain.js
+var import_react53 = __toModule(require_react());
+var ModalMain = ({ opened }) => {
+  return /* @__PURE__ */ import_react53.default.createElement(import_react53.default.Fragment, null, /* @__PURE__ */ import_react53.default.createElement(Modal, {
+    opened,
+    onClose: () => setOpened(false),
+    title: "Introduce yourself!"
+  }, /* @__PURE__ */ import_react53.default.createElement(Input, {
+    variant: "default",
+    placeholder: "Default variant"
+  })), /* @__PURE__ */ import_react53.default.createElement(Group, {
+    position: "center"
+  }));
+};
+var ModalMain_default = ModalMain;
 
 // src/components/Counter.js
 var HeaderContainer = styled_components_browser_esm_default.div`
@@ -31042,14 +31905,18 @@ var Switch2 = styled_components_browser_esm_default.div`
   ${""}
 `;
 var Counter = () => {
-  const [totalBills, setTotalBills] = (0, import_react44.useState)([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]);
-  const [totalCash, setTotalCash] = (0, import_react44.useState)(0);
-  const [target, setTarget] = (0, import_react44.useState)(1110);
-  const [toggle, setToggle] = (0, import_react44.useState)(true);
-  (0, import_react45.useEffect)(() => {
+  const [totalBills, setTotalBills] = (0, import_react55.useState)([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]);
+  const [totalCash, setTotalCash] = (0, import_react55.useState)(0);
+  const [target, setTarget] = (0, import_react55.useState)(1110);
+  const [toggle, setToggle] = (0, import_react55.useState)(true);
+  const [opened, setOpened2] = (0, import_react55.useState)(false);
+  (0, import_react56.useEffect)(() => {
     let reduced = totalBills.reduce((acc, num) => acc + num);
     setTotalCash(reduced);
   }, [totalBills]);
+  (0, import_react56.useEffect)(() => {
+    () => setOpened2(true);
+  }, []);
   let handleChange = (sum, denom, idx) => {
     let tempArray = totalBills.slice();
     tempArray[Number(idx)] = Number(sum);
@@ -31059,104 +31926,106 @@ var Counter = () => {
     setToggle(!toggle);
   };
   let ringColor = totalCash < target ? "cyan" : totalCash > target ? "red" : null;
-  return /* @__PURE__ */ import_react43.default.createElement(import_react43.default.Fragment, null, /* @__PURE__ */ import_react43.default.createElement(HeaderContainer, null, /* @__PURE__ */ import_react43.default.createElement(NumberInput, {
+  return /* @__PURE__ */ import_react54.default.createElement(import_react54.default.Fragment, null, /* @__PURE__ */ import_react54.default.createElement(ModalMain_default, {
+    opened
+  }), /* @__PURE__ */ import_react54.default.createElement(HeaderContainer, null, /* @__PURE__ */ import_react54.default.createElement(NumberInput, {
     hideControls: true,
     value: target,
     onChange: (value) => setTarget(value),
     styles: { input: { width: 64, textAlign: "center" } }
-  }), /* @__PURE__ */ import_react43.default.createElement("div", null, "TARGET: ", target, /* @__PURE__ */ import_react43.default.createElement("br", null), "TOTAL: ", totalCash, /* @__PURE__ */ import_react43.default.createElement("br", null), "DIFFERENCE: ", (target - totalCash).toFixed(2), /* @__PURE__ */ import_react43.default.createElement("br", null)), target !== totalCash ? /* @__PURE__ */ import_react43.default.createElement("div", null, /* @__PURE__ */ import_react43.default.createElement(RingProgress, {
+  }), /* @__PURE__ */ import_react54.default.createElement("div", null, "TARGET: ", target, /* @__PURE__ */ import_react54.default.createElement("br", null), "TOTAL: ", totalCash, /* @__PURE__ */ import_react54.default.createElement("br", null), "DIFFERENCE: ", (target - totalCash).toFixed(2), /* @__PURE__ */ import_react54.default.createElement("br", null)), target !== totalCash ? /* @__PURE__ */ import_react54.default.createElement("div", null, /* @__PURE__ */ import_react54.default.createElement(RingProgress, {
     sections: [{ value: totalCash / target * 100, color: ringColor }],
-    label: /* @__PURE__ */ import_react43.default.createElement(Text, {
+    label: /* @__PURE__ */ import_react54.default.createElement(Text, {
       color: ringColor,
       weight: 700,
       align: "center",
       size: "150"
     }, totalCash)
-  })) : /* @__PURE__ */ import_react43.default.createElement("div", null, /* @__PURE__ */ import_react43.default.createElement(RingProgress, {
+  })) : /* @__PURE__ */ import_react54.default.createElement("div", null, /* @__PURE__ */ import_react54.default.createElement(RingProgress, {
     sections: [{ value: 100, color: "teal" }],
-    label: /* @__PURE__ */ import_react43.default.createElement(Center, null, /* @__PURE__ */ import_react43.default.createElement(ThemeIcon, {
+    label: /* @__PURE__ */ import_react54.default.createElement(Center, null, /* @__PURE__ */ import_react54.default.createElement(ThemeIcon, {
       color: "teal",
       variant: "light",
       radius: "xl",
       size: "xl"
-    }, /* @__PURE__ */ import_react43.default.createElement(FontAwesomeIcon, {
+    }, /* @__PURE__ */ import_react54.default.createElement(FontAwesomeIcon, {
       icon: faCheck,
       color: "white",
       className: "fa-2x fa-beat fa-solid"
     })))
-  }))), /* @__PURE__ */ import_react43.default.createElement(Switch2, {
+  }))), /* @__PURE__ */ import_react54.default.createElement(Switch2, {
     onClick: handleToggle
-  }, /* @__PURE__ */ import_react43.default.createElement(FontAwesomeIcon, {
+  }, /* @__PURE__ */ import_react54.default.createElement(FontAwesomeIcon, {
     icon: faMoneyBill1Wave,
     color: toggle ? "lightGreen" : "yello",
     className: "fa-3x"
-  }), /* @__PURE__ */ import_react43.default.createElement(FontAwesomeIcon, {
+  }), /* @__PURE__ */ import_react54.default.createElement(FontAwesomeIcon, {
     icon: faCoins,
     color: toggle ? "gray" : "yellow",
     className: "fa-3x"
-  })), /* @__PURE__ */ import_react43.default.createElement(ToggleBills, {
+  })), /* @__PURE__ */ import_react54.default.createElement(ToggleBills, {
     toggle
-  }, /* @__PURE__ */ import_react43.default.createElement("div", {
+  }, /* @__PURE__ */ import_react54.default.createElement("div", {
     className: "input-group-bills"
-  }, "ONE", /* @__PURE__ */ import_react43.default.createElement(NumberComponent_default, {
+  }, "ONE", /* @__PURE__ */ import_react54.default.createElement(NumberComponent_default, {
     idx: "0",
     range: 100,
     denom: 1,
     onChange: handleChange,
     value: totalBills[0]
-  }), "FIVE", /* @__PURE__ */ import_react43.default.createElement(NumberComponent_default, {
+  }), "FIVE", /* @__PURE__ */ import_react54.default.createElement(NumberComponent_default, {
     idx: "1",
     range: 100,
     denom: 5,
     onChange: handleChange,
     value: totalBills[1]
-  }), "TEN", /* @__PURE__ */ import_react43.default.createElement(NumberComponent_default, {
+  }), "TEN", /* @__PURE__ */ import_react54.default.createElement(NumberComponent_default, {
     idx: "2",
     range: 100,
     denom: 10,
     onChange: handleChange,
     value: totalBills[2]
-  }), "TWENTY", /* @__PURE__ */ import_react43.default.createElement(NumberComponent_default, {
+  }), "TWENTY", /* @__PURE__ */ import_react54.default.createElement(NumberComponent_default, {
     idx: "3",
     range: 120,
     denom: 20,
     onChange: handleChange,
     value: totalBills[2]
-  }), "FIFTY", /* @__PURE__ */ import_react43.default.createElement(NumberComponent_default, {
+  }), "FIFTY", /* @__PURE__ */ import_react54.default.createElement(NumberComponent_default, {
     idx: "4",
     range: 50,
     denom: 50,
     onChange: handleChange,
     value: totalBills[2]
-  }), "HUNDRED", /* @__PURE__ */ import_react43.default.createElement(NumberComponent_default, {
+  }), "HUNDRED", /* @__PURE__ */ import_react54.default.createElement(NumberComponent_default, {
     idx: "5",
     range: 50,
     denom: 100,
     onChange: handleChange,
     value: totalBills[2]
-  }))), /* @__PURE__ */ import_react43.default.createElement(ToggleCoins, {
+  }))), /* @__PURE__ */ import_react54.default.createElement(ToggleCoins, {
     toggle
-  }, /* @__PURE__ */ import_react43.default.createElement("div", {
+  }, /* @__PURE__ */ import_react54.default.createElement("div", {
     className: "input-group-coins"
-  }, "PENNY", /* @__PURE__ */ import_react43.default.createElement(NumberComponent_default, {
+  }, "PENNY", /* @__PURE__ */ import_react54.default.createElement(NumberComponent_default, {
     idx: "6",
     range: 100,
     denom: 0.01,
     onChange: handleChange,
     value: totalBills[6]
-  }), "NICKEL", /* @__PURE__ */ import_react43.default.createElement(NumberComponent_default, {
+  }), "NICKEL", /* @__PURE__ */ import_react54.default.createElement(NumberComponent_default, {
     idx: "7",
     range: 100,
     denom: 0.05,
     onChange: handleChange,
     value: totalBills[7]
-  }), "DIME", /* @__PURE__ */ import_react43.default.createElement(NumberComponent_default, {
+  }), "DIME", /* @__PURE__ */ import_react54.default.createElement(NumberComponent_default, {
     idx: "8",
     range: 100,
     denom: 0.1,
     onChange: handleChange,
     value: totalBills[8]
-  }), "QUARTER", /* @__PURE__ */ import_react43.default.createElement(NumberComponent_default, {
+  }), "QUARTER", /* @__PURE__ */ import_react54.default.createElement(NumberComponent_default, {
     idx: "9",
     range: 100,
     denom: 0.25,
@@ -31168,15 +32037,15 @@ var Counter_default = Counter;
 
 // src/components/HelloWorld.jsx
 function HelloWorld() {
-  return /* @__PURE__ */ import_react46.default.createElement("div", {
+  return /* @__PURE__ */ import_react57.default.createElement("div", {
     className: "NumberInputHandlers"
-  }, /* @__PURE__ */ import_react46.default.createElement(Counter_default, null));
+  }, /* @__PURE__ */ import_react57.default.createElement(Counter_default, null));
 }
 var HelloWorld_default = HelloWorld;
 
 // src/App.jsx
 function App() {
-  return /* @__PURE__ */ import_react47.default.createElement("div", null, /* @__PURE__ */ import_react47.default.createElement(HelloWorld_default, null));
+  return /* @__PURE__ */ import_react58.default.createElement("div", null, /* @__PURE__ */ import_react58.default.createElement(HelloWorld_default, null));
 }
 
 // src/index.jsx
@@ -31188,7 +32057,7 @@ var AppContainer = styled_components_browser_esm_default.div`
   min-width: 60%;
   padding: 1em;
 `;
-import_react_dom.default.render(/* @__PURE__ */ import_react48.default.createElement(AppContainer, null, /* @__PURE__ */ import_react48.default.createElement(MantineProvider, {
+import_react_dom2.default.render(/* @__PURE__ */ import_react59.default.createElement(AppContainer, null, /* @__PURE__ */ import_react59.default.createElement(MantineProvider, {
   theme: {
     colorScheme: "dark",
     breakpoints: {
@@ -31200,7 +32069,7 @@ import_react_dom.default.render(/* @__PURE__ */ import_react48.default.createEle
     }
   },
   withGlobalStyles: true
-}, /* @__PURE__ */ import_react48.default.createElement(App, null))), document.querySelector("#app"));
+}, /* @__PURE__ */ import_react59.default.createElement(App, null))), document.querySelector("#app"));
 /*
 object-assign
 (c) Sindre Sorhus

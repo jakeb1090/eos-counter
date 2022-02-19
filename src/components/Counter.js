@@ -5,7 +5,9 @@ import styled from 'styled-components';
 import NumberComponent from './NumberComponent';
 import { NumberInput, RingProgress, Text, Tabs, Center, ThemeIcon} from '@mantine/core';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCheck, faCoins, faMoneyBill1Wave } from '@fortawesome/free-solid-svg-icons'
+import { faCheck, faCoins, faMoneyBill1Wave } from '@fortawesome/free-solid-svg-icons';
+import ModalMain from './ModalMain';
+
 
 const HeaderContainer = styled.div`
   display: flex;
@@ -38,12 +40,17 @@ const Counter = () => {
   // const [totalCoins, setTotalCoins] = useState([0, 0, 0, 0, 0]);
   const [totalCash, setTotalCash] = useState(0);
   const [target, setTarget] = useState(1110)
-  const [toggle, setToggle] =  useState(true)
+  const [toggle, setToggle] =  useState(true);
+  const [opened, setOpened] = useState(false);
 
   useEffect(() => {
     let reduced = totalBills.reduce((acc, num) => acc + num);
     setTotalCash(reduced)
   }, [totalBills])
+
+  useEffect(() => {
+    () => setOpened(true)
+  }, [])
 
   let handleChange = (sum, denom, idx) => {
     let tempArray = totalBills.slice()
@@ -63,6 +70,7 @@ const Counter = () => {
 
     return (
     <>
+      <ModalMain opened={opened} />
       <HeaderContainer>
         <NumberInput
           hideControls
