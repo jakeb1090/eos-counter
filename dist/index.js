@@ -29152,11 +29152,7 @@ function NumberComponent(props) {
     hideControls: true,
     value: sum,
     disabled: true,
-    styles: {
-      input: { width: 60, textAlign: "center" },
-      label: { color: "red" },
-      wrapper: { color: "red" }
-    }
+    styles: { input: { width: 60, textAlign: "center" } }
   }), /* @__PURE__ */ import_react51.default.createElement(ActionIcon, {
     size: 35,
     variant: "default",
@@ -31853,17 +31849,12 @@ var convertCurry = convert.bind(null, import_react52.default.createElement);
 var faCheck = {
   prefix: "fas",
   iconName: "check",
-  icon: [448, 512, [10004, 10003], "f00c", "M438.6 105.4C451.1 117.9 451.1 138.1 438.6 150.6L182.6 406.6C170.1 419.1 149.9 419.1 137.4 406.6L9.372 278.6C-3.124 266.1-3.124 245.9 9.372 233.4C21.87 220.9 42.13 220.9 54.63 233.4L159.1 338.7L393.4 105.4C405.9 92.88 426.1 92.88 438.6 105.4H438.6z"]
+  icon: [512, 512, [], "f00c", "M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z"]
 };
 var faCoins = {
   prefix: "fas",
   iconName: "coins",
-  icon: [512, 512, [], "f51e", "M512 80C512 98.01 497.7 114.6 473.6 128C444.5 144.1 401.2 155.5 351.3 158.9C347.7 157.2 343.9 155.5 340.1 153.9C300.6 137.4 248.2 128 192 128C183.7 128 175.6 128.2 167.5 128.6L166.4 128C142.3 114.6 128 98.01 128 80C128 35.82 213.1 0 320 0C426 0 512 35.82 512 80V80zM160.7 161.1C170.9 160.4 181.3 160 192 160C254.2 160 309.4 172.3 344.5 191.4C369.3 204.9 384 221.7 384 240C384 243.1 383.3 247.9 381.9 251.7C377.3 264.9 364.1 277 346.9 287.3C346.9 287.3 346.9 287.3 346.9 287.3C346.8 287.3 346.6 287.4 346.5 287.5L346.5 287.5C346.2 287.7 345.9 287.8 345.6 288C310.6 307.4 254.8 320 192 320C132.4 320 79.06 308.7 43.84 290.9C41.97 289.9 40.15 288.1 38.39 288C14.28 274.6 0 258 0 240C0 205.2 53.43 175.5 128 164.6C138.5 163 149.4 161.8 160.7 161.1L160.7 161.1zM391.9 186.6C420.2 182.2 446.1 175.2 468.1 166.1C484.4 159.3 499.5 150.9 512 140.6V176C512 195.3 495.5 213.1 468.2 226.9C453.5 234.3 435.8 240.5 415.8 245.3C415.9 243.6 416 241.8 416 240C416 218.1 405.4 200.1 391.9 186.6V186.6zM384 336C384 354 369.7 370.6 345.6 384C343.8 384.1 342 385.9 340.2 386.9C304.9 404.7 251.6 416 192 416C129.2 416 73.42 403.4 38.39 384C14.28 370.6 .0003 354 .0003 336V300.6C12.45 310.9 27.62 319.3 43.93 326.1C83.44 342.6 135.8 352 192 352C248.2 352 300.6 342.6 340.1 326.1C347.9 322.9 355.4 319.2 362.5 315.2C368.6 311.8 374.3 308 379.7 304C381.2 302.9 382.6 301.7 384 300.6L384 336zM416 278.1C434.1 273.1 452.5 268.6 468.1 262.1C484.4 255.3 499.5 246.9 512 236.6V272C512 282.5 507 293 497.1 302.9C480.8 319.2 452.1 332.6 415.8 341.3C415.9 339.6 416 337.8 416 336V278.1zM192 448C248.2 448 300.6 438.6 340.1 422.1C356.4 415.3 371.5 406.9 384 396.6V432C384 476.2 298 512 192 512C85.96 512 .0003 476.2 .0003 432V396.6C12.45 406.9 27.62 415.3 43.93 422.1C83.44 438.6 135.8 448 192 448z"]
-};
-var faMoneyBill1Wave = {
-  prefix: "fas",
-  iconName: "money-bill-1-wave",
-  icon: [576, 512, ["money-bill-wave-alt"], "f53b", "M251.1 207.1C251.1 196.1 260.1 187.1 271.1 187.1H287.1C299 187.1 308 196.1 308 207.1V275.1H312C323 275.1 332 284.1 332 295.1C332 307 323 315.1 312 315.1H263.1C252.1 315.1 243.1 307 243.1 295.1C243.1 284.1 252.1 275.1 263.1 275.1H267.1V227.6C258.9 225.7 251.1 217.7 251.1 207.1zM48.66 79.13C128.4 100.9 208.2 80.59 288 60.25C375 38.08 462 15.9 549 48.38C565.9 54.69 576 71.62 576 89.66V399.5C576 423.4 550.4 439.2 527.3 432.9C447.6 411.1 367.8 431.4 288 451.7C200.1 473.9 113.1 496.1 26.97 463.6C10.06 457.3 0 440.4 0 422.3V112.5C0 88.59 25.61 72.83 48.66 79.13L48.66 79.13zM127.1 416C127.1 380.7 99.35 352 63.1 352V416H127.1zM63.1 223.1C99.35 223.1 127.1 195.3 127.1 159.1H63.1V223.1zM512 352V287.1C476.7 287.1 448 316.7 448 352H512zM512 95.1H448C448 131.3 476.7 159.1 512 159.1V95.1zM287.1 143.1C234.1 143.1 191.1 194.1 191.1 255.1C191.1 317.9 234.1 368 287.1 368C341 368 384 317.9 384 255.1C384 194.1 341 143.1 287.1 143.1z"]
+  icon: [512, 512, [], "f51e", "M0 405.3V448c0 35.3 86 64 192 64s192-28.7 192-64v-42.7C342.7 434.4 267.2 448 192 448S41.3 434.4 0 405.3zM320 128c106 0 192-28.7 192-64S426 0 320 0 128 28.7 128 64s86 64 192 64zM0 300.4V352c0 35.3 86 64 192 64s192-28.7 192-64v-51.6c-41.3 34-116.9 51.6-192 51.6S41.3 334.4 0 300.4zm416 11c57.3-11.1 96-31.7 96-55.4v-42.7c-23.2 16.4-57.3 27.6-96 34.5v63.6zM192 160C86 160 0 195.8 0 240s86 80 192 80 192-35.8 192-80-86-80-192-80zm219.3 56.3c60-10.8 100.7-32 100.7-56.3v-42.7c-35.5 25.1-96.5 38.6-160.7 41.8 29.5 14.3 51.2 33.5 60 57.2z"]
 };
 
 // src/components/ModalMain.js
@@ -31888,7 +31879,7 @@ var HeaderContainer = styled_components_browser_esm_default.div`
   flex-direction: row;
   justify-content: center;
   color: teal;
-  border: 2px solid gray;
+  border: 1px solid gray;
 `;
 var ToggleBills = styled_components_browser_esm_default.div`
   display: ${(props) => props.toggle ? "block" : "none"}
@@ -31925,7 +31916,6 @@ var Counter = () => {
   let handleToggle = () => {
     setToggle(!toggle);
   };
-  let ringColor = totalCash < target ? "cyan" : totalCash > target ? "red" : null;
   return /* @__PURE__ */ import_react54.default.createElement(import_react54.default.Fragment, null, /* @__PURE__ */ import_react54.default.createElement(ModalMain_default, {
     opened
   }), /* @__PURE__ */ import_react54.default.createElement(HeaderContainer, null, /* @__PURE__ */ import_react54.default.createElement(NumberInput, {
@@ -31934,9 +31924,9 @@ var Counter = () => {
     onChange: (value) => setTarget(value),
     styles: { input: { width: 64, textAlign: "center" } }
   }), /* @__PURE__ */ import_react54.default.createElement("div", null, "TARGET: ", target, /* @__PURE__ */ import_react54.default.createElement("br", null), "TOTAL: ", totalCash, /* @__PURE__ */ import_react54.default.createElement("br", null), "DIFFERENCE: ", (target - totalCash).toFixed(2), /* @__PURE__ */ import_react54.default.createElement("br", null)), target !== totalCash ? /* @__PURE__ */ import_react54.default.createElement("div", null, /* @__PURE__ */ import_react54.default.createElement(RingProgress, {
-    sections: [{ value: totalCash / target * 100, color: ringColor }],
+    sections: [{ value: totalCash / target * 100, color: "violet" }],
     label: /* @__PURE__ */ import_react54.default.createElement(Text, {
-      color: ringColor,
+      color: "pink",
       weight: 700,
       align: "center",
       size: "150"
@@ -31956,10 +31946,6 @@ var Counter = () => {
   }))), /* @__PURE__ */ import_react54.default.createElement(Switch2, {
     onClick: handleToggle
   }, /* @__PURE__ */ import_react54.default.createElement(FontAwesomeIcon, {
-    icon: faMoneyBill1Wave,
-    color: toggle ? "lightGreen" : "yello",
-    className: "fa-3x"
-  }), /* @__PURE__ */ import_react54.default.createElement(FontAwesomeIcon, {
     icon: faCoins,
     color: toggle ? "gray" : "yellow",
     className: "fa-3x"
@@ -32075,6 +32061,10 @@ object-assign
 (c) Sindre Sorhus
 @license MIT
 */
+/*!
+ * Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com
+ * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
+ */
 /*!
  * Font Awesome Free 6.0.0 by @fontawesome - https://fontawesome.com
  * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)

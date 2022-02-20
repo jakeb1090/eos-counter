@@ -5,7 +5,7 @@ import styled from 'styled-components';
 import NumberComponent from './NumberComponent';
 import { NumberInput, RingProgress, Text, Tabs, Center, ThemeIcon} from '@mantine/core';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCheck, faCoins, faMoneyBill1Wave } from '@fortawesome/free-solid-svg-icons';
+import { faCheck, faCoins} from '@fortawesome/free-solid-svg-icons';
 import ModalMain from './ModalMain';
 
 
@@ -14,7 +14,7 @@ const HeaderContainer = styled.div`
   flex-direction: row;
   justify-content: center;
   color: teal;
-  border: 2px solid gray;
+  border: 1px solid gray;
 `;
 
 const ToggleBills = styled.div`
@@ -62,12 +62,6 @@ const Counter = () => {
     setToggle(!toggle)
   }
 
-  let ringColor = (
-    totalCash < target ? 'cyan' :
-    totalCash > target ? 'red' :
-    null
-  )
-
     return (
     <>
       <ModalMain opened={opened} />
@@ -88,9 +82,9 @@ const Counter = () => {
         { target !== totalCash ?
         (<div>
           <RingProgress
-            sections={[{ value: (totalCash / target) * 100, color: ringColor }]}
+            sections={[{ value: (totalCash / target) * 100, color: 'violet' }]}
             label={
-              <Text color={ringColor} weight={700} align="center" size="150">
+              <Text color="pink" weight={700} align="center" size="150">
                 {totalCash}
               </Text>
             }
@@ -114,7 +108,7 @@ const Counter = () => {
       </HeaderContainer>
 
       <Switch onClick={handleToggle}>
-        <FontAwesomeIcon icon={faMoneyBill1Wave} color={toggle ? "lightGreen" : "yello"} className="fa-3x"/>
+        {/* <FontAwesomeIcon icon={faMoneyBill1Wave} color={toggle ? "lightGreen" : "yello"} className="fa-3x"/> */}
         <FontAwesomeIcon icon={faCoins} color={toggle ? "gray" : "yellow"} className="fa-3x" />
       </Switch>
 
