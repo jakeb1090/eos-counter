@@ -19,6 +19,7 @@
     "@fortawesome/react-fontawesome": "^0.1.17",
     "@mantine/core": "^3.6.2",
     "@mantine/hooks": "^3.6.2",
+    "@modulz/radix-icons": "^4.0.0",
     "babel-plugin-macros": "^3.1.0",
     "express": "^4.17.3",
     "fs-extra": "^10.0.0",

@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { MantineProvider } from '@mantine/core';
+import { MantineProvider, ColorSchemeProvider } from '@mantine/core';
 import styled from 'styled-components';
 
 import App from './App'
@@ -27,7 +27,9 @@ ReactDOM.render(
               xl: 1400,
             },
           }} withGlobalStyles>
-        <App />
+        <ColorSchemeProvider>
+            <App />
+        </ColorSchemeProvider>
       </MantineProvider>
   </AppContainer>
   , document.querySelector('#app'));

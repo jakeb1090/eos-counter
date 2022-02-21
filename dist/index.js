@@ -500,7 +500,7 @@ var require_react_development = __commonJS({
           }
           return element;
         };
-        function createElement5(type, config2, children) {
+        function createElement6(type, config2, children) {
           var propName;
           var props = {};
           var key = null;
@@ -758,7 +758,7 @@ var require_react_development = __commonJS({
           }
           return children;
         }
-        function createContext3(defaultValue, calculateChangedBits) {
+        function createContext4(defaultValue, calculateChangedBits) {
           if (calculateChangedBits === void 0) {
             calculateChangedBits = null;
           } else {
@@ -1029,7 +1029,7 @@ var require_react_development = __commonJS({
           }
           return dispatcher;
         }
-        function useContext4(Context, unstable_observedBits) {
+        function useContext5(Context, unstable_observedBits) {
           var dispatcher = resolveDispatcher();
           {
             if (unstable_observedBits !== void 0) {
@@ -1046,7 +1046,7 @@ var require_react_development = __commonJS({
           }
           return dispatcher.useContext(Context, unstable_observedBits);
         }
-        function useState14(initialState) {
+        function useState15(initialState) {
           var dispatcher = resolveDispatcher();
           return dispatcher.useState(initialState);
         }
@@ -1058,7 +1058,7 @@ var require_react_development = __commonJS({
           var dispatcher = resolveDispatcher();
           return dispatcher.useRef(initialValue);
         }
-        function useEffect13(create, deps) {
+        function useEffect14(create, deps) {
           var dispatcher = resolveDispatcher();
           return dispatcher.useEffect(create, deps);
         }
@@ -1548,7 +1548,7 @@ var require_react_development = __commonJS({
               error("React.createElement: type is invalid -- expected a string (for built-in components) or a class/function (for composite components) but got: %s.%s", typeString, info);
             }
           }
-          var element = createElement5.apply(this, arguments);
+          var element = createElement6.apply(this, arguments);
           if (element == null) {
             return element;
           }
@@ -1617,7 +1617,7 @@ var require_react_development = __commonJS({
         exports2.PureComponent = PureComponent;
         exports2.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED = ReactSharedInternals;
         exports2.cloneElement = cloneElement$1;
-        exports2.createContext = createContext3;
+        exports2.createContext = createContext4;
         exports2.createElement = createElement$1;
         exports2.createFactory = createFactory;
         exports2.createRef = createRef;
@@ -1626,15 +1626,15 @@ var require_react_development = __commonJS({
         exports2.lazy = lazy;
         exports2.memo = memo;
         exports2.useCallback = useCallback3;
-        exports2.useContext = useContext4;
+        exports2.useContext = useContext5;
         exports2.useDebugValue = useDebugValue;
-        exports2.useEffect = useEffect13;
+        exports2.useEffect = useEffect14;
         exports2.useImperativeHandle = useImperativeHandle;
         exports2.useLayoutEffect = useLayoutEffect3;
         exports2.useMemo = useMemo;
         exports2.useReducer = useReducer;
         exports2.useRef = useRef16;
-        exports2.useState = useState14;
+        exports2.useState = useState15;
         exports2.version = ReactVersion;
       })();
     }
@@ -2442,11 +2442,11 @@ var require_react_dom_development = __commonJS({
     if (true) {
       (function() {
         "use strict";
-        var React40 = require_react();
+        var React43 = require_react();
         var _assign = require_object_assign();
         var Scheduler = require_scheduler();
         var tracing = require_tracing();
-        var ReactSharedInternals = React40.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED;
+        var ReactSharedInternals = React43.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED;
         function warn(format) {
           {
             for (var _len = arguments.length, args = new Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {
@@ -2478,7 +2478,7 @@ var require_react_dom_development = __commonJS({
             Function.prototype.apply.call(console[level], console, argsWithFormat);
           }
         }
-        if (!React40) {
+        if (!React43) {
           {
             throw Error("ReactDOM was loaded before React. Make sure you load the React package before loading ReactDOM.");
           }
@@ -3694,7 +3694,7 @@ var require_react_dom_development = __commonJS({
         var didWarnInvalidChild = false;
         function flattenChildren(children) {
           var content = "";
-          React40.Children.forEach(children, function(child) {
+          React43.Children.forEach(children, function(child) {
             if (child == null) {
               return;
             }
@@ -3705,7 +3705,7 @@ var require_react_dom_development = __commonJS({
         function validateProps(element, props) {
           {
             if (typeof props.children === "object" && props.children !== null) {
-              React40.Children.forEach(props.children, function(child) {
+              React43.Children.forEach(props.children, function(child) {
                 if (child == null) {
                   return;
                 }
@@ -8459,7 +8459,7 @@ var require_react_dom_development = __commonJS({
             }
           }
         }
-        function createElement5(type, props, rootContainerElement, parentNamespace) {
+        function createElement6(type, props, rootContainerElement, parentNamespace) {
           var isCustomComponentTag;
           var ownerDocument = getOwnerDocumentFromRootContainer(rootContainerElement);
           var domElement;
@@ -9336,7 +9336,7 @@ var require_react_dom_development = __commonJS({
             }
             parentNamespace = hostContextDev.namespace;
           }
-          var domElement = createElement5(type, props, rootContainerInstance, parentNamespace);
+          var domElement = createElement6(type, props, rootContainerInstance, parentNamespace);
           precacheFiberNode(internalInstanceHandle, domElement);
           updateFiberProps(domElement, props);
           return domElement;
@@ -10898,7 +10898,7 @@ var require_react_dom_development = __commonJS({
         }
         var fakeInternalInstance = {};
         var isArray = Array.isArray;
-        var emptyRefsObject = new React40.Component().refs;
+        var emptyRefsObject = new React43.Component().refs;
         var didWarnAboutStateAssignmentForComponent;
         var didWarnAboutUninitializedState;
         var didWarnAboutGetSnapshotBeforeUpdateWithoutDidUpdate;
@@ -21231,7 +21231,7 @@ var require_prop_types = __commonJS({
 });
 
 // src/index.jsx
-var import_react59 = __toModule(require_react());
+var import_react63 = __toModule(require_react());
 var import_react_dom2 = __toModule(require_react_dom());
 
 // node_modules/@mantine/styles/esm/theme/default-colors.js
@@ -23408,6 +23408,32 @@ function MantineProvider({
 }
 MantineProvider.displayName = "@mantine/core/MantineProvider";
 
+// node_modules/@mantine/styles/esm/theme/ColorSchemeProvider.js
+var import_react7 = __toModule(require_react());
+var ColorSchemeContext = (0, import_react7.createContext)(null);
+function useMantineColorScheme() {
+  const ctx = (0, import_react7.useContext)(ColorSchemeContext);
+  if (!ctx) {
+    throw new Error("useMantineColorScheme hook was called outside of context, make sure your app is wrapped with ColorSchemeProvider component");
+  }
+  return ctx;
+}
+function ColorSchemeProvider({
+  colorScheme,
+  toggleColorScheme,
+  children
+}) {
+  const [key, setKey] = (0, import_react7.useState)("init");
+  (0, import_react7.useEffect)(() => {
+    setKey("update");
+  }, []);
+  return /* @__PURE__ */ import_react7.default.createElement(ColorSchemeContext.Provider, {
+    key,
+    value: { colorScheme, toggleColorScheme }
+  }, children);
+}
+ColorSchemeProvider.displayName = "@mantine/core/ColorSchemeProvider";
+
 // node_modules/@mantine/styles/esm/theme/utils/get-default-z-index/get-default-z-index.js
 var elevations = {
   app: 100,
@@ -23564,9 +23590,9 @@ function clsx_m_default() {
 }
 
 // node_modules/@mantine/styles/esm/tss/utils/use-guaranteed-memo/use-guaranteed-memo.js
-var import_react7 = __toModule(require_react());
+var import_react8 = __toModule(require_react());
 function useGuaranteedMemo(fn, deps) {
-  const ref = (0, import_react7.useRef)();
+  const ref = (0, import_react8.useRef)();
   if (!ref.current || deps.length !== ref.current.prevDeps.length || ref.current.prevDeps.map((v2, i2) => v2 === deps[i2]).indexOf(false) >= 0) {
     ref.current = {
       v: fn(),
@@ -23807,7 +23833,7 @@ var transitions = {
 };
 
 // node_modules/@mantine/hooks/esm/use-media-query/use-media-query.js
-var import_react8 = __toModule(require_react());
+var import_react9 = __toModule(require_react());
 function attachMediaListener(query, callback) {
   try {
     query.addEventListener("change", callback);
@@ -23824,9 +23850,9 @@ function getInitialValue(query) {
   return false;
 }
 function useMediaQuery(query) {
-  const [matches, setMatches] = (0, import_react8.useState)(getInitialValue(query));
-  const queryRef = (0, import_react8.useRef)();
-  (0, import_react8.useEffect)(() => {
+  const [matches, setMatches] = (0, import_react9.useState)(getInitialValue(query));
+  const queryRef = (0, import_react9.useRef)();
+  (0, import_react9.useEffect)(() => {
     if ("matchMedia" in window) {
       queryRef.current = window.matchMedia(query);
       setMatches(queryRef.current.matches);
@@ -23837,17 +23863,17 @@ function useMediaQuery(query) {
 }
 
 // node_modules/@mantine/hooks/esm/use-isomorphic-effect/use-isomorphic-effect.js
-var import_react9 = __toModule(require_react());
-var useIsomorphicEffect = typeof document !== "undefined" ? import_react9.useLayoutEffect : import_react9.useEffect;
+var import_react10 = __toModule(require_react());
+var useIsomorphicEffect = typeof document !== "undefined" ? import_react10.useLayoutEffect : import_react10.useEffect;
 
 // node_modules/@mantine/hooks/esm/use-focus-return/use-focus-return.js
-var import_react11 = __toModule(require_react());
+var import_react12 = __toModule(require_react());
 
 // node_modules/@mantine/hooks/esm/use-did-update/use-did-update.js
-var import_react10 = __toModule(require_react());
+var import_react11 = __toModule(require_react());
 function useDidUpdate(fn, dependencies) {
-  const mounted = (0, import_react10.useRef)(false);
-  (0, import_react10.useEffect)(() => {
+  const mounted = (0, import_react11.useRef)(false);
+  (0, import_react11.useEffect)(() => {
     if (mounted.current) {
       fn();
     } else {
@@ -23862,7 +23888,7 @@ function useFocusReturn({
   transitionDuration,
   shouldReturnFocus = true
 }) {
-  const lastActiveElement = (0, import_react11.useRef)();
+  const lastActiveElement = (0, import_react12.useRef)();
   const returnFocus = () => {
     var _a;
     if (lastActiveElement.current && "focus" in lastActiveElement.current && typeof lastActiveElement.current.focus === "function") {
@@ -23891,7 +23917,7 @@ function useFocusReturn({
 }
 
 // node_modules/@mantine/hooks/esm/use-focus-trap/use-focus-trap.js
-var import_react12 = __toModule(require_react());
+var import_react13 = __toModule(require_react());
 
 // node_modules/@mantine/hooks/esm/use-focus-trap/tabbable.js
 var TABBABLE_NODES = /input|select|textarea|button|object/;
@@ -23984,9 +24010,9 @@ function createAriaHider(containerNode, selector = "body > :not(script)") {
 
 // node_modules/@mantine/hooks/esm/use-focus-trap/use-focus-trap.js
 function useFocusTrap(active = true) {
-  const ref = (0, import_react12.useRef)();
-  const restoreAria = (0, import_react12.useRef)(null);
-  const setRef = (0, import_react12.useCallback)((node2) => {
+  const ref = (0, import_react13.useRef)();
+  const restoreAria = (0, import_react13.useRef)(null);
+  const setRef = (0, import_react13.useCallback)((node2) => {
     if (!active) {
       return;
     }
@@ -24021,7 +24047,7 @@ function useFocusTrap(active = true) {
       ref.current = null;
     }
   }, [active]);
-  (0, import_react12.useEffect)(() => {
+  (0, import_react13.useEffect)(() => {
     if (!active) {
       return void 0;
     }
@@ -24044,7 +24070,7 @@ function randomId() {
 }
 
 // node_modules/@mantine/hooks/esm/use-merged-ref/use-merged-ref.js
-var import_react13 = __toModule(require_react());
+var import_react14 = __toModule(require_react());
 
 // node_modules/@mantine/hooks/esm/utils/assign-ref/assign-ref.js
 function assignRef(ref, value) {
@@ -24057,13 +24083,13 @@ function assignRef(ref, value) {
 
 // node_modules/@mantine/hooks/esm/use-merged-ref/use-merged-ref.js
 function useMergedRef(...refs) {
-  return (0, import_react13.useCallback)((node2) => {
+  return (0, import_react14.useCallback)((node2) => {
     refs.forEach((ref) => assignRef(ref, node2));
   }, refs);
 }
 
 // node_modules/@mantine/hooks/esm/use-move/use-move.js
-var import_react14 = __toModule(require_react());
+var import_react15 = __toModule(require_react());
 
 // node_modules/@mantine/hooks/esm/utils/clamp/clamp.js
 function clamp({ value, min, max }) {
@@ -24072,15 +24098,15 @@ function clamp({ value, min, max }) {
 
 // node_modules/@mantine/hooks/esm/use-move/use-move.js
 function useMove(onChange2, handlers, dir = "ltr") {
-  const ref = (0, import_react14.useRef)();
-  const mounted = (0, import_react14.useRef)(false);
-  const isSliding = (0, import_react14.useRef)(false);
-  const frame = (0, import_react14.useRef)(0);
-  const [active, setActive] = (0, import_react14.useState)(false);
-  (0, import_react14.useEffect)(() => {
+  const ref = (0, import_react15.useRef)();
+  const mounted = (0, import_react15.useRef)(false);
+  const isSliding = (0, import_react15.useRef)(false);
+  const frame = (0, import_react15.useRef)(0);
+  const [active, setActive] = (0, import_react15.useState)(false);
+  (0, import_react15.useEffect)(() => {
     mounted.current = true;
   }, []);
-  (0, import_react14.useEffect)(() => {
+  (0, import_react15.useEffect)(() => {
     const onScrub = ({ x: x2, y: y2 }) => {
       cancelAnimationFrame(frame.current);
       frame.current = requestAnimationFrame(() => {
@@ -24152,7 +24178,7 @@ function useMove(onChange2, handlers, dir = "ltr") {
 }
 
 // node_modules/@mantine/hooks/esm/use-uncontrolled/use-uncontrolled.js
-var import_react15 = __toModule(require_react());
+var import_react16 = __toModule(require_react());
 function useUncontrolled({
   value,
   defaultValue,
@@ -24162,9 +24188,9 @@ function useUncontrolled({
   onValueUpdate
 }) {
   const shouldBeControlled = rule(value);
-  const modeRef = (0, import_react15.useRef)("initial");
+  const modeRef = (0, import_react16.useRef)("initial");
   const initialValue = rule(defaultValue) ? defaultValue : finalValue;
-  const [uncontrolledValue, setUncontrolledValue] = (0, import_react15.useState)(initialValue);
+  const [uncontrolledValue, setUncontrolledValue] = (0, import_react16.useState)(initialValue);
   let effectiveValue = shouldBeControlled ? value : uncontrolledValue;
   if (!shouldBeControlled && modeRef.current === "controlled") {
     effectiveValue = finalValue;
@@ -24177,7 +24203,7 @@ function useUncontrolled({
       setUncontrolledValue(nextValue);
     }
   };
-  (0, import_react15.useEffect)(() => {
+  (0, import_react16.useEffect)(() => {
     if (mode === "uncontrolled") {
       setUncontrolledValue(effectiveValue);
     }
@@ -24192,7 +24218,7 @@ function useReducedMotion() {
 }
 
 // node_modules/@mantine/hooks/esm/use-scroll-lock/use-scroll-lock.js
-var import_react16 = __toModule(require_react());
+var import_react17 = __toModule(require_react());
 
 // node_modules/@mantine/hooks/esm/use-scroll-lock/utils/get-scroll-width.js
 function getScrollWidth() {
@@ -24243,10 +24269,10 @@ function makeStyleTag() {
 function useScrollLock(lock, options = {
   disableBodyPadding: false
 }) {
-  const [scrollLocked, setScrollLocked] = (0, import_react16.useState)(lock || false);
-  const scrollTop = (0, import_react16.useRef)(0);
+  const [scrollLocked, setScrollLocked] = (0, import_react17.useState)(lock || false);
+  const scrollTop = (0, import_react17.useRef)(0);
   const { disableBodyPadding } = options;
-  const stylesheet = (0, import_react16.useRef)(null);
+  const stylesheet = (0, import_react17.useRef)(null);
   const lockScroll = () => {
     scrollTop.current = window.scrollY;
     const styles3 = getLockStyles({ disableBodyPadding });
@@ -24261,7 +24287,7 @@ function useScrollLock(lock, options = {
     stylesheet.current.parentNode.removeChild(stylesheet.current);
     stylesheet.current = null;
   };
-  (0, import_react16.useEffect)(() => {
+  (0, import_react17.useEffect)(() => {
     if (scrollLocked) {
       lockScroll();
     } else {
@@ -24269,12 +24295,12 @@ function useScrollLock(lock, options = {
     }
     return unlockScroll;
   }, [scrollLocked]);
-  (0, import_react16.useEffect)(() => {
+  (0, import_react17.useEffect)(() => {
     if (lock !== void 0) {
       setScrollLocked(lock);
     }
   }, [lock]);
-  (0, import_react16.useEffect)(() => {
+  (0, import_react17.useEffect)(() => {
     if (lock === void 0 && typeof window !== "undefined") {
       window.document.body.style.overflow === "hidden" && setScrollLocked(true);
     }
@@ -24283,9 +24309,9 @@ function useScrollLock(lock, options = {
 }
 
 // node_modules/@mantine/hooks/esm/use-uuid/use-uuid.js
-var import_react17 = __toModule(require_react());
+var import_react18 = __toModule(require_react());
 function useUuid(staticId) {
-  const [uuid, setUuid] = (0, import_react17.useState)("");
+  const [uuid, setUuid] = (0, import_react18.useState)("");
   useIsomorphicEffect(() => {
     setUuid(randomId());
   }, []);
@@ -24293,7 +24319,7 @@ function useUuid(staticId) {
 }
 
 // node_modules/@mantine/core/esm/components/Box/Box.js
-var import_react18 = __toModule(require_react());
+var import_react19 = __toModule(require_react());
 
 // node_modules/@mantine/core/esm/components/Box/use-sx/get-margins/get-margins.js
 function isValidMargin(margin) {
@@ -24371,11 +24397,11 @@ var __objRest2 = (source, exclude) => {
     }
   return target;
 };
-var Box = (0, import_react18.forwardRef)((_a, ref) => {
+var Box = (0, import_react19.forwardRef)((_a, ref) => {
   var _b = _a, { className, component, style, sx } = _b, others = __objRest2(_b, ["className", "component", "style", "sx"]);
   const { margins, rest } = extractMargins(others);
   const Element = component || "div";
-  return /* @__PURE__ */ import_react18.default.createElement(Element, __spreadValues6({
+  return /* @__PURE__ */ import_react19.default.createElement(Element, __spreadValues6({
     ref,
     className: useSx(sx, margins, className),
     style
@@ -24384,7 +24410,7 @@ var Box = (0, import_react18.forwardRef)((_a, ref) => {
 Box.displayName = "@mantine/core/Box";
 
 // node_modules/@mantine/core/esm/components/Center/Center.js
-var import_react19 = __toModule(require_react());
+var import_react20 = __toModule(require_react());
 var __defProp8 = Object.defineProperty;
 var __getOwnPropSymbols8 = Object.getOwnPropertySymbols;
 var __hasOwnProp9 = Object.prototype.hasOwnProperty;
@@ -24413,9 +24439,9 @@ var __objRest3 = (source, exclude) => {
     }
   return target;
 };
-var Center = (0, import_react19.forwardRef)((_a, ref) => {
+var Center = (0, import_react20.forwardRef)((_a, ref) => {
   var _b = _a, { inline = false, sx } = _b, others = __objRest3(_b, ["inline", "sx"]);
-  return /* @__PURE__ */ import_react19.default.createElement(Box, __spreadValues7({
+  return /* @__PURE__ */ import_react20.default.createElement(Box, __spreadValues7({
     ref,
     sx: [
       {
@@ -24430,7 +24456,7 @@ var Center = (0, import_react19.forwardRef)((_a, ref) => {
 Center.displayName = "@mantine/core/Center";
 
 // node_modules/@mantine/core/esm/components/ActionIcon/ActionIcon.js
-var import_react24 = __toModule(require_react());
+var import_react25 = __toModule(require_react());
 
 // node_modules/@mantine/core/esm/components/ActionIcon/ActionIcon.styles.js
 var __defProp9 = Object.defineProperty;
@@ -24531,10 +24557,10 @@ var useStyles = createStyles((theme, { color, size: size2, radius }) => ({
 var ActionIcon_styles_default = useStyles;
 
 // node_modules/@mantine/core/esm/components/Loader/Loader.js
-var import_react23 = __toModule(require_react());
+var import_react24 = __toModule(require_react());
 
 // node_modules/@mantine/core/esm/components/Loader/loaders/Bars.js
-var import_react20 = __toModule(require_react());
+var import_react21 = __toModule(require_react());
 var __defProp10 = Object.defineProperty;
 var __getOwnPropSymbols10 = Object.getOwnPropertySymbols;
 var __hasOwnProp11 = Object.prototype.hasOwnProperty;
@@ -24565,103 +24591,103 @@ var __objRest4 = (source, exclude) => {
 };
 function Bars(_a) {
   var _b = _a, { size: size2, color } = _b, others = __objRest4(_b, ["size", "color"]);
-  return /* @__PURE__ */ import_react20.default.createElement("svg", __spreadValues9({
+  return /* @__PURE__ */ import_react21.default.createElement("svg", __spreadValues9({
     viewBox: "0 0 135 140",
     xmlns: "http://www.w3.org/2000/svg",
     fill: color,
     width: `${size2}px`
-  }, others), /* @__PURE__ */ import_react20.default.createElement("rect", {
+  }, others), /* @__PURE__ */ import_react21.default.createElement("rect", {
     y: "10",
     width: "15",
     height: "120",
     rx: "6"
-  }, /* @__PURE__ */ import_react20.default.createElement("animate", {
+  }, /* @__PURE__ */ import_react21.default.createElement("animate", {
     attributeName: "height",
     begin: "0.5s",
     dur: "1s",
     values: "120;110;100;90;80;70;60;50;40;140;120",
     calcMode: "linear",
     repeatCount: "indefinite"
-  }), /* @__PURE__ */ import_react20.default.createElement("animate", {
+  }), /* @__PURE__ */ import_react21.default.createElement("animate", {
     attributeName: "y",
     begin: "0.5s",
     dur: "1s",
     values: "10;15;20;25;30;35;40;45;50;0;10",
     calcMode: "linear",
     repeatCount: "indefinite"
-  })), /* @__PURE__ */ import_react20.default.createElement("rect", {
+  })), /* @__PURE__ */ import_react21.default.createElement("rect", {
     x: "30",
     y: "10",
     width: "15",
     height: "120",
     rx: "6"
-  }, /* @__PURE__ */ import_react20.default.createElement("animate", {
+  }, /* @__PURE__ */ import_react21.default.createElement("animate", {
     attributeName: "height",
     begin: "0.25s",
     dur: "1s",
     values: "120;110;100;90;80;70;60;50;40;140;120",
     calcMode: "linear",
     repeatCount: "indefinite"
-  }), /* @__PURE__ */ import_react20.default.createElement("animate", {
+  }), /* @__PURE__ */ import_react21.default.createElement("animate", {
     attributeName: "y",
     begin: "0.25s",
     dur: "1s",
     values: "10;15;20;25;30;35;40;45;50;0;10",
     calcMode: "linear",
     repeatCount: "indefinite"
-  })), /* @__PURE__ */ import_react20.default.createElement("rect", {
+  })), /* @__PURE__ */ import_react21.default.createElement("rect", {
     x: "60",
     width: "15",
     height: "140",
     rx: "6"
-  }, /* @__PURE__ */ import_react20.default.createElement("animate", {
+  }, /* @__PURE__ */ import_react21.default.createElement("animate", {
     attributeName: "height",
     begin: "0s",
     dur: "1s",
     values: "120;110;100;90;80;70;60;50;40;140;120",
     calcMode: "linear",
     repeatCount: "indefinite"
-  }), /* @__PURE__ */ import_react20.default.createElement("animate", {
+  }), /* @__PURE__ */ import_react21.default.createElement("animate", {
     attributeName: "y",
     begin: "0s",
     dur: "1s",
     values: "10;15;20;25;30;35;40;45;50;0;10",
     calcMode: "linear",
     repeatCount: "indefinite"
-  })), /* @__PURE__ */ import_react20.default.createElement("rect", {
+  })), /* @__PURE__ */ import_react21.default.createElement("rect", {
     x: "90",
     y: "10",
     width: "15",
     height: "120",
     rx: "6"
-  }, /* @__PURE__ */ import_react20.default.createElement("animate", {
+  }, /* @__PURE__ */ import_react21.default.createElement("animate", {
     attributeName: "height",
     begin: "0.25s",
     dur: "1s",
     values: "120;110;100;90;80;70;60;50;40;140;120",
     calcMode: "linear",
     repeatCount: "indefinite"
-  }), /* @__PURE__ */ import_react20.default.createElement("animate", {
+  }), /* @__PURE__ */ import_react21.default.createElement("animate", {
     attributeName: "y",
     begin: "0.25s",
     dur: "1s",
     values: "10;15;20;25;30;35;40;45;50;0;10",
     calcMode: "linear",
     repeatCount: "indefinite"
-  })), /* @__PURE__ */ import_react20.default.createElement("rect", {
+  })), /* @__PURE__ */ import_react21.default.createElement("rect", {
     x: "120",
     y: "10",
     width: "15",
     height: "120",
     rx: "6"
-  }, /* @__PURE__ */ import_react20.default.createElement("animate", {
+  }, /* @__PURE__ */ import_react21.default.createElement("animate", {
     attributeName: "height",
     begin: "0.5s",
     dur: "1s",
     values: "120;110;100;90;80;70;60;50;40;140;120",
     calcMode: "linear",
     repeatCount: "indefinite"
-  }), /* @__PURE__ */ import_react20.default.createElement("animate", {
+  }), /* @__PURE__ */ import_react21.default.createElement("animate", {
     attributeName: "y",
     begin: "0.5s",
     dur: "1s",
@@ -24672,7 +24698,7 @@ function Bars(_a) {
 }
 
 // node_modules/@mantine/core/esm/components/Loader/loaders/Oval.js
-var import_react21 = __toModule(require_react());
+var import_react22 = __toModule(require_react());
 var __defProp11 = Object.defineProperty;
 var __getOwnPropSymbols11 = Object.getOwnPropertySymbols;
 var __hasOwnProp12 = Object.prototype.hasOwnProperty;
@@ -24703,26 +24729,26 @@ var __objRest5 = (source, exclude) => {
 };
 function Oval(_a) {
   var _b = _a, { size: size2, color } = _b, others = __objRest5(_b, ["size", "color"]);
-  return /* @__PURE__ */ import_react21.default.createElement("svg", __spreadValues10({
+  return /* @__PURE__ */ import_react22.default.createElement("svg", __spreadValues10({
     width: `${size2}px`,
     height: `${size2}px`,
     viewBox: "0 0 38 38",
     xmlns: "http://www.w3.org/2000/svg",
     stroke: color
-  }, others), /* @__PURE__ */ import_react21.default.createElement("g", {
+  }, others), /* @__PURE__ */ import_react22.default.createElement("g", {
     fill: "none",
     fillRule: "evenodd"
-  }, /* @__PURE__ */ import_react21.default.createElement("g", {
+  }, /* @__PURE__ */ import_react22.default.createElement("g", {
     transform: "translate(2.5 2.5)",
     strokeWidth: "5"
-  }, /* @__PURE__ */ import_react21.default.createElement("circle", {
+  }, /* @__PURE__ */ import_react22.default.createElement("circle", {
     strokeOpacity: ".5",
     cx: "16",
     cy: "16",
     r: "16"
-  }), /* @__PURE__ */ import_react21.default.createElement("path", {
+  }), /* @__PURE__ */ import_react22.default.createElement("path", {
     d: "M32 16c0-9.94-8.06-16-16-16"
-  }, /* @__PURE__ */ import_react21.default.createElement("animateTransform", {
+  }, /* @__PURE__ */ import_react22.default.createElement("animateTransform", {
     attributeName: "transform",
     type: "rotate",
     from: "0 16 16",
@@ -24733,7 +24759,7 @@ function Oval(_a) {
 }
 
 // node_modules/@mantine/core/esm/components/Loader/loaders/Dots.js
-var import_react22 = __toModule(require_react());
+var import_react23 = __toModule(require_react());
 var __defProp12 = Object.defineProperty;
 var __getOwnPropSymbols12 = Object.getOwnPropertySymbols;
 var __hasOwnProp13 = Object.prototype.hasOwnProperty;
@@ -24764,17 +24790,17 @@ var __objRest6 = (source, exclude) => {
 };
 function Dots(_a) {
   var _b = _a, { size: size2, color } = _b, others = __objRest6(_b, ["size", "color"]);
-  return /* @__PURE__ */ import_react22.default.createElement("svg", __spreadValues11({
+  return /* @__PURE__ */ import_react23.default.createElement("svg", __spreadValues11({
     width: `${size2}px`,
     height: `${size2 / 4}px`,
     viewBox: "0 0 120 30",
     xmlns: "http://www.w3.org/2000/svg",
     fill: color
-  }, others), /* @__PURE__ */ import_react22.default.createElement("circle", {
+  }, others), /* @__PURE__ */ import_react23.default.createElement("circle", {
     cx: "15",
     cy: "15",
     r: "15"
-  }, /* @__PURE__ */ import_react22.default.createElement("animate", {
+  }, /* @__PURE__ */ import_react23.default.createElement("animate", {
     attributeName: "r",
     from: "15",
     to: "15",
@@ -24783,7 +24809,7 @@ function Dots(_a) {
     values: "15;9;15",
     calcMode: "linear",
     repeatCount: "indefinite"
-  }), /* @__PURE__ */ import_react22.default.createElement("animate", {
+  }), /* @__PURE__ */ import_react23.default.createElement("animate", {
     attributeName: "fill-opacity",
     from: "1",
     to: "1",
@@ -24792,12 +24818,12 @@ function Dots(_a) {
     values: "1;.5;1",
     calcMode: "linear",
     repeatCount: "indefinite"
-  })), /* @__PURE__ */ import_react22.default.createElement("circle", {
+  })), /* @__PURE__ */ import_react23.default.createElement("circle", {
     cx: "60",
     cy: "15",
     r: "9",
     fillOpacity: "0.3"
-  }, /* @__PURE__ */ import_react22.default.createElement("animate", {
+  }, /* @__PURE__ */ import_react23.default.createElement("animate", {
     attributeName: "r",
     from: "9",
     to: "9",
@@ -24806,7 +24832,7 @@ function Dots(_a) {
     values: "9;15;9",
     calcMode: "linear",
     repeatCount: "indefinite"
-  }), /* @__PURE__ */ import_react22.default.createElement("animate", {
+  }), /* @__PURE__ */ import_react23.default.createElement("animate", {
     attributeName: "fill-opacity",
     from: "0.5",
     to: "0.5",
@@ -24815,11 +24841,11 @@ function Dots(_a) {
     values: ".5;1;.5",
     calcMode: "linear",
     repeatCount: "indefinite"
-  })), /* @__PURE__ */ import_react22.default.createElement("circle", {
+  })), /* @__PURE__ */ import_react23.default.createElement("circle", {
     cx: "105",
     cy: "15",
     r: "15"
-  }, /* @__PURE__ */ import_react22.default.createElement("animate", {
+  }, /* @__PURE__ */ import_react23.default.createElement("animate", {
     attributeName: "r",
     from: "15",
     to: "15",
@@ -24828,7 +24854,7 @@ function Dots(_a) {
     values: "15;9;15",
     calcMode: "linear",
     repeatCount: "indefinite"
-  }), /* @__PURE__ */ import_react22.default.createElement("animate", {
+  }), /* @__PURE__ */ import_react23.default.createElement("animate", {
     attributeName: "fill-opacity",
     from: "1",
     to: "1",
@@ -24886,7 +24912,7 @@ function Loader(_a) {
   const theme = useMantineTheme();
   const defaultLoader = variant in LOADERS ? variant : theme.loader;
   const _color = color || theme.primaryColor;
-  return /* @__PURE__ */ import_react23.default.createElement(Box, __spreadValues12({
+  return /* @__PURE__ */ import_react24.default.createElement(Box, __spreadValues12({
     role: "presentation",
     component: LOADERS[defaultLoader] || LOADERS.bars,
     size: theme.fn.size({ size: size2, sizes: LOADER_SIZES }),
@@ -24924,7 +24950,7 @@ var __objRest8 = (source, exclude) => {
     }
   return target;
 };
-var ActionIcon = (0, import_react24.forwardRef)((_a, ref) => {
+var ActionIcon = (0, import_react25.forwardRef)((_a, ref) => {
   var _b = _a, {
     className,
     color = "gray",
@@ -24955,11 +24981,11 @@ var ActionIcon = (0, import_react24.forwardRef)((_a, ref) => {
   const theme = useMantineTheme();
   const { classes, cx } = ActionIcon_styles_default({ size: size2, radius, color }, { name: "ActionIcon", classNames, styles: styles3 });
   const colors = getSharedColorScheme({ color, theme, variant: "light" });
-  const loader = /* @__PURE__ */ import_react24.default.createElement(Loader, __spreadValues13({
+  const loader = /* @__PURE__ */ import_react25.default.createElement(Loader, __spreadValues13({
     color: colors.color,
     size: theme.fn.size({ size: size2, sizes }) - 12
   }, loaderProps));
-  return /* @__PURE__ */ import_react24.default.createElement(Box, __spreadValues13({
+  return /* @__PURE__ */ import_react25.default.createElement(Box, __spreadValues13({
     component: component || "button",
     className: cx(classes[variant], classes.root, { [classes.loading]: loading }, className),
     type: "button",
@@ -24970,10 +24996,10 @@ var ActionIcon = (0, import_react24.forwardRef)((_a, ref) => {
 ActionIcon.displayName = "@mantine/core/ActionIcon";
 
 // node_modules/@mantine/core/esm/components/ActionIcon/CloseButton/CloseButton.js
-var import_react26 = __toModule(require_react());
+var import_react27 = __toModule(require_react());
 
 // node_modules/@mantine/core/esm/components/ActionIcon/CloseButton/CloseIcon.js
-var import_react25 = __toModule(require_react());
+var import_react26 = __toModule(require_react());
 var __defProp15 = Object.defineProperty;
 var __getOwnPropSymbols15 = Object.getOwnPropertySymbols;
 var __hasOwnProp16 = Object.prototype.hasOwnProperty;
@@ -24991,11 +25017,11 @@ var __spreadValues14 = (a2, b2) => {
   return a2;
 };
 function CloseIcon(props) {
-  return /* @__PURE__ */ import_react25.default.createElement("svg", __spreadValues14({
+  return /* @__PURE__ */ import_react26.default.createElement("svg", __spreadValues14({
     viewBox: "0 0 15 15",
     fill: "none",
     xmlns: "http://www.w3.org/2000/svg"
-  }, props), /* @__PURE__ */ import_react25.default.createElement("path", {
+  }, props), /* @__PURE__ */ import_react26.default.createElement("path", {
     d: "M11.7816 4.03157C12.0062 3.80702 12.0062 3.44295 11.7816 3.2184C11.5571 2.99385 11.193 2.99385 10.9685 3.2184L7.50005 6.68682L4.03164 3.2184C3.80708 2.99385 3.44301 2.99385 3.21846 3.2184C2.99391 3.44295 2.99391 3.80702 3.21846 4.03157L6.68688 7.49999L3.21846 10.9684C2.99391 11.193 2.99391 11.557 3.21846 11.7816C3.44301 12.0061 3.80708 12.0061 4.03164 11.7816L7.50005 8.31316L10.9685 11.7816C11.193 12.0061 11.5571 12.0061 11.7816 11.7816C12.0062 11.557 12.0062 11.193 11.7816 10.9684L8.31322 7.49999L11.7816 4.03157Z",
     fill: "currentColor",
     fillRule: "evenodd",
@@ -25040,14 +25066,14 @@ var iconSizes = {
   lg: 20,
   xl: 24
 };
-var CloseButton = (0, import_react26.forwardRef)((_a, ref) => {
+var CloseButton = (0, import_react27.forwardRef)((_a, ref) => {
   var _b = _a, { iconSize, size: size2 = "md" } = _b, others = __objRest9(_b, ["iconSize", "size"]);
   const theme = useMantineTheme();
   const _iconSize = iconSize || theme.fn.size({ size: size2, sizes: iconSizes });
-  return /* @__PURE__ */ import_react26.default.createElement(ActionIcon, __spreadValues15({
+  return /* @__PURE__ */ import_react27.default.createElement(ActionIcon, __spreadValues15({
     size: size2,
     ref
-  }, others), /* @__PURE__ */ import_react26.default.createElement(CloseIcon, {
+  }, others), /* @__PURE__ */ import_react27.default.createElement(CloseIcon, {
     width: _iconSize,
     height: _iconSize
   }));
@@ -25055,12 +25081,12 @@ var CloseButton = (0, import_react26.forwardRef)((_a, ref) => {
 CloseButton.displayName = "@mantine/core/CloseButton";
 
 // node_modules/@mantine/core/esm/components/Portal/Portal.js
-var import_react27 = __toModule(require_react());
+var import_react28 = __toModule(require_react());
 var import_react_dom = __toModule(require_react_dom());
 function Portal({ children, zIndex = 1, target, className }) {
   const theme = useMantineTheme();
-  const [mounted, setMounted] = (0, import_react27.useState)(false);
-  const ref = (0, import_react27.useRef)();
+  const [mounted, setMounted] = (0, import_react28.useState)(false);
+  const ref = (0, import_react28.useRef)();
   useIsomorphicEffect(() => {
     setMounted(true);
     ref.current = !target ? document.createElement("div") : typeof target === "string" ? document.querySelector(target) : target;
@@ -25074,7 +25100,7 @@ function Portal({ children, zIndex = 1, target, className }) {
   if (!mounted) {
     return null;
   }
-  return (0, import_react_dom.createPortal)(/* @__PURE__ */ import_react27.default.createElement("div", {
+  return (0, import_react_dom.createPortal)(/* @__PURE__ */ import_react28.default.createElement("div", {
     className,
     dir: theme.dir,
     style: { position: "relative", zIndex }
@@ -25083,7 +25109,7 @@ function Portal({ children, zIndex = 1, target, className }) {
 Portal.displayName = "@mantine/core/Portal";
 
 // node_modules/@mantine/core/esm/components/Text/Text.js
-var import_react28 = __toModule(require_react());
+var import_react29 = __toModule(require_react());
 
 // node_modules/@mantine/core/esm/components/Text/Text.styles.js
 var __defProp17 = Object.defineProperty;
@@ -25195,7 +25221,7 @@ var __objRest10 = (source, exclude) => {
     }
   return target;
 };
-var Text = (0, import_react28.forwardRef)((_a, ref) => {
+var Text = (0, import_react29.forwardRef)((_a, ref) => {
   var _b = _a, {
     className,
     component,
@@ -25241,7 +25267,7 @@ var Text = (0, import_react28.forwardRef)((_a, ref) => {
     gradientTo: gradient.to,
     gradientDeg: gradient.deg
   }, { classNames, styles: styles3, name: "Text" });
-  return /* @__PURE__ */ import_react28.default.createElement(Box, __spreadValues17({
+  return /* @__PURE__ */ import_react29.default.createElement(Box, __spreadValues17({
     ref,
     component: component || "div",
     className: cx(classes.root, { [classes.gradient]: variant === "gradient" }, className)
@@ -25250,7 +25276,7 @@ var Text = (0, import_react28.forwardRef)((_a, ref) => {
 Text.displayName = "@mantine/core/Text";
 
 // node_modules/@mantine/core/esm/components/Transition/Transition.js
-var import_react30 = __toModule(require_react());
+var import_react31 = __toModule(require_react());
 
 // node_modules/@mantine/core/esm/components/Transition/get-transition-styles/get-transition-styles.js
 var __defProp19 = Object.defineProperty;
@@ -25301,7 +25327,7 @@ function getTransitionStyles({
 }
 
 // node_modules/@mantine/core/esm/components/Transition/use-transition.js
-var import_react29 = __toModule(require_react());
+var import_react30 = __toModule(require_react());
 function useTransition({
   duration,
   exitDuration,
@@ -25314,9 +25340,9 @@ function useTransition({
 }) {
   const theme = useMantineTheme();
   const reduceMotion = useReducedMotion();
-  const [transitionStatus, setStatus] = (0, import_react29.useState)(mounted ? "entered" : "exited");
-  const [transitionDuration, setTransitionDuration] = (0, import_react29.useState)(reduceMotion ? 0 : duration);
-  const timeoutRef = (0, import_react29.useRef)(-1);
+  const [transitionStatus, setStatus] = (0, import_react30.useState)(mounted ? "entered" : "exited");
+  const [transitionDuration, setTransitionDuration] = (0, import_react30.useState)(reduceMotion ? 0 : duration);
+  const timeoutRef = (0, import_react30.useRef)(-1);
   const handleStateChange = (shouldMount) => {
     const preHandler = shouldMount ? onEnter : onExit;
     const handler = shouldMount ? onEntered : onExited;
@@ -25343,7 +25369,7 @@ function useTransition({
   useDidUpdate(() => {
     handleStateChange(mounted);
   }, [mounted]);
-  (0, import_react29.useEffect)(() => () => window.clearTimeout(timeoutRef.current), []);
+  (0, import_react30.useEffect)(() => () => window.clearTimeout(timeoutRef.current), []);
   return {
     transitionDuration,
     transitionStatus,
@@ -25375,9 +25401,9 @@ function Transition({
     onExited
   });
   if (transitionDuration === 0) {
-    return mounted ? /* @__PURE__ */ import_react30.default.createElement(import_react30.default.Fragment, null, children({})) : null;
+    return mounted ? /* @__PURE__ */ import_react31.default.createElement(import_react31.default.Fragment, null, children({})) : null;
   }
-  return transitionStatus === "exited" ? null : /* @__PURE__ */ import_react30.default.createElement(import_react30.default.Fragment, null, children(getTransitionStyles({
+  return transitionStatus === "exited" ? null : /* @__PURE__ */ import_react31.default.createElement(import_react31.default.Fragment, null, children(getTransitionStyles({
     transition,
     duration: transitionDuration,
     state: transitionStatus,
@@ -25387,7 +25413,7 @@ function Transition({
 Transition.displayName = "@mantine/core/Transition";
 
 // node_modules/@mantine/core/esm/components/Paper/Paper.js
-var import_react31 = __toModule(require_react());
+var import_react32 = __toModule(require_react());
 
 // node_modules/@mantine/core/esm/components/Paper/Paper.styles.js
 var __defProp20 = Object.defineProperty;
@@ -25454,7 +25480,7 @@ var __objRest11 = (source, exclude) => {
     }
   return target;
 };
-var Paper = (0, import_react31.forwardRef)((_a, ref) => {
+var Paper = (0, import_react32.forwardRef)((_a, ref) => {
   var _b = _a, {
     component,
     className,
@@ -25473,7 +25499,7 @@ var Paper = (0, import_react31.forwardRef)((_a, ref) => {
     "shadow"
   ]);
   const { classes, cx } = Paper_styles_default({ radius, shadow, padding, withBorder }, { name: "Paper" });
-  return /* @__PURE__ */ import_react31.default.createElement(Box, __spreadValues20({
+  return /* @__PURE__ */ import_react32.default.createElement(Box, __spreadValues20({
     component: component || "div",
     className: cx(classes.root, className),
     ref
@@ -25482,7 +25508,7 @@ var Paper = (0, import_react31.forwardRef)((_a, ref) => {
 Paper.displayName = "@mantine/core/Paper";
 
 // node_modules/@mantine/core/esm/components/InputWrapper/InputWrapper.js
-var import_react32 = __toModule(require_react());
+var import_react33 = __toModule(require_react());
 
 // node_modules/@mantine/core/esm/components/InputWrapper/InputWrapper.styles.js
 var __defProp22 = Object.defineProperty;
@@ -25569,7 +25595,7 @@ var __objRest12 = (source, exclude) => {
     }
   return target;
 };
-var InputWrapper = (0, import_react32.forwardRef)((_a, ref) => {
+var InputWrapper = (0, import_react33.forwardRef)((_a, ref) => {
   var _b = _a, {
     className,
     label,
@@ -25605,19 +25631,19 @@ var InputWrapper = (0, import_react32.forwardRef)((_a, ref) => {
   ]);
   const { classes, cx } = InputWrapper_styles_default({ size: size2 }, { classNames, styles: styles3, name: __staticSelector });
   const _labelProps = labelElement === "label" ? { htmlFor: id } : {};
-  const inputLabel = (0, import_react32.createElement)(labelElement, __spreadProps9(__spreadValues22(__spreadValues22({}, _labelProps), labelProps), {
+  const inputLabel = (0, import_react33.createElement)(labelElement, __spreadProps9(__spreadValues22(__spreadValues22({}, _labelProps), labelProps), {
     id: id ? `${id}-label` : void 0,
     className: classes.label
-  }), /* @__PURE__ */ import_react32.default.createElement(import_react32.default.Fragment, null, label, required && /* @__PURE__ */ import_react32.default.createElement("span", {
+  }), /* @__PURE__ */ import_react33.default.createElement(import_react33.default.Fragment, null, label, required && /* @__PURE__ */ import_react33.default.createElement("span", {
     className: classes.required
   }, " *")));
-  return /* @__PURE__ */ import_react32.default.createElement(Box, __spreadValues22({
+  return /* @__PURE__ */ import_react33.default.createElement(Box, __spreadValues22({
     className: cx(classes.root, className),
     ref
-  }, others), label && inputLabel, description && /* @__PURE__ */ import_react32.default.createElement(Text, __spreadProps9(__spreadValues22({}, descriptionProps), {
+  }, others), label && inputLabel, description && /* @__PURE__ */ import_react33.default.createElement(Text, __spreadProps9(__spreadValues22({}, descriptionProps), {
     color: "gray",
     className: classes.description
-  }), description), children, typeof error !== "boolean" && error && /* @__PURE__ */ import_react32.default.createElement(Text, __spreadProps9(__spreadValues22({}, errorProps), {
+  }), description), children, typeof error !== "boolean" && error && /* @__PURE__ */ import_react33.default.createElement(Text, __spreadProps9(__spreadValues22({}, errorProps), {
     size: size2,
     className: classes.error
   }), error));
@@ -25625,7 +25651,7 @@ var InputWrapper = (0, import_react32.forwardRef)((_a, ref) => {
 InputWrapper.displayName = "@mantine/core/InputWrapper";
 
 // node_modules/@mantine/core/esm/components/Input/Input.js
-var import_react33 = __toModule(require_react());
+var import_react34 = __toModule(require_react());
 
 // node_modules/@mantine/core/esm/components/Input/Input.styles.js
 var __defProp24 = Object.defineProperty;
@@ -25823,7 +25849,7 @@ var __objRest13 = (source, exclude) => {
     }
   return target;
 };
-var Input = (0, import_react33.forwardRef)((_a, ref) => {
+var Input = (0, import_react34.forwardRef)((_a, ref) => {
   var _b = _a, {
     component,
     className,
@@ -25881,13 +25907,13 @@ var Input = (0, import_react33.forwardRef)((_a, ref) => {
   }, { classNames, styles: styles3, name: __staticSelector });
   const { margins, rest } = extractMargins(others);
   const Element = component || "input";
-  return /* @__PURE__ */ import_react33.default.createElement(Box, __spreadValues24(__spreadValues24({
+  return /* @__PURE__ */ import_react34.default.createElement(Box, __spreadValues24(__spreadValues24({
     className: cx(classes.wrapper, className),
     sx,
     style
-  }, margins), wrapperProps), icon3 && /* @__PURE__ */ import_react33.default.createElement("div", {
+  }, margins), wrapperProps), icon3 && /* @__PURE__ */ import_react34.default.createElement("div", {
     className: classes.icon
-  }, icon3), /* @__PURE__ */ import_react33.default.createElement(Element, __spreadProps11(__spreadValues24({}, rest), {
+  }, icon3), /* @__PURE__ */ import_react34.default.createElement(Element, __spreadProps11(__spreadValues24({}, rest), {
     ref,
     "aria-required": required,
     "aria-invalid": invalid,
@@ -25897,14 +25923,14 @@ var Input = (0, import_react33.forwardRef)((_a, ref) => {
       [classes.invalid]: invalid,
       [classes.disabled]: disabled2
     })
-  })), rightSection && /* @__PURE__ */ import_react33.default.createElement("div", __spreadProps11(__spreadValues24({}, rightSectionProps), {
+  })), rightSection && /* @__PURE__ */ import_react34.default.createElement("div", __spreadProps11(__spreadValues24({}, rightSectionProps), {
     className: classes.rightSection
   }), rightSection));
 });
 Input.displayName = "@mantine/core/Input";
 
 // node_modules/@mantine/core/esm/components/Group/Group.js
-var import_react35 = __toModule(require_react());
+var import_react36 = __toModule(require_react());
 
 // node_modules/@mantine/core/esm/components/Group/Group.styles.js
 var POSITIONS = {
@@ -25932,9 +25958,9 @@ var useStyles6 = createStyles((theme, { spacing, position: position2, noWrap, di
 var Group_styles_default = useStyles6;
 
 // node_modules/@mantine/core/esm/utils/filter-falsy-children/filter-falsy-children.js
-var import_react34 = __toModule(require_react());
+var import_react35 = __toModule(require_react());
 function filterFalsyChildren(children) {
-  return import_react34.Children.toArray(children).filter(Boolean);
+  return import_react35.Children.toArray(children).filter(Boolean);
 }
 
 // node_modules/@mantine/core/esm/components/Group/Group.js
@@ -25966,7 +25992,7 @@ var __objRest14 = (source, exclude) => {
     }
   return target;
 };
-var Group = (0, import_react35.forwardRef)((_a, ref) => {
+var Group = (0, import_react36.forwardRef)((_a, ref) => {
   var _b = _a, {
     className,
     position: position2 = "left",
@@ -26000,10 +26026,10 @@ var Group = (0, import_react35.forwardRef)((_a, ref) => {
     direction,
     count: filteredChildren.length
   }, { classNames, styles: styles3, name: "Group" });
-  const items = filteredChildren.map((child) => import_react35.default.cloneElement(child, {
+  const items = filteredChildren.map((child) => import_react36.default.cloneElement(child, {
     className: cx(classes.child, child.props.className)
   }));
-  return /* @__PURE__ */ import_react35.default.createElement(Box, __spreadValues25({
+  return /* @__PURE__ */ import_react36.default.createElement(Box, __spreadValues25({
     className: cx(classes.root, className),
     ref
   }, others), items);
@@ -26011,7 +26037,7 @@ var Group = (0, import_react35.forwardRef)((_a, ref) => {
 Group.displayName = "@mantine/core/Group";
 
 // node_modules/@mantine/core/esm/components/Transition/GroupedTransition.js
-var import_react36 = __toModule(require_react());
+var import_react37 = __toModule(require_react());
 function GroupedTransition({
   transitions: transitions2,
   duration = 250,
@@ -26035,7 +26061,7 @@ function GroupedTransition({
     onExited
   });
   if (transitionDuration === 0) {
-    return mounted ? /* @__PURE__ */ import_react36.default.createElement(import_react36.default.Fragment, null, children({})) : null;
+    return mounted ? /* @__PURE__ */ import_react37.default.createElement(import_react37.default.Fragment, null, children({})) : null;
   }
   if (transitionStatus === "exited") {
     return null;
@@ -26049,12 +26075,12 @@ function GroupedTransition({
     });
     return acc;
   }, {});
-  return /* @__PURE__ */ import_react36.default.createElement(import_react36.default.Fragment, null, children(transitionsStyles));
+  return /* @__PURE__ */ import_react37.default.createElement(import_react37.default.Fragment, null, children(transitionsStyles));
 }
 GroupedTransition.displayName = "@mantine/core/GroupedTransition";
 
 // node_modules/@mantine/core/esm/components/Overlay/Overlay.js
-var import_react37 = __toModule(require_react());
+var import_react38 = __toModule(require_react());
 var __defProp27 = Object.defineProperty;
 var __defProps12 = Object.defineProperties;
 var __getOwnPropDescs12 = Object.getOwnPropertyDescriptors;
@@ -26086,7 +26112,7 @@ var __objRest15 = (source, exclude) => {
     }
   return target;
 };
-var Overlay = (0, import_react37.forwardRef)((_a, ref) => {
+var Overlay = (0, import_react38.forwardRef)((_a, ref) => {
   var _b = _a, {
     opacity = 0.6,
     color = "#fff",
@@ -26105,7 +26131,7 @@ var Overlay = (0, import_react37.forwardRef)((_a, ref) => {
     "sx"
   ]);
   const background = gradient ? { backgroundImage: gradient } : { backgroundColor: color };
-  return /* @__PURE__ */ import_react37.default.createElement(Box, __spreadValues26({
+  return /* @__PURE__ */ import_react38.default.createElement(Box, __spreadValues26({
     component: component || "div",
     ref,
     sx: [
@@ -26185,7 +26211,7 @@ var useStyles7 = createStyles((theme, { overflow, size: size2, centered }) => ({
 var Modal_styles_default = useStyles7;
 
 // node_modules/@mantine/core/esm/components/Modal/Modal.js
-var import_react38 = __toModule(require_react());
+var import_react39 = __toModule(require_react());
 var __defProp28 = Object.defineProperty;
 var __defProps13 = Object.defineProperties;
 var __getOwnPropDescs13 = Object.getOwnPropertyDescriptors;
@@ -26281,14 +26307,14 @@ function MantineModal(_a) {
       onClose();
     }
   };
-  (0, import_react38.useEffect)(() => {
+  (0, import_react39.useEffect)(() => {
     if (noFocusTrap) {
       window.addEventListener("keydown", closeOnEscapePress);
       return () => window.removeEventListener("keydown", closeOnEscapePress);
     }
   }, [noFocusTrap]);
   useFocusReturn({ opened, transitionDuration });
-  return /* @__PURE__ */ import_react38.default.createElement(GroupedTransition, {
+  return /* @__PURE__ */ import_react39.default.createElement(GroupedTransition, {
     onExited: () => lockScroll(false),
     onEntered: () => lockScroll(true),
     mounted: opened,
@@ -26300,9 +26326,9 @@ function MantineModal(_a) {
         timingFunction: "ease"
       }
     }
-  }, (transitionStyles) => /* @__PURE__ */ import_react38.default.createElement(Box, __spreadValues27({
+  }, (transitionStyles) => /* @__PURE__ */ import_react39.default.createElement(Box, __spreadValues27({
     className: cx(classes.root, className)
-  }, others), /* @__PURE__ */ import_react38.default.createElement("div", {
+  }, others), /* @__PURE__ */ import_react39.default.createElement("div", {
     className: classes.inner,
     onMouseDown: () => closeOnClickOutside && onClose(),
     onKeyDownCapture: (event) => {
@@ -26311,7 +26337,7 @@ function MantineModal(_a) {
       shouldTrigger && event.nativeEvent.code === "Escape" && closeOnEscape && onClose();
     },
     ref: focusTrapRef
-  }, /* @__PURE__ */ import_react38.default.createElement(Paper, {
+  }, /* @__PURE__ */ import_react39.default.createElement(Paper, {
     onMouseDown: (event) => event.stopPropagation(),
     className: classes.modal,
     shadow,
@@ -26326,22 +26352,22 @@ function MantineModal(_a) {
       marginLeft: "calc(var(--removed-scroll-width, 0px) * -1)",
       zIndex: 3
     })
-  }, (title || !hideCloseButton) && /* @__PURE__ */ import_react38.default.createElement("div", {
+  }, (title || !hideCloseButton) && /* @__PURE__ */ import_react39.default.createElement("div", {
     className: classes.header
-  }, /* @__PURE__ */ import_react38.default.createElement(Text, {
+  }, /* @__PURE__ */ import_react39.default.createElement(Text, {
     id: titleId,
     className: classes.title
-  }, title), !hideCloseButton && /* @__PURE__ */ import_react38.default.createElement(CloseButton, {
+  }, title), !hideCloseButton && /* @__PURE__ */ import_react39.default.createElement(CloseButton, {
     iconSize: 16,
     onClick: onClose,
     "aria-label": closeButtonLabel,
     className: classes.close
-  })), /* @__PURE__ */ import_react38.default.createElement("div", {
+  })), /* @__PURE__ */ import_react39.default.createElement("div", {
     id: bodyId,
     className: classes.body
-  }, children))), /* @__PURE__ */ import_react38.default.createElement("div", {
+  }, children))), /* @__PURE__ */ import_react39.default.createElement("div", {
     style: transitionStyles.overlay
-  }, /* @__PURE__ */ import_react38.default.createElement(Overlay, {
+  }, /* @__PURE__ */ import_react39.default.createElement(Overlay, {
     zIndex: 0,
     color: overlayColor || (theme.colorScheme === "dark" ? theme.colors.dark[9] : theme.black),
     opacity: _overlayOpacity
@@ -26355,18 +26381,18 @@ function Modal(_c) {
     "zIndex",
     "target"
   ]);
-  return /* @__PURE__ */ import_react38.default.createElement(Portal, {
+  return /* @__PURE__ */ import_react39.default.createElement(Portal, {
     zIndex,
     target
-  }, /* @__PURE__ */ import_react38.default.createElement(MantineModal, __spreadValues27({}, props)));
+  }, /* @__PURE__ */ import_react39.default.createElement(MantineModal, __spreadValues27({}, props)));
 }
 Modal.displayName = "@mantine/core/Modal";
 
 // node_modules/@mantine/core/esm/components/NumberInput/NumberInput.js
-var import_react40 = __toModule(require_react());
+var import_react41 = __toModule(require_react());
 
 // node_modules/@mantine/core/esm/components/TextInput/TextInput.js
-var import_react39 = __toModule(require_react());
+var import_react40 = __toModule(require_react());
 var __defProp29 = Object.defineProperty;
 var __defProps14 = Object.defineProperties;
 var __getOwnPropDescs14 = Object.getOwnPropertyDescriptors;
@@ -26398,7 +26424,7 @@ var __objRest17 = (source, exclude) => {
     }
   return target;
 };
-var TextInput = (0, import_react39.forwardRef)((_a, ref) => {
+var TextInput = (0, import_react40.forwardRef)((_a, ref) => {
   var _b = _a, {
     className,
     id,
@@ -26434,7 +26460,7 @@ var TextInput = (0, import_react39.forwardRef)((_a, ref) => {
   ]);
   const uuid = useUuid(id);
   const { margins, rest } = extractMargins(others);
-  return /* @__PURE__ */ import_react39.default.createElement(InputWrapper, __spreadValues28(__spreadValues28({
+  return /* @__PURE__ */ import_react40.default.createElement(InputWrapper, __spreadValues28(__spreadValues28({
     required,
     id: uuid,
     label,
@@ -26447,7 +26473,7 @@ var TextInput = (0, import_react39.forwardRef)((_a, ref) => {
     styles: styles3,
     __staticSelector,
     sx
-  }, margins), wrapperProps), /* @__PURE__ */ import_react39.default.createElement(Input, __spreadProps14(__spreadValues28({}, rest), {
+  }, margins), wrapperProps), /* @__PURE__ */ import_react40.default.createElement(Input, __spreadProps14(__spreadValues28({}, rest), {
     required,
     ref,
     id: uuid,
@@ -26562,7 +26588,7 @@ var __objRest18 = (source, exclude) => {
     }
   return target;
 };
-var NumberInput = (0, import_react40.forwardRef)((_a, ref) => {
+var NumberInput = (0, import_react41.forwardRef)((_a, ref) => {
   var _b = _a, {
     disabled: disabled2,
     value,
@@ -26611,11 +26637,11 @@ var NumberInput = (0, import_react40.forwardRef)((_a, ref) => {
     "rightSection"
   ]);
   const { classes, cx, theme } = NumberInput_styles_default({ radius, size: size2 }, { classNames, styles: styles3, name: "NumberInput" });
-  const [focused, setFocused] = (0, import_react40.useState)(false);
-  const [_value, setValue] = (0, import_react40.useState)(typeof value === "number" ? value : typeof defaultValue === "number" ? defaultValue : void 0);
+  const [focused, setFocused] = (0, import_react41.useState)(false);
+  const [_value, setValue] = (0, import_react41.useState)(typeof value === "number" ? value : typeof defaultValue === "number" ? defaultValue : void 0);
   const finalValue = typeof value === "number" ? value : _value;
-  const [tempValue, setTempValue] = (0, import_react40.useState)(typeof finalValue === "number" ? finalValue.toFixed(precision) : "");
-  const inputRef = (0, import_react40.useRef)();
+  const [tempValue, setTempValue] = (0, import_react41.useState)(typeof finalValue === "number" ? finalValue.toFixed(precision) : "");
+  const inputRef = (0, import_react41.useRef)();
   const handleValueChange = (val) => {
     typeof onChange2 === "function" && onChange2(val);
     setValue(val);
@@ -26640,7 +26666,7 @@ var NumberInput = (0, import_react40.forwardRef)((_a, ref) => {
   };
   const _min = typeof min === "number" ? min : -Infinity;
   const _max = typeof max === "number" ? max : Infinity;
-  const incrementRef = (0, import_react40.useRef)();
+  const incrementRef = (0, import_react41.useRef)();
   incrementRef.current = () => {
     var _a2;
     if (_value === void 0) {
@@ -26652,7 +26678,7 @@ var NumberInput = (0, import_react40.forwardRef)((_a, ref) => {
       setTempValue(result);
     }
   };
-  const decrementRef = (0, import_react40.useRef)();
+  const decrementRef = (0, import_react41.useRef)();
   decrementRef.current = () => {
     var _a2;
     if (_value === void 0) {
@@ -26665,7 +26691,7 @@ var NumberInput = (0, import_react40.forwardRef)((_a, ref) => {
     }
   };
   assignRef(handlersRef, { increment: incrementRef.current, decrement: decrementRef.current });
-  (0, import_react40.useEffect)(() => {
+  (0, import_react41.useEffect)(() => {
     if (typeof value === "number" && !focused) {
       setValue(value);
       setTempValue(value.toFixed(precision));
@@ -26676,8 +26702,8 @@ var NumberInput = (0, import_react40.forwardRef)((_a, ref) => {
     }
   }, [value]);
   const shouldUseStepInterval = stepHoldDelay !== void 0 && stepHoldInterval !== void 0;
-  const onStepTimeoutRef = (0, import_react40.useRef)(null);
-  const stepCountRef = (0, import_react40.useRef)(0);
+  const onStepTimeoutRef = (0, import_react41.useRef)(null);
+  const stepCountRef = (0, import_react41.useRef)(0);
   const onStepDone = () => {
     if (onStepTimeoutRef.current) {
       window.clearTimeout(onStepTimeoutRef.current);
@@ -26708,13 +26734,13 @@ var NumberInput = (0, import_react40.forwardRef)((_a, ref) => {
     }
     inputRef.current.focus();
   };
-  (0, import_react40.useEffect)(() => {
+  (0, import_react41.useEffect)(() => {
     onStepDone();
     return onStepDone;
   }, []);
-  const controls = /* @__PURE__ */ import_react40.default.createElement("div", {
+  const controls = /* @__PURE__ */ import_react41.default.createElement("div", {
     className: classes.rightSection
-  }, /* @__PURE__ */ import_react40.default.createElement("button", {
+  }, /* @__PURE__ */ import_react41.default.createElement("button", {
     type: "button",
     tabIndex: -1,
     "aria-hidden": true,
@@ -26725,7 +26751,7 @@ var NumberInput = (0, import_react40.forwardRef)((_a, ref) => {
     },
     onMouseUp: onStepDone,
     onMouseLeave: onStepDone
-  }), /* @__PURE__ */ import_react40.default.createElement("button", {
+  }), /* @__PURE__ */ import_react41.default.createElement("button", {
     type: "button",
     tabIndex: -1,
     "aria-hidden": true,
@@ -26787,7 +26813,7 @@ var NumberInput = (0, import_react40.forwardRef)((_a, ref) => {
       onStepDone();
     }
   };
-  return /* @__PURE__ */ import_react40.default.createElement(TextInput, __spreadProps15(__spreadValues29({}, others), {
+  return /* @__PURE__ */ import_react41.default.createElement(TextInput, __spreadProps15(__spreadValues29({}, others), {
     variant,
     value: formatNum(tempValue),
     disabled: disabled2,
@@ -26813,10 +26839,10 @@ var NumberInput = (0, import_react40.forwardRef)((_a, ref) => {
 NumberInput.displayName = "@mantine/core/NumberInput";
 
 // node_modules/@mantine/core/esm/components/RingProgress/RingProgress.js
-var import_react42 = __toModule(require_react());
+var import_react43 = __toModule(require_react());
 
 // node_modules/@mantine/core/esm/components/RingProgress/Curve/Curve.js
-var import_react41 = __toModule(require_react());
+var import_react42 = __toModule(require_react());
 
 // node_modules/@mantine/core/esm/components/RingProgress/Curve/get-curve-props.js
 function getCurveProps({ size: size2, thickness, sum, value, root, offset }) {
@@ -26863,7 +26889,7 @@ function Curve({
 }) {
   const theme = useMantineTheme();
   const stroke = theme.fn.themeColor(color || (theme.colorScheme === "dark" ? "dark" : "gray"), color ? 6 : theme.colorScheme === "dark" ? 4 : 1, false);
-  return /* @__PURE__ */ import_react41.default.createElement("circle", __spreadValues30({
+  return /* @__PURE__ */ import_react42.default.createElement("circle", __spreadValues30({
     fill: "none",
     strokeLinecap: lineRoundCaps ? "round" : "butt",
     stroke
@@ -26957,7 +26983,7 @@ var __objRest19 = (source, exclude) => {
     }
   return target;
 };
-var RingProgress = (0, import_react42.forwardRef)((_a, ref) => {
+var RingProgress = (0, import_react43.forwardRef)((_a, ref) => {
   var _b = _a, {
     className,
     style,
@@ -26987,7 +27013,7 @@ var RingProgress = (0, import_react42.forwardRef)((_a, ref) => {
     renderRoundedLineCaps: roundCaps
   }).map((curve, index2) => {
     var _a2, _b2;
-    return /* @__PURE__ */ import_react42.default.createElement(Curve, {
+    return /* @__PURE__ */ import_react43.default.createElement(Curve, {
       key: index2,
       value: (_a2 = curve.data) == null ? void 0 : _a2.value,
       size: size2,
@@ -26999,15 +27025,15 @@ var RingProgress = (0, import_react42.forwardRef)((_a, ref) => {
       lineRoundCaps: curve.lineRoundCaps
     });
   });
-  return /* @__PURE__ */ import_react42.default.createElement(Box, __spreadValues32({
+  return /* @__PURE__ */ import_react43.default.createElement(Box, __spreadValues32({
     style: __spreadValues32({ width: size2, height: size2 }, style),
     className: cx(classes.root, className),
     ref
-  }, others), /* @__PURE__ */ import_react42.default.createElement("svg", {
+  }, others), /* @__PURE__ */ import_react43.default.createElement("svg", {
     width: size2,
     height: size2,
     style: { transform: "rotate(-90deg)" }
-  }, curves), label && /* @__PURE__ */ import_react42.default.createElement("div", {
+  }, curves), label && /* @__PURE__ */ import_react43.default.createElement("div", {
     className: classes.label,
     style: { right: thickness * 2, left: thickness * 2 }
   }, label));
@@ -27015,7 +27041,7 @@ var RingProgress = (0, import_react42.forwardRef)((_a, ref) => {
 RingProgress.displayName = "@mantine/core/RingProgress";
 
 // node_modules/@mantine/core/esm/components/Slider/Slider/Slider.js
-var import_react47 = __toModule(require_react());
+var import_react48 = __toModule(require_react());
 
 // node_modules/@mantine/core/esm/components/Slider/utils/get-position/get-position.js
 function getPosition({ value, min, max }) {
@@ -27031,7 +27057,7 @@ function getChangeValue({ value, containerWidth, min, max, step }) {
 }
 
 // node_modules/@mantine/core/esm/components/Slider/Thumb/Thumb.js
-var import_react43 = __toModule(require_react());
+var import_react44 = __toModule(require_react());
 
 // node_modules/@mantine/core/esm/components/Slider/SliderRoot/SliderRoot.styles.js
 var __defProp34 = Object.defineProperty;
@@ -27132,7 +27158,7 @@ var useStyles11 = createStyles((theme, { color, size: size2 }) => ({
 var Thumb_styles_default = useStyles11;
 
 // node_modules/@mantine/core/esm/components/Slider/Thumb/Thumb.js
-var Thumb = (0, import_react43.forwardRef)(({
+var Thumb = (0, import_react44.forwardRef)(({
   max,
   min,
   value,
@@ -27155,9 +27181,9 @@ var Thumb = (0, import_react43.forwardRef)(({
   children = null
 }, ref) => {
   const { classes, cx, theme } = Thumb_styles_default({ color, size: size2 }, { classNames, styles: styles3, name: "Slider" });
-  const [focused, setFocused] = (0, import_react43.useState)(false);
+  const [focused, setFocused] = (0, import_react44.useState)(false);
   const isVisible = labelAlwaysOn || dragging || focused || showLabelOnHover;
-  return /* @__PURE__ */ import_react43.default.createElement(Box, {
+  return /* @__PURE__ */ import_react44.default.createElement(Box, {
     tabIndex: 0,
     role: "slider",
     "aria-label": thumbLabel,
@@ -27178,12 +27204,12 @@ var Thumb = (0, import_react43.forwardRef)(({
     onMouseDown,
     onClick: (event) => event.stopPropagation(),
     sx: { left: `${position2}%` }
-  }, children, /* @__PURE__ */ import_react43.default.createElement(Transition, {
+  }, children, /* @__PURE__ */ import_react44.default.createElement(Transition, {
     mounted: label != null && isVisible,
     duration: labelTransitionDuration,
     transition: labelTransition,
     timingFunction: labelTransitionTimingFunction || theme.transitionTimingFunction
-  }, (transitionStyles) => /* @__PURE__ */ import_react43.default.createElement("div", {
+  }, (transitionStyles) => /* @__PURE__ */ import_react44.default.createElement("div", {
     style: transitionStyles,
     className: classes.label
   }, label)));
@@ -27191,10 +27217,10 @@ var Thumb = (0, import_react43.forwardRef)(({
 Thumb.displayName = "@mantine/core/SliderThumb";
 
 // node_modules/@mantine/core/esm/components/Slider/Track/Track.js
-var import_react45 = __toModule(require_react());
+var import_react46 = __toModule(require_react());
 
 // node_modules/@mantine/core/esm/components/Slider/Marks/Marks.js
-var import_react44 = __toModule(require_react());
+var import_react45 = __toModule(require_react());
 
 // node_modules/@mantine/core/esm/components/Slider/Marks/is-mark-filled.js
 function isMarkFilled({ mark, offset, value }) {
@@ -27243,15 +27269,15 @@ function Marks({
   onChange: onChange2
 }) {
   const { classes, cx } = Marks_styles_default({ size: size2, color }, { classNames, styles: styles3, name: "Slider" });
-  const items = marks.map((mark, index2) => /* @__PURE__ */ import_react44.default.createElement(Box, {
+  const items = marks.map((mark, index2) => /* @__PURE__ */ import_react45.default.createElement(Box, {
     className: classes.markWrapper,
     sx: { left: `${getPosition({ value: mark.value, min, max })}%` },
     key: index2
-  }, /* @__PURE__ */ import_react44.default.createElement("div", {
+  }, /* @__PURE__ */ import_react45.default.createElement("div", {
     className: cx(classes.mark, {
       [classes.markFilled]: isMarkFilled({ mark, value, offset })
     })
-  }), mark.label && /* @__PURE__ */ import_react44.default.createElement("div", {
+  }), mark.label && /* @__PURE__ */ import_react45.default.createElement("div", {
     className: classes.markLabel,
     onMouseDown: (event) => {
       event.stopPropagation();
@@ -27262,7 +27288,7 @@ function Marks({
       onChange2(mark.value);
     }
   }, mark.label)));
-  return /* @__PURE__ */ import_react44.default.createElement("div", null, items);
+  return /* @__PURE__ */ import_react45.default.createElement("div", null, items);
 }
 Marks.displayName = "@mantine/core/SliderMarks";
 
@@ -27354,17 +27380,17 @@ function Track(_a) {
     "onMouseEnter"
   ]);
   const { classes } = Track_styles_default({ color, size: size2, radius }, { classNames, styles: styles3, name: "Slider" });
-  return /* @__PURE__ */ import_react45.default.createElement("div", {
+  return /* @__PURE__ */ import_react46.default.createElement("div", {
     className: classes.track,
     onMouseLeave,
     onMouseEnter
-  }, /* @__PURE__ */ import_react45.default.createElement(Box, {
+  }, /* @__PURE__ */ import_react46.default.createElement(Box, {
     className: classes.bar,
     sx: (theme) => ({
       left: `calc(${offset}% - ${theme.fn.size({ size: size2, sizes: sizes4 })}px)`,
       width: `calc(${filled}% + ${theme.fn.size({ size: size2, sizes: sizes4 })}px)`
     })
-  }), children, /* @__PURE__ */ import_react45.default.createElement(Marks, __spreadProps19(__spreadValues35({}, others), {
+  }), children, /* @__PURE__ */ import_react46.default.createElement(Marks, __spreadProps19(__spreadValues35({}, others), {
     size: size2,
     color,
     offset,
@@ -27375,7 +27401,7 @@ function Track(_a) {
 Track.displayName = "@mantine/core/SliderTrack";
 
 // node_modules/@mantine/core/esm/components/Slider/SliderRoot/SliderRoot.js
-var import_react46 = __toModule(require_react());
+var import_react47 = __toModule(require_react());
 var __defProp37 = Object.defineProperty;
 var __defProps20 = Object.defineProperties;
 var __getOwnPropDescs20 = Object.getOwnPropertyDescriptors;
@@ -27407,10 +27433,10 @@ var __objRest21 = (source, exclude) => {
     }
   return target;
 };
-var SliderRoot = (0, import_react46.forwardRef)((_a, ref) => {
+var SliderRoot = (0, import_react47.forwardRef)((_a, ref) => {
   var _b = _a, { className, size: size2, classNames, styles: styles3 } = _b, others = __objRest21(_b, ["className", "size", "classNames", "styles"]);
   const { classes, cx } = SliderRoot_styles_default({ size: size2 }, { classNames, styles: styles3, name: "Slider" });
-  return /* @__PURE__ */ import_react46.default.createElement(Box, __spreadProps20(__spreadValues36({}, others), {
+  return /* @__PURE__ */ import_react47.default.createElement(Box, __spreadProps20(__spreadValues36({}, others), {
     tabIndex: -1,
     className: cx(classes.root, className),
     ref
@@ -27450,7 +27476,7 @@ var __objRest22 = (source, exclude) => {
     }
   return target;
 };
-var Slider = (0, import_react47.forwardRef)((_a, ref) => {
+var Slider = (0, import_react48.forwardRef)((_a, ref) => {
   var _b = _a, {
     classNames,
     styles: styles3,
@@ -27497,7 +27523,7 @@ var Slider = (0, import_react47.forwardRef)((_a, ref) => {
     "thumbChildren"
   ]);
   const theme = useMantineTheme();
-  const [hovered, setHovered] = (0, import_react47.useState)(false);
+  const [hovered, setHovered] = (0, import_react48.useState)(false);
   const [_value, setValue] = useUncontrolled({
     value: typeof value === "number" ? clamp({ value, min, max }) : value,
     defaultValue: typeof defaultValue === "number" ? clamp({ value: defaultValue, min, max }) : defaultValue,
@@ -27505,7 +27531,7 @@ var Slider = (0, import_react47.forwardRef)((_a, ref) => {
     rule: (val) => typeof val === "number",
     onChange: onChange2
   });
-  const thumb = (0, import_react47.useRef)();
+  const thumb = (0, import_react48.useRef)();
   const position2 = getPosition({ value: _value, min, max });
   const _label = typeof label === "function" ? label(_value) : label;
   const handleChange = (val) => {
@@ -27537,7 +27563,7 @@ var Slider = (0, import_react47.forwardRef)((_a, ref) => {
       }
     }
   };
-  return /* @__PURE__ */ import_react47.default.createElement(SliderRoot, __spreadProps21(__spreadValues37({}, others), {
+  return /* @__PURE__ */ import_react48.default.createElement(SliderRoot, __spreadProps21(__spreadValues37({}, others), {
     size: size2,
     ref: useMergedRef(container, ref),
     onKeyDownCapture: handleTrackKeydownCapture,
@@ -27547,7 +27573,7 @@ var Slider = (0, import_react47.forwardRef)((_a, ref) => {
     },
     classNames,
     styles: styles3
-  }), /* @__PURE__ */ import_react47.default.createElement(Track, {
+  }), /* @__PURE__ */ import_react48.default.createElement(Track, {
     offset: 0,
     filled: position2,
     marks,
@@ -27562,7 +27588,7 @@ var Slider = (0, import_react47.forwardRef)((_a, ref) => {
     onMouseLeave: showLabelOnHover ? () => setHovered(false) : void 0,
     classNames,
     styles: styles3
-  }, /* @__PURE__ */ import_react47.default.createElement(Thumb, {
+  }, /* @__PURE__ */ import_react48.default.createElement(Thumb, {
     max,
     min,
     value: _value,
@@ -27581,7 +27607,7 @@ var Slider = (0, import_react47.forwardRef)((_a, ref) => {
     styles: styles3,
     thumbLabel,
     showLabelOnHover: showLabelOnHover && hovered
-  }, thumbChildren)), /* @__PURE__ */ import_react47.default.createElement("input", {
+  }, thumbChildren)), /* @__PURE__ */ import_react48.default.createElement("input", {
     type: "hidden",
     name,
     value: _value
@@ -27590,7 +27616,7 @@ var Slider = (0, import_react47.forwardRef)((_a, ref) => {
 Slider.displayName = "@mantine/core/Slider";
 
 // node_modules/@mantine/core/esm/components/Switch/Switch.js
-var import_react48 = __toModule(require_react());
+var import_react49 = __toModule(require_react());
 
 // node_modules/@mantine/core/esm/components/Switch/Switch.styles.js
 var __defProp39 = Object.defineProperty;
@@ -27767,7 +27793,7 @@ var __objRest23 = (source, exclude) => {
     }
   return target;
 };
-var Switch = (0, import_react48.forwardRef)((_a, ref) => {
+var Switch = (0, import_react49.forwardRef)((_a, ref) => {
   var _b = _a, {
     className,
     color,
@@ -27802,16 +27828,16 @@ var Switch = (0, import_react48.forwardRef)((_a, ref) => {
   const { classes, cx } = Switch_styles_default({ size: size2, color, radius, offLabel, onLabel }, { classNames, styles: styles3, name: "Switch" });
   const { margins, rest } = extractMargins(others);
   const uuid = useUuid(id);
-  return /* @__PURE__ */ import_react48.default.createElement(Box, __spreadValues39(__spreadValues39({
+  return /* @__PURE__ */ import_react49.default.createElement(Box, __spreadValues39(__spreadValues39({
     className: cx(classes.root, className),
     style,
     sx
-  }, margins), wrapperProps), /* @__PURE__ */ import_react48.default.createElement("input", __spreadProps23(__spreadValues39({}, rest), {
+  }, margins), wrapperProps), /* @__PURE__ */ import_react49.default.createElement("input", __spreadProps23(__spreadValues39({}, rest), {
     id: uuid,
     ref,
     type: "checkbox",
     className: classes.input
-  })), label && /* @__PURE__ */ import_react48.default.createElement("label", {
+  })), label && /* @__PURE__ */ import_react49.default.createElement("label", {
     className: classes.label,
     htmlFor: uuid
   }, label));
@@ -27819,7 +27845,7 @@ var Switch = (0, import_react48.forwardRef)((_a, ref) => {
 Switch.displayName = "@mantine/core/Switch";
 
 // node_modules/@mantine/core/esm/components/ThemeIcon/ThemeIcon.js
-var import_react49 = __toModule(require_react());
+var import_react50 = __toModule(require_react());
 
 // node_modules/@mantine/core/esm/components/ThemeIcon/ThemeIcon.styles.js
 var __defProp41 = Object.defineProperty;
@@ -27904,7 +27930,7 @@ var __objRest24 = (source, exclude) => {
     }
   return target;
 };
-var ThemeIcon = (0, import_react49.forwardRef)((_a, ref) => {
+var ThemeIcon = (0, import_react50.forwardRef)((_a, ref) => {
   var _b = _a, {
     className,
     size: size2 = "md",
@@ -27931,7 +27957,7 @@ var ThemeIcon = (0, import_react49.forwardRef)((_a, ref) => {
     gradientTo: gradient.to,
     gradientDeg: gradient.deg
   }, { name: "ThemeIcon" });
-  return /* @__PURE__ */ import_react49.default.createElement(Box, __spreadValues41({
+  return /* @__PURE__ */ import_react50.default.createElement(Box, __spreadValues41({
     className: cx(classes.root, className),
     ref
   }, others), children);
@@ -27940,7 +27966,7 @@ ThemeIcon.displayName = "@mantine/core/ThemeIcon";
 
 // node_modules/styled-components/dist/styled-components.browser.esm.js
 var import_react_is = __toModule(require_react_is());
-var import_react50 = __toModule(require_react());
+var import_react51 = __toModule(require_react());
 var import_shallowequal = __toModule(require_shallowequal());
 
 // node_modules/@emotion/stylis/dist/stylis.browser.esm.js
@@ -28819,27 +28845,27 @@ function ce(e2) {
     return t3.name || j(15), te(e3, t3.name);
   }, 5381).toString() : "", m;
 }
-var ue = import_react50.default.createContext();
+var ue = import_react51.default.createContext();
 var le = ue.Consumer;
-var de = import_react50.default.createContext();
+var de = import_react51.default.createContext();
 var he = (de.Consumer, new Z());
 var pe = ce();
 function fe() {
-  return (0, import_react50.useContext)(ue) || he;
+  return (0, import_react51.useContext)(ue) || he;
 }
 function me() {
-  return (0, import_react50.useContext)(de) || pe;
+  return (0, import_react51.useContext)(de) || pe;
 }
 function ye(e2) {
-  var t2 = (0, import_react50.useState)(e2.stylisPlugins), n2 = t2[0], s2 = t2[1], c2 = fe(), u2 = (0, import_react50.useMemo)(function() {
+  var t2 = (0, import_react51.useState)(e2.stylisPlugins), n2 = t2[0], s2 = t2[1], c2 = fe(), u2 = (0, import_react51.useMemo)(function() {
     var t3 = c2;
     return e2.sheet ? t3 = e2.sheet : e2.target && (t3 = t3.reconstructWithOptions({ target: e2.target }, false)), e2.disableCSSOMInjection && (t3 = t3.reconstructWithOptions({ useCSSOMInjection: false })), t3;
-  }, [e2.disableCSSOMInjection, e2.sheet, e2.target]), l2 = (0, import_react50.useMemo)(function() {
+  }, [e2.disableCSSOMInjection, e2.sheet, e2.target]), l2 = (0, import_react51.useMemo)(function() {
     return ce({ options: { prefix: !e2.disableVendorPrefixes }, plugins: n2 });
   }, [e2.disableVendorPrefixes, n2]);
-  return (0, import_react50.useEffect)(function() {
+  return (0, import_react51.useEffect)(function() {
     (0, import_shallowequal.default)(n2, e2.stylisPlugins) || s2(e2.stylisPlugins);
-  }, [e2.stylisPlugins]), import_react50.default.createElement(ue.Provider, { value: u2 }, import_react50.default.createElement(de.Provider, { value: l2 }, true ? import_react50.default.Children.only(e2.children) : e2.children));
+  }, [e2.stylisPlugins]), import_react51.default.createElement(ue.Provider, { value: u2 }, import_react51.default.createElement(de.Provider, { value: l2 }, true ? import_react51.default.Children.only(e2.children) : e2.children));
 }
 var ve = function() {
   function e2(e3, t2) {
@@ -28915,7 +28941,7 @@ var Oe = function(e2, t2) {
             s2[i2 - 1] = arguments[i2];
           r2.apply(void 0, [e3].concat(s2));
         }
-      }, (0, import_react50.useRef)(), o2 && !Pe.has(n2) && (console.warn(n2), Pe.add(n2));
+      }, (0, import_react51.useRef)(), o2 && !Pe.has(n2) && (console.warn(n2), Pe.add(n2));
     } catch (e3) {
       Ie.test(e3.message) && Pe.delete(n2);
     } finally {
@@ -28958,7 +28984,7 @@ function Me(e2) {
   }
   return e2;
 }
-var Ge = import_react50.default.createContext();
+var Ge = import_react51.default.createContext();
 var Le = Ge.Consumer;
 var Ye = {};
 function qe(e2, t2, n2) {
@@ -28976,7 +29002,7 @@ function qe(e2, t2, n2) {
   var C, I2 = new se(n2, g2, o2 ? e2.componentStyle : void 0), P2 = I2.isStatic && c2.length === 0, O = function(e3, t3) {
     return function(e4, t4, n3, r2) {
       var o3 = e4.attrs, i3 = e4.componentStyle, a3 = e4.defaultProps, c3 = e4.foldedComponentIds, d4 = e4.shouldForwardProp, h3 = e4.styledComponentId, p3 = e4.target;
-      (0, import_react50.useDebugValue)(h3);
+      (0, import_react51.useDebugValue)(h3);
       var f2 = function(e5, t5, n4) {
         e5 === void 0 && (e5 = E);
         var r3 = v({}, t5, { theme: e5 }), o4 = {};
@@ -28985,16 +29011,16 @@ function qe(e2, t2, n2) {
           for (t6 in b(i4) && (i4 = i4(r3)), i4)
             r3[t6] = o4[t6] = t6 === "className" ? (n5 = o4[t6], s2 = i4[t6], n5 && s2 ? n5 + " " + s2 : n5 || s2) : i4[t6];
         }), [r3, o4];
-      }(Re(t4, (0, import_react50.useContext)(Ge), a3) || E, t4, o3), y2 = f2[0], g3 = f2[1], S3 = function(e5, t5, n4, r3) {
+      }(Re(t4, (0, import_react51.useContext)(Ge), a3) || E, t4, o3), y2 = f2[0], g3 = f2[1], S3 = function(e5, t5, n4, r3) {
         var o4 = fe(), s2 = me(), i4 = t5 ? e5.generateAndInjectStyles(E, o4, s2) : e5.generateAndInjectStyles(n4, o4, s2);
-        return (0, import_react50.useDebugValue)(i4), !t5 && r3 && r3(i4), i4;
+        return (0, import_react51.useDebugValue)(i4), !t5 && r3 && r3(i4), i4;
       }(i3, r2, y2, true ? e4.warnTooManyClasses : void 0), w3 = n3, _2 = g3.$as || t4.$as || g3.as || t4.as || p3, N2 = ke(_2), A3 = g3 !== t4 ? v({}, t4, {}, g3) : t4, C2 = {};
       for (var I3 in A3)
         I3[0] !== "$" && I3 !== "as" && (I3 === "forwardedAs" ? C2.as = A3[I3] : (d4 ? d4(I3, is_prop_valid_browser_esm_default, _2) : !N2 || is_prop_valid_browser_esm_default(I3)) && (C2[I3] = A3[I3]));
-      return t4.style && g3.style !== t4.style && (C2.style = v({}, t4.style, {}, g3.style)), C2.className = Array.prototype.concat(c3, h3, S3 !== h3 ? S3 : null, t4.className, g3.className).filter(Boolean).join(" "), C2.ref = w3, (0, import_react50.createElement)(_2, C2);
+      return t4.style && g3.style !== t4.style && (C2.style = v({}, t4.style, {}, g3.style)), C2.className = Array.prototype.concat(c3, h3, S3 !== h3 ? S3 : null, t4.className, g3.className).filter(Boolean).join(" "), C2.ref = w3, (0, import_react51.createElement)(_2, C2);
     }(C, e3, t3, P2);
   };
-  return O.displayName = f, (C = import_react50.default.forwardRef(O)).attrs = S2, C.componentStyle = I2, C.displayName = f, C.shouldForwardProp = A2, C.foldedComponentIds = o2 ? Array.prototype.concat(e2.foldedComponentIds, e2.styledComponentId) : w, C.styledComponentId = g2, C.target = o2 ? e2.target : e2, C.withComponent = function(e3) {
+  return O.displayName = f, (C = import_react51.default.forwardRef(O)).attrs = S2, C.componentStyle = I2, C.displayName = f, C.shouldForwardProp = A2, C.foldedComponentIds = o2 ? Array.prototype.concat(e2.foldedComponentIds, e2.styledComponentId) : w, C.styledComponentId = g2, C.target = o2 ? e2.target : e2, C.withComponent = function(e3) {
     var r2 = t2.componentId, o3 = function(e4, t3) {
       if (e4 == null)
         return {};
@@ -29067,14 +29093,14 @@ var Je = function() {
       if (e3.sealed)
         return j(2);
       var n2 = ((t3 = {})[A] = "", t3["data-styled-version"] = "5.3.3", t3.dangerouslySetInnerHTML = { __html: e3.instance.toString() }, t3), o2 = q();
-      return o2 && (n2.nonce = o2), [import_react50.default.createElement("style", v({}, n2, { key: "sc-0-0" }))];
+      return o2 && (n2.nonce = o2), [import_react51.default.createElement("style", v({}, n2, { key: "sc-0-0" }))];
     }, this.seal = function() {
       e3.sealed = true;
     }, this.instance = new Z({ isServer: true }), this.sealed = false;
   }
   var t2 = e2.prototype;
   return t2.collectStyles = function(e3) {
-    return this.sealed ? j(2) : import_react50.default.createElement(ye, { sheet: this.instance }, e3);
+    return this.sealed ? j(2) : import_react51.default.createElement(ye, { sheet: this.instance }, e3);
   }, t2.interleaveWithNodeStream = function(e3) {
     return j(3);
   }, e2;
@@ -29083,31 +29109,31 @@ typeof navigator != "undefined" && navigator.product === "ReactNative" && consol
 var styled_components_browser_esm_default = He;
 
 // src/App.jsx
-var import_react58 = __toModule(require_react());
+var import_react62 = __toModule(require_react());
 
 // src/components/HelloWorld.jsx
-var import_react57 = __toModule(require_react());
+var import_react61 = __toModule(require_react());
 
 // src/components/Counter.js
-var import_react54 = __toModule(require_react());
-var import_react55 = __toModule(require_react());
-var import_react56 = __toModule(require_react_development());
+var import_react58 = __toModule(require_react());
+var import_react59 = __toModule(require_react());
+var import_react60 = __toModule(require_react_development());
 
 // src/components/NumberComponent.js
-var import_react51 = __toModule(require_react());
+var import_react52 = __toModule(require_react());
 var BillQuantityText = styled_components_browser_esm_default.span`
   color: 'teal',
   backgroundColor: 'slateGray'
 `;
 function NumberComponent(props) {
   let { range, idx, denom, onChange: onChange2 } = props;
-  const [quantity, setQuantity] = (0, import_react51.useState)(0);
-  const [sum, setSum] = (0, import_react51.useState)(0);
-  const [isLocked, setIsLocked] = (0, import_react51.useState)(false);
-  (0, import_react51.useEffect)(() => {
+  const [quantity, setQuantity] = (0, import_react52.useState)(0);
+  const [sum, setSum] = (0, import_react52.useState)(0);
+  const [isLocked, setIsLocked] = (0, import_react52.useState)(false);
+  (0, import_react52.useEffect)(() => {
     denomCalculator();
   }, [quantity]);
-  (0, import_react51.useEffect)(() => {
+  (0, import_react52.useEffect)(() => {
     onChange2(sum, denom, idx);
   }, [sum]);
   const denomCalculator = () => {
@@ -29125,22 +29151,22 @@ function NumberComponent(props) {
     setIsLocked(!isLocked);
     console.log(e2.target.checked);
   };
-  return /* @__PURE__ */ import_react51.default.createElement(import_react51.default.Fragment, null, /* @__PURE__ */ import_react51.default.createElement(Slider, {
+  return /* @__PURE__ */ import_react52.default.createElement(import_react52.default.Fragment, null, /* @__PURE__ */ import_react52.default.createElement(Slider, {
     labelTransition: "skew-down",
     labelTransitionDuration: 150,
     labelTransitionTimingFunction: "ease",
     onChange: (quant) => setQuantity(quant),
     value: quantity,
     size: "xl"
-  }), /* @__PURE__ */ import_react51.default.createElement(Group, {
+  }), /* @__PURE__ */ import_react52.default.createElement(Group, {
     spacing: 5,
     style: { "marginBottom": "1em" }
-  }, /* @__PURE__ */ import_react51.default.createElement(Switch, {
+  }, /* @__PURE__ */ import_react52.default.createElement(Switch, {
     label: isLocked ? "Locked" : "Unlocked",
     color: "cyan",
     checked: isLocked,
     onChange: handleChangeSwitch
-  }), /* @__PURE__ */ import_react51.default.createElement(NumberInput, {
+  }), /* @__PURE__ */ import_react52.default.createElement(NumberInput, {
     hideControls: true,
     value: quantity,
     onChange: () => console.log("value"),
@@ -29148,22 +29174,89 @@ function NumberComponent(props) {
     min: 0,
     step: 2,
     styles: { input: { width: 54, textAlign: "center" } }
-  }), /* @__PURE__ */ import_react51.default.createElement(NumberInput, {
+  }), /* @__PURE__ */ import_react52.default.createElement(NumberInput, {
     hideControls: true,
     value: sum,
     disabled: true,
     styles: { input: { width: 60, textAlign: "center" } }
-  }), /* @__PURE__ */ import_react51.default.createElement(ActionIcon, {
+  }), /* @__PURE__ */ import_react52.default.createElement(ActionIcon, {
     size: 35,
     variant: "default",
     onClick: handleClick
-  }, "-"), /* @__PURE__ */ import_react51.default.createElement(ActionIcon, {
+  }, "-"), /* @__PURE__ */ import_react52.default.createElement(ActionIcon, {
     size: 35,
     variant: "default",
     onClick: handleClick
   }, "+")));
 }
 var NumberComponent_default = NumberComponent;
+
+// src/components/ThemeSwitcher.js
+var import_react54 = __toModule(require_react());
+
+// node_modules/@modulz/radix-icons/dist/radix-icons.esm.js
+var import_react53 = __toModule(require_react());
+function _objectWithoutPropertiesLoose(source, excluded) {
+  if (source == null)
+    return {};
+  var target = {};
+  var sourceKeys = Object.keys(source);
+  var key, i2;
+  for (i2 = 0; i2 < sourceKeys.length; i2++) {
+    key = sourceKeys[i2];
+    if (excluded.indexOf(key) >= 0)
+      continue;
+    target[key] = source[key];
+  }
+  return target;
+}
+var MoonIcon = function MoonIcon2(_ref2) {
+  var _ref$color = _ref2.color, color = _ref$color === void 0 ? "currentColor" : _ref$color, props = _objectWithoutPropertiesLoose(_ref2, ["color"]);
+  return (0, import_react53.createElement)("svg", Object.assign({
+    width: "15",
+    height: "15",
+    viewBox: "0 0 15 15",
+    fill: "none",
+    xmlns: "http://www.w3.org/2000/svg"
+  }, props), (0, import_react53.createElement)("path", {
+    d: "M2.89998 0.499976C2.89998 0.279062 2.72089 0.0999756 2.49998 0.0999756C2.27906 0.0999756 2.09998 0.279062 2.09998 0.499976V1.09998H1.49998C1.27906 1.09998 1.09998 1.27906 1.09998 1.49998C1.09998 1.72089 1.27906 1.89998 1.49998 1.89998H2.09998V2.49998C2.09998 2.72089 2.27906 2.89998 2.49998 2.89998C2.72089 2.89998 2.89998 2.72089 2.89998 2.49998V1.89998H3.49998C3.72089 1.89998 3.89998 1.72089 3.89998 1.49998C3.89998 1.27906 3.72089 1.09998 3.49998 1.09998H2.89998V0.499976ZM5.89998 3.49998C5.89998 3.27906 5.72089 3.09998 5.49998 3.09998C5.27906 3.09998 5.09998 3.27906 5.09998 3.49998V4.09998H4.49998C4.27906 4.09998 4.09998 4.27906 4.09998 4.49998C4.09998 4.72089 4.27906 4.89998 4.49998 4.89998H5.09998V5.49998C5.09998 5.72089 5.27906 5.89998 5.49998 5.89998C5.72089 5.89998 5.89998 5.72089 5.89998 5.49998V4.89998H6.49998C6.72089 4.89998 6.89998 4.72089 6.89998 4.49998C6.89998 4.27906 6.72089 4.09998 6.49998 4.09998H5.89998V3.49998ZM1.89998 6.49998C1.89998 6.27906 1.72089 6.09998 1.49998 6.09998C1.27906 6.09998 1.09998 6.27906 1.09998 6.49998V7.09998H0.499976C0.279062 7.09998 0.0999756 7.27906 0.0999756 7.49998C0.0999756 7.72089 0.279062 7.89998 0.499976 7.89998H1.09998V8.49998C1.09998 8.72089 1.27906 8.89997 1.49998 8.89997C1.72089 8.89997 1.89998 8.72089 1.89998 8.49998V7.89998H2.49998C2.72089 7.89998 2.89998 7.72089 2.89998 7.49998C2.89998 7.27906 2.72089 7.09998 2.49998 7.09998H1.89998V6.49998ZM8.54406 0.98184L8.24618 0.941586C8.03275 0.917676 7.90692 1.1655 8.02936 1.34194C8.17013 1.54479 8.29981 1.75592 8.41754 1.97445C8.91878 2.90485 9.20322 3.96932 9.20322 5.10022C9.20322 8.37201 6.82247 11.0878 3.69887 11.6097C3.45736 11.65 3.20988 11.6772 2.96008 11.6906C2.74563 11.702 2.62729 11.9535 2.77721 12.1072C2.84551 12.1773 2.91535 12.2458 2.98667 12.3128L3.05883 12.3795L3.31883 12.6045L3.50684 12.7532L3.62796 12.8433L3.81491 12.9742L3.99079 13.089C4.11175 13.1651 4.23536 13.2375 4.36157 13.3059L4.62496 13.4412L4.88553 13.5607L5.18837 13.6828L5.43169 13.7686C5.56564 13.8128 5.70149 13.8529 5.83857 13.8885C5.94262 13.9155 6.04767 13.9401 6.15405 13.9622C6.27993 13.9883 6.40713 14.0109 6.53544 14.0298L6.85241 14.0685L7.11934 14.0892C7.24637 14.0965 7.37436 14.1002 7.50322 14.1002C11.1483 14.1002 14.1032 11.1453 14.1032 7.50023C14.1032 7.25044 14.0893 7.00389 14.0623 6.76131L14.0255 6.48407C13.991 6.26083 13.9453 6.04129 13.8891 5.82642C13.8213 5.56709 13.7382 5.31398 13.6409 5.06881L13.5279 4.80132L13.4507 4.63542L13.3766 4.48666C13.2178 4.17773 13.0353 3.88295 12.8312 3.60423L12.6782 3.40352L12.4793 3.16432L12.3157 2.98361L12.1961 2.85951L12.0355 2.70246L11.8134 2.50184L11.4925 2.24191L11.2483 2.06498L10.9562 1.87446L10.6346 1.68894L10.3073 1.52378L10.1938 1.47176L9.95488 1.3706L9.67791 1.2669L9.42566 1.1846L9.10075 1.09489L8.83599 1.03486L8.54406 0.98184ZM10.4032 5.30023C10.4032 4.27588 10.2002 3.29829 9.83244 2.40604C11.7623 3.28995 13.1032 5.23862 13.1032 7.50023C13.1032 10.593 10.596 13.1002 7.50322 13.1002C6.63646 13.1002 5.81597 12.9036 5.08355 12.5522C6.5419 12.0941 7.81081 11.2082 8.74322 10.0416C8.87963 10.2284 9.10028 10.3497 9.34928 10.3497C9.76349 10.3497 10.0993 10.0139 10.0993 9.59971C10.0993 9.24256 9.84965 8.94373 9.51535 8.86816C9.57741 8.75165 9.63653 8.63334 9.6926 8.51332C9.88358 8.63163 10.1088 8.69993 10.35 8.69993C11.0403 8.69993 11.6 8.14028 11.6 7.44993C11.6 6.75976 11.0406 6.20024 10.3505 6.19993C10.3853 5.90487 10.4032 5.60464 10.4032 5.30023Z",
+    fill: color,
+    fillRule: "evenodd",
+    clipRule: "evenodd"
+  }));
+};
+var SunIcon = function SunIcon2(_ref2) {
+  var _ref$color = _ref2.color, color = _ref$color === void 0 ? "currentColor" : _ref$color, props = _objectWithoutPropertiesLoose(_ref2, ["color"]);
+  return (0, import_react53.createElement)("svg", Object.assign({
+    width: "15",
+    height: "15",
+    viewBox: "0 0 15 15",
+    fill: "none",
+    xmlns: "http://www.w3.org/2000/svg"
+  }, props), (0, import_react53.createElement)("path", {
+    d: "M7.5 0C7.77614 0 8 0.223858 8 0.5V2.5C8 2.77614 7.77614 3 7.5 3C7.22386 3 7 2.77614 7 2.5V0.5C7 0.223858 7.22386 0 7.5 0ZM2.1967 2.1967C2.39196 2.00144 2.70854 2.00144 2.90381 2.1967L4.31802 3.61091C4.51328 3.80617 4.51328 4.12276 4.31802 4.31802C4.12276 4.51328 3.80617 4.51328 3.61091 4.31802L2.1967 2.90381C2.00144 2.70854 2.00144 2.39196 2.1967 2.1967ZM0.5 7C0.223858 7 0 7.22386 0 7.5C0 7.77614 0.223858 8 0.5 8H2.5C2.77614 8 3 7.77614 3 7.5C3 7.22386 2.77614 7 2.5 7H0.5ZM2.1967 12.8033C2.00144 12.608 2.00144 12.2915 2.1967 12.0962L3.61091 10.682C3.80617 10.4867 4.12276 10.4867 4.31802 10.682C4.51328 10.8772 4.51328 11.1938 4.31802 11.3891L2.90381 12.8033C2.70854 12.9986 2.39196 12.9986 2.1967 12.8033ZM12.5 7C12.2239 7 12 7.22386 12 7.5C12 7.77614 12.2239 8 12.5 8H14.5C14.7761 8 15 7.77614 15 7.5C15 7.22386 14.7761 7 14.5 7H12.5ZM10.682 4.31802C10.4867 4.12276 10.4867 3.80617 10.682 3.61091L12.0962 2.1967C12.2915 2.00144 12.608 2.00144 12.8033 2.1967C12.9986 2.39196 12.9986 2.70854 12.8033 2.90381L11.3891 4.31802C11.1938 4.51328 10.8772 4.51328 10.682 4.31802ZM8 12.5C8 12.2239 7.77614 12 7.5 12C7.22386 12 7 12.2239 7 12.5V14.5C7 14.7761 7.22386 15 7.5 15C7.77614 15 8 14.7761 8 14.5V12.5ZM10.682 10.682C10.8772 10.4867 11.1938 10.4867 11.3891 10.682L12.8033 12.0962C12.9986 12.2915 12.9986 12.608 12.8033 12.8033C12.608 12.9986 12.2915 12.9986 12.0962 12.8033L10.682 11.3891C10.4867 11.1938 10.4867 10.8772 10.682 10.682ZM5.5 7.5C5.5 6.39543 6.39543 5.5 7.5 5.5C8.60457 5.5 9.5 6.39543 9.5 7.5C9.5 8.60457 8.60457 9.5 7.5 9.5C6.39543 9.5 5.5 8.60457 5.5 7.5ZM7.5 4.5C5.84315 4.5 4.5 5.84315 4.5 7.5C4.5 9.15685 5.84315 10.5 7.5 10.5C9.15685 10.5 10.5 9.15685 10.5 7.5C10.5 5.84315 9.15685 4.5 7.5 4.5Z",
+    fill: color,
+    fillRule: "evenodd",
+    clipRule: "evenodd"
+  }));
+};
+
+// src/components/ThemeSwitcher.js
+var ThemeSwitcher = () => {
+  const { colorScheme, toggleColorScheme } = useMantineColorScheme();
+  const dark = colorScheme === "dark";
+  return /* @__PURE__ */ import_react54.default.createElement(ActionIcon, {
+    variant: "outline",
+    color: dark ? "yellow" : "blue",
+    onClick: () => toggleColorScheme(),
+    title: "Toggle color scheme"
+  }, dark ? /* @__PURE__ */ import_react54.default.createElement(SunIcon, {
+    style: { width: 18, height: 18 }
+  }) : /* @__PURE__ */ import_react54.default.createElement(MoonIcon, {
+    style: { width: 18, height: 18 }
+  }));
+};
+var ThemeSwitcher_default = ThemeSwitcher;
 
 // node_modules/@fortawesome/fontawesome-svg-core/index.es.js
 function ownKeys(object, enumerableOnly) {
@@ -30467,12 +30560,12 @@ function getMutator() {
 function createElementNS(tag) {
   return DOCUMENT.createElementNS("http://www.w3.org/2000/svg", tag);
 }
-function createElement4(tag) {
+function createElement5(tag) {
   return DOCUMENT.createElement(tag);
 }
 function convertSVG(abstractObj) {
   var params = arguments.length > 1 && arguments[1] !== void 0 ? arguments[1] : {};
-  var _params$ceFn = params.ceFn, ceFn = _params$ceFn === void 0 ? abstractObj.tag === "svg" ? createElementNS : createElement4 : _params$ceFn;
+  var _params$ceFn = params.ceFn, ceFn = _params$ceFn === void 0 ? abstractObj.tag === "svg" ? createElementNS : createElement5 : _params$ceFn;
   if (typeof abstractObj === "string") {
     return DOCUMENT.createTextNode(abstractObj);
   }
@@ -31535,7 +31628,7 @@ var counter = api.counter;
 
 // node_modules/@fortawesome/react-fontawesome/index.es.js
 var import_prop_types = __toModule(require_prop_types());
-var import_react52 = __toModule(require_react());
+var import_react55 = __toModule(require_react());
 function ownKeys2(object, enumerableOnly) {
   var keys = Object.keys(object);
   if (Object.getOwnPropertySymbols) {
@@ -31578,7 +31671,7 @@ function _defineProperty2(obj, key, value) {
   }
   return obj;
 }
-function _objectWithoutPropertiesLoose(source, excluded) {
+function _objectWithoutPropertiesLoose2(source, excluded) {
   if (source == null)
     return {};
   var target = {};
@@ -31595,7 +31688,7 @@ function _objectWithoutPropertiesLoose(source, excluded) {
 function _objectWithoutProperties(source, excluded) {
   if (source == null)
     return {};
-  var target = _objectWithoutPropertiesLoose(source, excluded);
+  var target = _objectWithoutPropertiesLoose2(source, excluded);
   var key, i2;
   if (Object.getOwnPropertySymbols) {
     var sourceSymbolKeys = Object.getOwnPropertySymbols(source);
@@ -31698,13 +31791,13 @@ function styleToObject(style) {
     return acc;
   }, {});
 }
-function convert(createElement5, element) {
+function convert(createElement6, element) {
   var extraProps = arguments.length > 2 && arguments[2] !== void 0 ? arguments[2] : {};
   if (typeof element === "string") {
     return element;
   }
   var children = (element.children || []).map(function(child) {
-    return convert(createElement5, child);
+    return convert(createElement6, child);
   });
   var mixins = Object.keys(element.attributes || {}).reduce(function(acc, key) {
     var val = element.attributes[key];
@@ -31729,7 +31822,7 @@ function convert(createElement5, element) {
   });
   var _extraProps$style = extraProps.style, existingStyle = _extraProps$style === void 0 ? {} : _extraProps$style, remaining = _objectWithoutProperties(extraProps, _excluded$1);
   mixins.attrs["style"] = _objectSpread22(_objectSpread22({}, mixins.attrs["style"]), existingStyle);
-  return createElement5.apply(void 0, [element.tag, _objectSpread22(_objectSpread22({}, mixins.attrs), remaining)].concat(_toConsumableArray2(children)));
+  return createElement6.apply(void 0, [element.tag, _objectSpread22(_objectSpread22({}, mixins.attrs), remaining)].concat(_toConsumableArray2(children)));
 }
 var PRODUCTION2 = false;
 try {
@@ -31843,35 +31936,57 @@ FontAwesomeIcon.defaultProps = {
   transform: null,
   swapOpacity: false
 };
-var convertCurry = convert.bind(null, import_react52.default.createElement);
+var convertCurry = convert.bind(null, import_react55.default.createElement);
 
 // node_modules/@fortawesome/free-solid-svg-icons/index.es.js
 var faCheck = {
   prefix: "fas",
   iconName: "check",
-  icon: [512, 512, [], "f00c", "M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z"]
+  icon: [448, 512, [10004, 10003], "f00c", "M438.6 105.4C451.1 117.9 451.1 138.1 438.6 150.6L182.6 406.6C170.1 419.1 149.9 419.1 137.4 406.6L9.372 278.6C-3.124 266.1-3.124 245.9 9.372 233.4C21.87 220.9 42.13 220.9 54.63 233.4L159.1 338.7L393.4 105.4C405.9 92.88 426.1 92.88 438.6 105.4H438.6z"]
 };
 var faCoins = {
   prefix: "fas",
   iconName: "coins",
-  icon: [512, 512, [], "f51e", "M0 405.3V448c0 35.3 86 64 192 64s192-28.7 192-64v-42.7C342.7 434.4 267.2 448 192 448S41.3 434.4 0 405.3zM320 128c106 0 192-28.7 192-64S426 0 320 0 128 28.7 128 64s86 64 192 64zM0 300.4V352c0 35.3 86 64 192 64s192-28.7 192-64v-51.6c-41.3 34-116.9 51.6-192 51.6S41.3 334.4 0 300.4zm416 11c57.3-11.1 96-31.7 96-55.4v-42.7c-23.2 16.4-57.3 27.6-96 34.5v63.6zM192 160C86 160 0 195.8 0 240s86 80 192 80 192-35.8 192-80-86-80-192-80zm219.3 56.3c60-10.8 100.7-32 100.7-56.3v-42.7c-35.5 25.1-96.5 38.6-160.7 41.8 29.5 14.3 51.2 33.5 60 57.2z"]
+  icon: [512, 512, [], "f51e", "M512 80C512 98.01 497.7 114.6 473.6 128C444.5 144.1 401.2 155.5 351.3 158.9C347.7 157.2 343.9 155.5 340.1 153.9C300.6 137.4 248.2 128 192 128C183.7 128 175.6 128.2 167.5 128.6L166.4 128C142.3 114.6 128 98.01 128 80C128 35.82 213.1 0 320 0C426 0 512 35.82 512 80V80zM160.7 161.1C170.9 160.4 181.3 160 192 160C254.2 160 309.4 172.3 344.5 191.4C369.3 204.9 384 221.7 384 240C384 243.1 383.3 247.9 381.9 251.7C377.3 264.9 364.1 277 346.9 287.3C346.9 287.3 346.9 287.3 346.9 287.3C346.8 287.3 346.6 287.4 346.5 287.5L346.5 287.5C346.2 287.7 345.9 287.8 345.6 288C310.6 307.4 254.8 320 192 320C132.4 320 79.06 308.7 43.84 290.9C41.97 289.9 40.15 288.1 38.39 288C14.28 274.6 0 258 0 240C0 205.2 53.43 175.5 128 164.6C138.5 163 149.4 161.8 160.7 161.1L160.7 161.1zM391.9 186.6C420.2 182.2 446.1 175.2 468.1 166.1C484.4 159.3 499.5 150.9 512 140.6V176C512 195.3 495.5 213.1 468.2 226.9C453.5 234.3 435.8 240.5 415.8 245.3C415.9 243.6 416 241.8 416 240C416 218.1 405.4 200.1 391.9 186.6V186.6zM384 336C384 354 369.7 370.6 345.6 384C343.8 384.1 342 385.9 340.2 386.9C304.9 404.7 251.6 416 192 416C129.2 416 73.42 403.4 38.39 384C14.28 370.6 .0003 354 .0003 336V300.6C12.45 310.9 27.62 319.3 43.93 326.1C83.44 342.6 135.8 352 192 352C248.2 352 300.6 342.6 340.1 326.1C347.9 322.9 355.4 319.2 362.5 315.2C368.6 311.8 374.3 308 379.7 304C381.2 302.9 382.6 301.7 384 300.6L384 336zM416 278.1C434.1 273.1 452.5 268.6 468.1 262.1C484.4 255.3 499.5 246.9 512 236.6V272C512 282.5 507 293 497.1 302.9C480.8 319.2 452.1 332.6 415.8 341.3C415.9 339.6 416 337.8 416 336V278.1zM192 448C248.2 448 300.6 438.6 340.1 422.1C356.4 415.3 371.5 406.9 384 396.6V432C384 476.2 298 512 192 512C85.96 512 .0003 476.2 .0003 432V396.6C12.45 406.9 27.62 415.3 43.93 422.1C83.44 438.6 135.8 448 192 448z"]
+};
+var faMoneyBill = {
+  prefix: "fas",
+  iconName: "money-bill",
+  icon: [576, 512, [], "f0d6", "M512 64C547.3 64 576 92.65 576 128V384C576 419.3 547.3 448 512 448H64C28.65 448 0 419.3 0 384V128C0 92.65 28.65 64 64 64H512zM128 384C128 348.7 99.35 320 64 320V384H128zM64 192C99.35 192 128 163.3 128 128H64V192zM512 384V320C476.7 320 448 348.7 448 384H512zM512 128H448C448 163.3 476.7 192 512 192V128zM288 352C341 352 384 309 384 256C384 202.1 341 160 288 160C234.1 160 192 202.1 192 256C192 309 234.1 352 288 352z"]
 };
 
 // src/components/ModalMain.js
-var import_react53 = __toModule(require_react());
+var import_react56 = __toModule(require_react());
 var ModalMain = ({ opened }) => {
-  return /* @__PURE__ */ import_react53.default.createElement(import_react53.default.Fragment, null, /* @__PURE__ */ import_react53.default.createElement(Modal, {
+  return /* @__PURE__ */ import_react56.default.createElement(import_react56.default.Fragment, null, /* @__PURE__ */ import_react56.default.createElement(Modal, {
     opened,
     onClose: () => setOpened(false),
     title: "Introduce yourself!"
-  }, /* @__PURE__ */ import_react53.default.createElement(Input, {
+  }, /* @__PURE__ */ import_react56.default.createElement(Input, {
     variant: "default",
     placeholder: "Default variant"
-  })), /* @__PURE__ */ import_react53.default.createElement(Group, {
+  })), /* @__PURE__ */ import_react56.default.createElement(Group, {
     position: "center"
   }));
 };
 var ModalMain_default = ModalMain;
+
+// src/components/Header.jsx
+var import_react57 = __toModule(require_react());
+var Stizz = styled_components_browser_esm_default.div`
+  font-family: 'Mr Dafoe';
+  margin: 0;
+  margin-top: -0.6em;
+  color: blue;
+  text-shadow: 0 0 0.05em #fff, 0 0 0.2em #fe05e1, 0 0 0.3em white;
+  transform: rotate(-7deg);
+`;
+function Header() {
+  return /* @__PURE__ */ import_react57.default.createElement("div", {
+    className: "header"
+  }, /* @__PURE__ */ import_react57.default.createElement(Stizz, null, "jenna-counts"));
+}
+var Header_default = Header;
 
 // src/components/Counter.js
 var HeaderContainer = styled_components_browser_esm_default.div`
@@ -31896,16 +32011,16 @@ var Switch2 = styled_components_browser_esm_default.div`
   ${""}
 `;
 var Counter = () => {
-  const [totalBills, setTotalBills] = (0, import_react55.useState)([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]);
-  const [totalCash, setTotalCash] = (0, import_react55.useState)(0);
-  const [target, setTarget] = (0, import_react55.useState)(1110);
-  const [toggle, setToggle] = (0, import_react55.useState)(true);
-  const [opened, setOpened2] = (0, import_react55.useState)(false);
-  (0, import_react56.useEffect)(() => {
+  const [totalBills, setTotalBills] = (0, import_react59.useState)([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]);
+  const [totalCash, setTotalCash] = (0, import_react59.useState)(0);
+  const [target, setTarget] = (0, import_react59.useState)(1110);
+  const [toggle, setToggle] = (0, import_react59.useState)(true);
+  const [opened, setOpened2] = (0, import_react59.useState)(false);
+  (0, import_react60.useEffect)(() => {
     let reduced = totalBills.reduce((acc, num) => acc + num);
     setTotalCash(reduced);
   }, [totalBills]);
-  (0, import_react56.useEffect)(() => {
+  (0, import_react60.useEffect)(() => {
     () => setOpened2(true);
   }, []);
   let handleChange = (sum, denom, idx) => {
@@ -31916,122 +32031,126 @@ var Counter = () => {
   let handleToggle = () => {
     setToggle(!toggle);
   };
-  return /* @__PURE__ */ import_react54.default.createElement(import_react54.default.Fragment, null, /* @__PURE__ */ import_react54.default.createElement(ModalMain_default, {
+  return /* @__PURE__ */ import_react58.default.createElement(import_react58.default.Fragment, null, /* @__PURE__ */ import_react58.default.createElement(ThemeSwitcher_default, null), /* @__PURE__ */ import_react58.default.createElement(ModalMain_default, {
     opened
-  }), /* @__PURE__ */ import_react54.default.createElement(HeaderContainer, null, /* @__PURE__ */ import_react54.default.createElement(NumberInput, {
+  }), /* @__PURE__ */ import_react58.default.createElement(HeaderContainer, null, /* @__PURE__ */ import_react58.default.createElement(NumberInput, {
     hideControls: true,
     value: target,
     onChange: (value) => setTarget(value),
     styles: { input: { width: 64, textAlign: "center" } }
-  }), /* @__PURE__ */ import_react54.default.createElement("div", null, "TARGET: ", target, /* @__PURE__ */ import_react54.default.createElement("br", null), "TOTAL: ", totalCash, /* @__PURE__ */ import_react54.default.createElement("br", null), "DIFFERENCE: ", (target - totalCash).toFixed(2), /* @__PURE__ */ import_react54.default.createElement("br", null)), target !== totalCash ? /* @__PURE__ */ import_react54.default.createElement("div", null, /* @__PURE__ */ import_react54.default.createElement(RingProgress, {
+  }), /* @__PURE__ */ import_react58.default.createElement("div", null, "TARGET: ", target, /* @__PURE__ */ import_react58.default.createElement("br", null), "TOTAL: ", totalCash, /* @__PURE__ */ import_react58.default.createElement("br", null), "DIFFERENCE: ", (target - totalCash).toFixed(2), /* @__PURE__ */ import_react58.default.createElement("br", null)), target !== totalCash ? /* @__PURE__ */ import_react58.default.createElement("div", null, /* @__PURE__ */ import_react58.default.createElement(RingProgress, {
     sections: [{ value: totalCash / target * 100, color: "violet" }],
-    label: /* @__PURE__ */ import_react54.default.createElement(Text, {
+    label: /* @__PURE__ */ import_react58.default.createElement(Text, {
       color: "pink",
       weight: 700,
       align: "center",
       size: "150"
     }, totalCash)
-  })) : /* @__PURE__ */ import_react54.default.createElement("div", null, /* @__PURE__ */ import_react54.default.createElement(RingProgress, {
+  })) : /* @__PURE__ */ import_react58.default.createElement("div", null, /* @__PURE__ */ import_react58.default.createElement(RingProgress, {
     sections: [{ value: 100, color: "teal" }],
-    label: /* @__PURE__ */ import_react54.default.createElement(Center, null, /* @__PURE__ */ import_react54.default.createElement(ThemeIcon, {
+    label: /* @__PURE__ */ import_react58.default.createElement(Center, null, /* @__PURE__ */ import_react58.default.createElement(ThemeIcon, {
       color: "teal",
       variant: "light",
       radius: "xl",
       size: "xl"
-    }, /* @__PURE__ */ import_react54.default.createElement(FontAwesomeIcon, {
+    }, /* @__PURE__ */ import_react58.default.createElement(FontAwesomeIcon, {
       icon: faCheck,
       color: "white",
       className: "fa-2x fa-beat fa-solid"
     })))
-  }))), /* @__PURE__ */ import_react54.default.createElement(Switch2, {
+  }))), /* @__PURE__ */ import_react58.default.createElement(Switch2, {
     onClick: handleToggle
-  }, /* @__PURE__ */ import_react54.default.createElement(FontAwesomeIcon, {
+  }, /* @__PURE__ */ import_react58.default.createElement(FontAwesomeIcon, {
+    icon: faMoneyBill,
+    color: toggle ? "lightGreen" : "yello",
+    className: "fa-3x"
+  }), /* @__PURE__ */ import_react58.default.createElement(FontAwesomeIcon, {
     icon: faCoins,
     color: toggle ? "gray" : "yellow",
     className: "fa-3x"
-  })), /* @__PURE__ */ import_react54.default.createElement(ToggleBills, {
+  })), /* @__PURE__ */ import_react58.default.createElement(ToggleBills, {
     toggle
-  }, /* @__PURE__ */ import_react54.default.createElement("div", {
+  }, /* @__PURE__ */ import_react58.default.createElement("div", {
     className: "input-group-bills"
-  }, "ONE", /* @__PURE__ */ import_react54.default.createElement(NumberComponent_default, {
+  }, "ONE", /* @__PURE__ */ import_react58.default.createElement(NumberComponent_default, {
     idx: "0",
     range: 100,
     denom: 1,
     onChange: handleChange,
     value: totalBills[0]
-  }), "FIVE", /* @__PURE__ */ import_react54.default.createElement(NumberComponent_default, {
+  }), "FIVE", /* @__PURE__ */ import_react58.default.createElement(NumberComponent_default, {
     idx: "1",
     range: 100,
     denom: 5,
     onChange: handleChange,
     value: totalBills[1]
-  }), "TEN", /* @__PURE__ */ import_react54.default.createElement(NumberComponent_default, {
+  }), "TEN", /* @__PURE__ */ import_react58.default.createElement(NumberComponent_default, {
     idx: "2",
     range: 100,
     denom: 10,
     onChange: handleChange,
     value: totalBills[2]
-  }), "TWENTY", /* @__PURE__ */ import_react54.default.createElement(NumberComponent_default, {
+  }), "TWENTY", /* @__PURE__ */ import_react58.default.createElement(NumberComponent_default, {
     idx: "3",
     range: 120,
     denom: 20,
     onChange: handleChange,
     value: totalBills[2]
-  }), "FIFTY", /* @__PURE__ */ import_react54.default.createElement(NumberComponent_default, {
+  }), "FIFTY", /* @__PURE__ */ import_react58.default.createElement(NumberComponent_default, {
     idx: "4",
     range: 50,
     denom: 50,
     onChange: handleChange,
     value: totalBills[2]
-  }), "HUNDRED", /* @__PURE__ */ import_react54.default.createElement(NumberComponent_default, {
+  }), "HUNDRED", /* @__PURE__ */ import_react58.default.createElement(NumberComponent_default, {
     idx: "5",
     range: 50,
     denom: 100,
     onChange: handleChange,
     value: totalBills[2]
-  }))), /* @__PURE__ */ import_react54.default.createElement(ToggleCoins, {
+  }))), /* @__PURE__ */ import_react58.default.createElement(ToggleCoins, {
     toggle
-  }, /* @__PURE__ */ import_react54.default.createElement("div", {
+  }, /* @__PURE__ */ import_react58.default.createElement("div", {
     className: "input-group-coins"
-  }, "PENNY", /* @__PURE__ */ import_react54.default.createElement(NumberComponent_default, {
+  }, "PENNY", /* @__PURE__ */ import_react58.default.createElement(NumberComponent_default, {
     idx: "6",
     range: 100,
     denom: 0.01,
     onChange: handleChange,
     value: totalBills[6]
-  }), "NICKEL", /* @__PURE__ */ import_react54.default.createElement(NumberComponent_default, {
+  }), "NICKEL", /* @__PURE__ */ import_react58.default.createElement(NumberComponent_default, {
     idx: "7",
     range: 100,
     denom: 0.05,
     onChange: handleChange,
     value: totalBills[7]
-  }), "DIME", /* @__PURE__ */ import_react54.default.createElement(NumberComponent_default, {
+  }), "DIME", /* @__PURE__ */ import_react58.default.createElement(NumberComponent_default, {
     idx: "8",
     range: 100,
     denom: 0.1,
     onChange: handleChange,
     value: totalBills[8]
-  }), "QUARTER", /* @__PURE__ */ import_react54.default.createElement(NumberComponent_default, {
+  }), "QUARTER", /* @__PURE__ */ import_react58.default.createElement(NumberComponent_default, {
     idx: "9",
     range: 100,
     denom: 0.25,
     onChange: handleChange,
     value: totalBills[9]
-  }))));
+  }))), /* @__PURE__ */ import_react58.default.createElement(Header_default, null));
 };
 var Counter_default = Counter;
 
 // src/components/HelloWorld.jsx
 function HelloWorld() {
-  return /* @__PURE__ */ import_react57.default.createElement("div", {
+  return /* @__PURE__ */ import_react61.default.createElement("div", {
     className: "NumberInputHandlers"
-  }, /* @__PURE__ */ import_react57.default.createElement(Counter_default, null));
+  }, /* @__PURE__ */ import_react61.default.createElement(Counter_default, null));
 }
 var HelloWorld_default = HelloWorld;
 
 // src/App.jsx
 function App() {
-  return /* @__PURE__ */ import_react58.default.createElement("div", null, /* @__PURE__ */ import_react58.default.createElement(HelloWorld_default, null));
+  return /* @__PURE__ */ import_react62.default.createElement("div", null, /* @__PURE__ */ import_react62.default.createElement(HelloWorld_default, null));
 }
 
 // src/index.jsx
@@ -32043,7 +32162,7 @@ var AppContainer = styled_components_browser_esm_default.div`
   min-width: 60%;
   padding: 1em;
 `;
-import_react_dom2.default.render(/* @__PURE__ */ import_react59.default.createElement(AppContainer, null, /* @__PURE__ */ import_react59.default.createElement(MantineProvider, {
+import_react_dom2.default.render(/* @__PURE__ */ import_react63.default.createElement(AppContainer, null, /* @__PURE__ */ import_react63.default.createElement(MantineProvider, {
   theme: {
     colorScheme: "dark",
     breakpoints: {
@@ -32055,16 +32174,12 @@ import_react_dom2.default.render(/* @__PURE__ */ import_react59.default.createEl
     }
   },
   withGlobalStyles: true
-}, /* @__PURE__ */ import_react59.default.createElement(App, null))), document.querySelector("#app"));
+}, /* @__PURE__ */ import_react63.default.createElement(ColorSchemeProvider, null, /* @__PURE__ */ import_react63.default.createElement(App, null)))), document.querySelector("#app"));
 /*
 object-assign
 (c) Sindre Sorhus
 @license MIT
 */
-/*!
- * Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com
- * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
- */
 /*!
  * Font Awesome Free 6.0.0 by @fontawesome - https://fontawesome.com
  * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)

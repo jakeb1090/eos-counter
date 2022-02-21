@@ -3,10 +3,12 @@ import { useState, useRef } from 'react';
 import { useEffect } from 'react/cjs/react.development';
 import styled from 'styled-components';
 import NumberComponent from './NumberComponent';
+import ThemeSwitcher from './ThemeSwitcher';
 import { NumberInput, RingProgress, Text, Tabs, Center, ThemeIcon} from '@mantine/core';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCheck, faCoins} from '@fortawesome/free-solid-svg-icons';
+import { faCheck, faCoins, faMoneyBill } from '@fortawesome/free-solid-svg-icons';
 import ModalMain from './ModalMain';
+import Header from './Header';
 
 
 const HeaderContainer = styled.div`
@@ -64,6 +66,7 @@ const Counter = () => {
 
     return (
     <>
+      <ThemeSwitcher />
       <ModalMain opened={opened} />
       <HeaderContainer>
         <NumberInput
@@ -78,7 +81,6 @@ const Counter = () => {
           TOTAL: {totalCash}<br />
           DIFFERENCE: {(target - totalCash).toFixed(2)}<br />
         </div>
-
         { target !== totalCash ?
         (<div>
           <RingProgress
@@ -108,7 +110,7 @@ const Counter = () => {
       </HeaderContainer>
 
       <Switch onClick={handleToggle}>
-        {/* <FontAwesomeIcon icon={faMoneyBill1Wave} color={toggle ? "lightGreen" : "yello"} className="fa-3x"/> */}
+        <FontAwesomeIcon icon={faMoneyBill} color={toggle ? "lightGreen" : "yello"} className="fa-3x"/>
         <FontAwesomeIcon icon={faCoins} color={toggle ? "gray" : "yellow"} className="fa-3x" />
       </Switch>
 
@@ -131,6 +133,7 @@ const Counter = () => {
           QUARTER<NumberComponent idx="9" range={100} denom={.25} onChange={handleChange} value={totalBills[9]}/>
         </div>
         </ToggleCoins>
+        <Header />
     </>
   )
 }
